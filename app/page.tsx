@@ -37,9 +37,10 @@ const customThemeIconPath=(themeId:string,name:string)=>{
   if(themeId==='pip-boy') return `/pipboy/vaultboy_${name}.png`;
   if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
   if(themeId==='kc-bbq') return `/kcbbq/kcbbq_${name}.png`;
+  if(themeId==='aim') return `/aim/aim_${name}.png`;
   return '';
 };
-const hasCustomThemeIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq';
+const hasCustomThemeIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='aim';
 const ThemeIcon=({themeId,name,alt='',className=''}:{themeId:string;name:string;alt?:string;className?:string})=>
   <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
