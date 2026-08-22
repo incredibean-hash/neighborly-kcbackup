@@ -1051,3 +1051,18 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
       drop-shadow(0 0 8px rgba(210,20,48,.55)) !important;
   }
 }
+
+
+/* Final KCFD tweak: slightly larger header heart only. */
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark,
+[data-theme="kcfd"] .nkc-mobile-theme-mark{
+  width:58px !important;
+  height:58px !important;
+  flex:0 0 58px !important;
+}
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark img,
+[data-theme="kcfd"] .nkc-mobile-theme-mark img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+}
