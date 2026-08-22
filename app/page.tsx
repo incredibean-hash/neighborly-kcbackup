@@ -52,7 +52,7 @@ const heartHeaderPalette=(theme:any)=>({
   'kc-current':{surface:'#00333d',primary:'#54eff5',secondary:'#efffff'},
   'kc-sunset':{surface:'#00333d',primary:'#54eff5',secondary:'#efffff'},
   space:{surface:'#160629',primary:'#c978ff',secondary:'#f7eaff'},
-  aim:{surface:'#261704',primary:'#ffc75b',secondary:'#fff7df'},
+  aim:{surface:'#ffdf00',primary:'#1456d9',secondary:'#ffffff'},
   'pip-boy':{surface:'#001306',primary:'#68ff9a',secondary:'#d9ffe5'},
   kcpd:{surface:'#061a42',primary:'#78baff',secondary:'#f3f8ff'},
   kcfd:{surface:'#270202',primary:'#ff6945',secondary:'#fff0e9'},
@@ -694,9 +694,9 @@ export default function Page(){
     setThemeId(next);
     localStorage.setItem('nkc_theme', next);
     window.dispatchEvent(new Event('nkc-theme-change'));
-    // Close the theme picker and Settings once a theme is chosen.
+    // Close only the theme picker. Settings remains open behind it so a mobile
+    // tap cannot click through to controls underneath or sign the user out.
     setShowThemePicker(false);
-    setShowSettings(false);
   }, []);
 
   useEffect(()=>{
