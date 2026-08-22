@@ -1066,3 +1066,35 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   height:100% !important;
   object-fit:contain !important;
 }
+
+
+/* KCFD header heart: show the entire emblem inside its allotted space. */
+[data-theme="kcfd"] .nkc-mobile-theme-mark,
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark{
+  width:58px !important;
+  height:58px !important;
+  flex:0 0 58px !important;
+  overflow:visible !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+}
+
+[data-theme="kcfd"] .nkc-mobile-theme-mark img,
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark img{
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  display:block !important;
+  transform:none !important;
+  clip-path:none !important;
+}
+
+[data-theme="kcfd"] .nkc-mobile-brand,
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-brand{
+  overflow:visible !important;
+}
