@@ -1,12 +1,13 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import ThemeInstallIcon from "./components/ThemeInstallIcon";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://neighborlykc.com"),
   title: "NeighborlyKC — Kansas City Neighbors, Connected",
   description: "Join NeighborlyKC for local updates, recommendations, events, safety alerts and neighbor-to-neighbor conversations across Kansas City.",
-  manifest: "/manifest.json?v=10",
+  manifest: "/api/manifest?theme=royals",
   alternates: { canonical: "/" },
   openGraph: {
     title: "NeighborlyKC — Kansas City Neighbors, Connected",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#0b2b52" />
       </head>
       <body className="bg-[#f0f6ff]">
+        <ThemeInstallIcon />
         {children}
         <Analytics />
       </body>
