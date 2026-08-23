@@ -38,6 +38,11 @@ const iconPath=(themeId:string,name:string)=>{
     if(name==='settings') return '/city-fountains/fountains_settings_v2.png';
   }
 
+  if(themeId==='cowtown'){
+    if(name==='dms') return '/cowtown/cowtown_dms_v2.png';
+    if(name==='create_post') return '/cowtown/cowtown_create_post_v2.png';
+    if(name==='settings') return '/cowtown/cowtown_settings_v2.png';
+  }
   if(themeId==='army'){
     if(name==='dms') return '/army/army_dms_v2.png';
     if(name==='create_post') return '/army/army_create_post_v2.png';
@@ -60,7 +65,7 @@ const iconPath=(themeId:string,name:string)=>{
   }
   return '';
 };
-const hasCustomIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains','army','navy','marines','air-force'].includes(themeId);
+const hasCustomIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'].includes(themeId);
 const ThemeIcon=({themeId,name,className=''}:{themeId:string;name:string;className?:string})=><img src={iconPath(themeId,name)} alt="" className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
 const luminance=(hex:string)=>{const v=(hex||'#000000').replace('#','').slice(0,6).padEnd(6,'0');const c=[0,2,4].map(i=>parseInt(v.slice(i,i+2),16)/255).map(x=>x<=.03928?x/12.92:Math.pow((x+.055)/1.055,2.4));return .2126*c[0]+.7152*c[1]+.0722*c[2]};

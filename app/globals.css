@@ -1560,7 +1560,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-orb-item,
   .nkc-mobile-bottom-nav:is(
     [data-theme="pip-boy"],
@@ -1572,7 +1573,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-plus{
     background:transparent !important;
     background-color:transparent !important;
@@ -1592,7 +1594,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-orb-item::before,
   .nkc-mobile-bottom-nav:is(
     [data-theme="pip-boy"],
@@ -1604,7 +1607,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-orb-item::after,
   .nkc-mobile-bottom-nav:is(
     [data-theme="pip-boy"],
@@ -1616,7 +1620,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-plus::before,
   .nkc-mobile-bottom-nav:is(
     [data-theme="pip-boy"],
@@ -1628,7 +1633,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-plus::after{
     content:none !important;
     display:none !important;
@@ -1650,7 +1656,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-orb-item,
   .nkc-mobile-bottom-nav:is(
     [data-theme="pip-boy"],
@@ -1662,7 +1669,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-plus{
     width:80px !important;
     height:80px !important;
@@ -1680,7 +1688,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-custom-theme-nav-icon,
   .nkc-mobile-bottom-nav:is(
     [data-theme="pip-boy"],
@@ -1692,7 +1701,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="chiefs"],
     [data-theme="space"],
     [data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-custom-theme-plus-icon,
   .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-nav-icon,
   .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-plus-icon{
@@ -1733,7 +1743,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="pip-boy"],[data-theme="kcfd"],[data-theme="kc-bbq"],
     [data-theme="aim"],[data-theme="sporting"],[data-theme="royals"],
     [data-theme="chiefs"],[data-theme="space"],[data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ){
     min-height:102px !important;
   }
@@ -1742,13 +1753,15 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     [data-theme="pip-boy"],[data-theme="kcfd"],[data-theme="kc-bbq"],
     [data-theme="aim"],[data-theme="sporting"],[data-theme="royals"],
     [data-theme="chiefs"],[data-theme="space"],[data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-orb-item,
   .nkc-mobile-bottom-nav:is(
     [data-theme="pip-boy"],[data-theme="kcfd"],[data-theme="kc-bbq"],
     [data-theme="aim"],[data-theme="sporting"],[data-theme="royals"],
     [data-theme="chiefs"],[data-theme="space"],[data-theme="kcpd"],
-    [data-theme="city-fountains"]
+    [data-theme="city-fountains"],
+    [data-theme="cowtown"]
   ) .nkc-bottom-nav-plus{
     width:82px !important;
     height:96px !important;
@@ -1847,19 +1860,4 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   .nkc-mobile-bottom-nav:is([data-theme="kcfd"],[data-theme="pip-boy"]) .nkc-nav-label{
     display:none !important;
   }
-}
-
-
-/* Main-feed long-post preview */
-.nkc-post-clamp{
-  display:-webkit-box;
-  -webkit-box-orient:vertical;
-  -webkit-line-clamp:6;
-  overflow:hidden;
-}
-.nkc-read-more{
-  background:transparent;
-  border:0;
-  padding:0;
-  cursor:pointer;
 }
