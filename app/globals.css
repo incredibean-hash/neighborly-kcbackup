@@ -1860,3 +1860,112 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     display:none !important;
   }
 }
+
+/* =========================================================
+   V4 CUSTOM THEME NAV — artwork already includes its own label.
+   Hide duplicate captions and make the V4 artwork large/readable.
+   Themes: Pip-Boy, KC BBQ, KC Current, 18th & Vine,
+   River Market, Cowtown.
+   ========================================================= */
+@media (max-width:640px){
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ){
+    height:104px !important;
+    min-height:104px !important;
+    padding:5px 7vw calc(7px + env(safe-area-inset-bottom)) !important;
+    gap:clamp(20px,9vw,52px) !important;
+    overflow:visible !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ) .nkc-nav-label{
+    display:none !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ) .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ) .nkc-bottom-nav-plus{
+    width:96px !important;
+    height:96px !important;
+    flex:0 0 96px !important;
+    margin-top:-13px !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+    display:grid !important;
+    place-items:center !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ) .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ) .nkc-bottom-nav-plus::before{
+    display:none !important;
+    content:none !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ) .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kc-bbq"],
+    [data-theme="kc-current"],
+    [data-theme="18th-vine"],
+    [data-theme="river-market"],
+    [data-theme="cowtown"]
+  ) .nkc-custom-theme-plus-icon{
+    width:92px !important;
+    height:92px !important;
+    max-width:92px !important;
+    max-height:92px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    flex:0 0 92px !important;
+  }
+}
