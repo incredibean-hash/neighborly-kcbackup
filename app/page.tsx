@@ -1382,7 +1382,7 @@ export default function Page(){
           style={{color:navThemeColor}}
         >
           {hasCustomThemeIcons(theme.id)?<ThemeIcon themeId={theme.id} name="dms" alt="" className="nkc-custom-theme-nav-icon"/>:<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H9l-5 3v-14Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><path d="M8 9h8M8 12.5h5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>}
-          <span className="sr-only">Messages</span>
+          <span className="nkc-nav-label">Messages</span>
         </Link>
 
         <button
@@ -1394,6 +1394,7 @@ export default function Page(){
           style={{color:navThemeColor}}
         >
           {hasCustomThemeIcons(theme.id)?<ThemeIcon themeId={theme.id} name="create_post" alt="" className="nkc-custom-theme-plus-icon"/>:<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round"/></svg>}
+          <span className="nkc-nav-label">Post</span>
         </button>
 
         <button
@@ -1404,7 +1405,7 @@ export default function Page(){
           style={showSettings?{backgroundColor:theme.pillActive,color:theme.pillTextActive}:{color:navThemeColor}}
         >
           {hasCustomThemeIcons(theme.id)?<ThemeIcon themeId={theme.id} name="settings" alt="" className="nkc-custom-theme-nav-icon"/>:<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.7 3.6h4.6l.6 2.1 1.8 1 2.1-.5 2.3 4-1.5 1.6v2.1l1.5 1.6-2.3 4-2.1-.5-1.8 1-.6 2.1H9.7L9.1 20l-1.8-1-2.1.5-2.3-4 1.5-1.6v-2.1L2.9 10l2.3-4 2.1.5 1.8-1z" fill="none" stroke="currentColor" strokeWidth="1.55" strokeLinejoin="round"/><circle cx="12" cy="12.8" r="2.7" fill="none" stroke="currentColor" strokeWidth="1.7"/></svg>}
-          <span className="sr-only">Settings</span>
+          <span className="nkc-nav-label">Settings</span>
         </button>
       </nav>
 

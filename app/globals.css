@@ -1705,3 +1705,53 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     object-position:center !important;
   }
 }
+
+
+/* FINAL MOBILE NAV TEXT LABELS — visible under each nav icon. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav .nkc-bottom-nav-plus{
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:2px !important;
+  }
+
+  .nkc-mobile-bottom-nav .nkc-nav-label{
+    display:block !important;
+    font-size:10px !important;
+    line-height:11px !important;
+    font-weight:800 !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+    color:currentColor !important;
+    pointer-events:none !important;
+  }
+
+  /* Keep the approved AIM-sized artwork while making room underneath for text. */
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],[data-theme="kcfd"],[data-theme="kc-bbq"],
+    [data-theme="aim"],[data-theme="sporting"],[data-theme="royals"],
+    [data-theme="chiefs"],[data-theme="space"],[data-theme="kcpd"],
+    [data-theme="city-fountains"]
+  ){
+    min-height:102px !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],[data-theme="kcfd"],[data-theme="kc-bbq"],
+    [data-theme="aim"],[data-theme="sporting"],[data-theme="royals"],
+    [data-theme="chiefs"],[data-theme="space"],[data-theme="kcpd"],
+    [data-theme="city-fountains"]
+  ) .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],[data-theme="kcfd"],[data-theme="kc-bbq"],
+    [data-theme="aim"],[data-theme="sporting"],[data-theme="royals"],
+    [data-theme="chiefs"],[data-theme="space"],[data-theme="kcpd"],
+    [data-theme="city-fountains"]
+  ) .nkc-bottom-nav-plus{
+    width:82px !important;
+    height:96px !important;
+    padding:3px 6px !important;
+  }
+}
