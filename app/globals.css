@@ -1458,3 +1458,25 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     display:none !important;
   }
 }
+
+
+/* KC BBQ V2 nav: artwork only; no selected circle/background. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item.is-active,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus.is-active{
+    background:transparent !important;
+    background-color:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    outline:none !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus::after{
+    content:none !important;
+    display:none !important;
+  }
+}
