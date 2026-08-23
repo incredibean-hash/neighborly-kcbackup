@@ -1546,3 +1546,36 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   background:#050914 !important;
   border-top-color:#1f5fae !important;
 }
+
+
+/* KCPD V2 nav artwork */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item.is-active,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus.is-active{
+    background:transparent !important;
+    background-color:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    outline:none !important;
+    overflow:visible !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus::after{
+    content:none !important;
+    display:none !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-nav-icon{
+    width:72px !important;
+    height:72px !important;
+    object-fit:contain !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-plus-icon{
+    width:76px !important;
+    height:76px !important;
+    object-fit:contain !important;
+  }
+}
