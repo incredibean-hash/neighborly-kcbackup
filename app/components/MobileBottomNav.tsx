@@ -3,12 +3,32 @@
 import Link from 'next/link';
 
 const iconPath=(themeId:string,name:string)=>{
-  if(themeId==='pip-boy') return `/pipboy/vaultboy_${name}.png`;
+  if(themeId==='pip-boy'){
+    if(name==='dms') return '/pipboy/cgi_dms.png';
+    if(name==='create_post') return '/pipboy/cgi_create_post.webp';
+    if(name==='settings') return '/pipboy/cgi_settings.webp';
+  }
   if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
   if(themeId==='kc-bbq'){
-    if(name==='dms') return '/kcbbq/kcbbq_dms_v2.png';
-    if(name==='create_post') return '/kcbbq/kcbbq_create_post_v2.png';
-    if(name==='settings') return '/kcbbq/kcbbq_settings_v2.png';
+    if(name==='dms') return '/kcbbq/kcbbq_dms_v3.png';
+    if(name==='create_post') return '/kcbbq/kcbbq_create_post_v3.png';
+    if(name==='settings') return '/kcbbq/kcbbq_settings_v3.png';
+  }
+
+  if(themeId==='kc-current' || themeId==='kc-sunset'){
+    if(name==='dms') return '/kc-current/dms.png';
+    if(name==='create_post') return '/kc-current/create_post.png';
+    if(name==='settings') return '/kc-current/settings.png';
+  }
+  if(themeId==='18th-vine'){
+    if(name==='dms') return '/18th-vine/messages.png';
+    if(name==='create_post') return '/18th-vine/create_post.png';
+    if(name==='settings') return '/18th-vine/settings.png';
+  }
+  if(themeId==='river-market'){
+    if(name==='dms') return '/river-market/dms.png';
+    if(name==='create_post') return '/river-market/create_post.png';
+    if(name==='settings') return '/river-market/settings.png';
   }
   if(themeId==='aim') return `/aim/aim_${name}.png`;
   if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
@@ -65,7 +85,7 @@ const iconPath=(themeId:string,name:string)=>{
   }
   return '';
 };
-const hasCustomIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'].includes(themeId);
+const hasCustomIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','kc-current','kc-sunset','18th-vine','river-market','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'].includes(themeId);
 const ThemeIcon=({themeId,name,className=''}:{themeId:string;name:string;className?:string})=><img src={iconPath(themeId,name)} alt="" className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
 const luminance=(hex:string)=>{const v=(hex||'#000000').replace('#','').slice(0,6).padEnd(6,'0');const c=[0,2,4].map(i=>parseInt(v.slice(i,i+2),16)/255).map(x=>x<=.03928?x/12.92:Math.pow((x+.055)/1.055,2.4));return .2126*c[0]+.7152*c[1]+.0722*c[2]};
