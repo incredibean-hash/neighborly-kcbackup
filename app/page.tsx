@@ -40,9 +40,10 @@ const customThemeIconPath=(themeId:string,name:string)=>{
   if(themeId==='aim') return `/aim/aim_${name}.png`;
   if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
   if(themeId==='royals') return `/royals/royals_${name}.png`;
+  if(themeId==='chiefs') return `/chiefs/chiefs_${name}.png`;
   return '';
 };
-const hasCustomThemeIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='aim'||themeId==='sporting'||themeId==='royals';
+const hasCustomThemeIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='aim'||themeId==='sporting'||themeId==='royals'||themeId==='chiefs';
 const ThemeIcon=({themeId,name,alt='',className=''}:{themeId:string;name:string;alt?:string;className?:string})=>
   <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
