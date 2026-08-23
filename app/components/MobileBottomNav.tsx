@@ -7,9 +7,10 @@ const iconPath=(themeId:string,name:string)=>{
   if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
   if(themeId==='kc-bbq') return `/kcbbq/kcbbq_${name}.png`;
   if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
+  if(themeId==='royals') return `/royals/royals_${name}.png`;
   return '';
 };
-const hasCustomIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='sporting';
+const hasCustomIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='sporting'||themeId==='royals';
 const ThemeIcon=({themeId,name,className=''}:{themeId:string;name:string;className?:string})=><img src={iconPath(themeId,name)} alt="" className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
 const luminance=(hex:string)=>{const v=(hex||'#000000').replace('#','').slice(0,6).padEnd(6,'0');const c=[0,2,4].map(i=>parseInt(v.slice(i,i+2),16)/255).map(x=>x<=.03928?x/12.92:Math.pow((x+.055)/1.055,2.4));return .2126*c[0]+.7152*c[1]+.0722*c[2]};
