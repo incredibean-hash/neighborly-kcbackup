@@ -1848,3 +1848,18 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     display:none !important;
   }
 }
+
+
+/* Main-feed long-post preview */
+.nkc-post-clamp{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:6;
+  overflow:hidden;
+}
+.nkc-read-more{
+  background:transparent;
+  border:0;
+  padding:0;
+  cursor:pointer;
+}
