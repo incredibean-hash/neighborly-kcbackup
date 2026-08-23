@@ -1124,3 +1124,23 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     filter:drop-shadow(0 2px 2px rgba(0,0,0,.22)) !important;
   }
 }
+
+
+/* AIM header: bright yellow with blue accents */
+.nkc-mobile-top-header[data-theme="aim"],
+[data-theme="aim"].nkc-mobile-top-header{
+  background:#ffdf00 !important;
+  border-bottom-color:#1456d9 !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-whats,
+[data-theme="aim"].nkc-mobile-top-header .nkc-mobile-whats{
+  background:#fffef2 !important;
+  border-color:#1456d9 !important;
+  color:#111111 !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-icon,
+[data-theme="aim"].nkc-mobile-top-header .nkc-mobile-icon{
+  color:#1456d9 !important;
+}

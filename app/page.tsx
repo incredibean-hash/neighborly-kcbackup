@@ -695,9 +695,9 @@ export default function Page(){
     setThemeId(next);
     localStorage.setItem('nkc_theme', next);
     window.dispatchEvent(new Event('nkc-theme-change'));
-    // Close only the theme picker. Settings remains open behind it so a mobile
-    // tap cannot click through to controls underneath or sign the user out.
+    // Close the theme picker and Settings after a theme is chosen.
     setShowThemePicker(false);
+    setShowSettings(false);
   }, []);
 
   useEffect(()=>{
