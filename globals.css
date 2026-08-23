@@ -122,6 +122,85 @@ body{overflow-y:visible;touch-action:pan-y pinch-zoom}
   header.sticky{z-index:60}
 }
 
+/* Locked three-part mobile design: compact theme header, forecast/content,
+   and the three illuminated circular controls from the supplied references. */
+@media (max-width:639px){
+  .nkc-mobile-top-header{
+    position:relative!important;
+    background-image:linear-gradient(180deg,color-mix(in srgb,var(--nkc-nav-accent,currentColor) 7%,transparent),transparent)!important;
+    box-shadow:0 1px 0 var(--nkc-nav-border,currentColor),0 8px 24px rgba(0,0,0,.16)!important;
+  }
+  .nkc-mobile-top-row{height:48px!important;padding:0 14px!important}
+  .nkc-mobile-top-row{position:relative!important}
+  .nkc-mobile-brand{gap:0!important;font-size:20px!important}
+  .nkc-mobile-theme-mark{width:34px!important;height:34px!important;flex-basis:34px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+  .nkc-mobile-theme-mark img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important;filter:drop-shadow(0 0 5px var(--nkc-nav-accent,currentColor))!important}
+  .nkc-mobile-wordmark{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;font-size:20px!important;letter-spacing:-.8px!important;text-align:center!important;text-shadow:0 1px 3px rgba(0,0,0,.6)!important}
+  .nkc-mobile-top-icons{gap:7px!important}
+  .nkc-mobile-icon{width:27px!important;height:27px!important}
+  .nkc-mobile-icon svg{width:20px!important;height:20px!important}
+  .nkc-mobile-whats{height:40px!important;margin:0 14px 7px!important;width:calc(100% - 28px)!important;border-radius:10px!important;padding:0 9px!important;font-size:12px!important}
+  .nkc-mobile-tabs{height:36px!important;padding:0 10px!important}
+
+  .nkc-forecast-banner{border-top:0!important;border-bottom:1px solid!important}
+  .nkc-forecast-inner{padding:9px 14px 11px!important}
+  .nkc-forecast-title{font-size:11px!important;margin-bottom:8px!important}
+  .nkc-forecast-days{gap:8px!important}
+  .nkc-forecast-day{flex:0 0 calc((100vw - 52px)/4)!important;min-width:calc((100vw - 52px)/4)!important;min-height:66px!important;padding:7px 8px!important;border-radius:18px!important}
+  .nkc-forecast-icon{font-size:20px!important}
+  .nkc-forecast-day>strong{font-size:18px!important}
+
+  .nkc-mobile-bottom-nav{
+    height:88px!important;
+    padding:0 11vw calc(8px + env(safe-area-inset-bottom))!important;
+    gap:clamp(28px,12vw,72px)!important;
+    justify-content:center!important;
+    overflow:visible!important;
+    border-top:2px solid var(--nkc-bottom-glow,currentColor)!important;
+    background:
+      linear-gradient(180deg,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 24%,transparent),transparent 42%),
+      color-mix(in srgb,var(--nkc-bottom-surface,#071933) 88%,black)!important;
+    box-shadow:0 -9px 25px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 24%,transparent),inset 0 1px 0 color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 54%,transparent)!important;
+  }
+  .nkc-bottom-nav-orb-item,.nkc-bottom-nav-plus{
+    flex:0 0 64px!important;
+    width:64px!important;
+    height:64px!important;
+    margin-top:-19px!important;
+    padding:0!important;
+    border-radius:999px!important;
+    border:3px solid color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 52%,#6e7730)!important;
+    display:grid!important;
+    place-items:center!important;
+    background:radial-gradient(circle at 42% 35%,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 18%,var(--nkc-bottom-surface,#071933)),color-mix(in srgb,var(--nkc-bottom-surface,#071933) 88%,black) 68%)!important;
+    color:var(--nkc-bottom-inactive,currentColor)!important;
+    box-shadow:inset 0 0 12px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 22%,transparent),0 6px 14px rgba(0,0,0,.48),0 0 12px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 26%,transparent)!important;
+    filter:none!important;
+    text-decoration:none!important;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .nkc-bottom-nav-orb-item svg,.nkc-bottom-nav-plus svg{width:30px!important;height:30px!important;filter:drop-shadow(0 0 4px var(--nkc-bottom-glow,currentColor))}
+  .nkc-bottom-nav-orb-item.is-active{outline:2px solid color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 70%,white)!important;outline-offset:2px!important}
+
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"]::after{
+    content:"PIP-BOY 3000";
+    position:absolute;
+    left:50%;bottom:3px;
+    transform:translateX(-50%);
+    min-width:122px;
+    padding:2px 12px;
+    border:2px solid #5e6c2b;
+    border-radius:5px;
+    background:#18220c;
+    color:#a7ff6f;
+    font:800 10px/1.1 ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:2px;
+    text-align:center;
+    text-shadow:0 0 6px #5cff3d;
+    box-shadow:inset 0 0 8px #000,0 0 7px rgba(92,255,61,.25);
+  }
+}
+
 /* Full-width NeighborlyKC banner */
 .nkc-main-header{isolation:isolate}
 .nkc-header-banner-wrap{position:relative;width:100%;background:#0b2b52}
@@ -273,14 +352,11 @@ body{overflow-y:visible;touch-action:pan-y pinch-zoom}
   }
 }
 
-/* Keep feed post media consistent so the first three image posts line up cleanly. */
-.nkc-post-image-frame{aspect-ratio:16/9;background:#eaf1fb;}
-.nkc-post-image{display:block;object-fit:cover;}
-@media (min-width:640px){
-  .nkc-post-card .nkc-post-image-frame{max-height:360px;}
-}
+/* Center uploaded photos and preserve their complete natural composition. */
+.nkc-post-image-frame{display:flex;align-items:center;justify-content:center;width:100%;}
+.nkc-post-image{display:block;width:100%;height:auto;max-height:min(68vh,560px);margin-inline:auto;object-fit:contain;object-position:center;pointer-events:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
 @media (max-width:639px){
-  .nkc-post-image-frame{aspect-ratio:16/10;}
+  .nkc-post-image{max-height:min(62vh,480px);}
 }
 
 /* Theme picker cards supplied by Neighborly KC. */
@@ -328,7 +404,7 @@ body{overflow-y:visible;touch-action:pan-y pinch-zoom}
 .nkc-mobile-top-row{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 10px}
 .nkc-mobile-brand{display:flex;align-items:center;gap:6px;min-width:0;color:inherit;background:transparent;border:0;padding:0;font-weight:950;font-size:15px;letter-spacing:-.6px}
 .nkc-mobile-theme-mark{width:27px;height:27px;display:block;overflow:hidden;flex:0 0 27px;border-radius:7px;border:1px solid var(--nkc-nav-accent,currentColor);box-shadow:0 0 8px color-mix(in srgb,var(--nkc-nav-accent,currentColor) 30%,transparent)}
-.nkc-mobile-theme-mark img{display:block;width:100%;height:100%;border:0;border-radius:0;object-fit:cover;object-position:center 22%;box-shadow:none}
+.nkc-mobile-theme-mark img{display:block;width:100%;height:100%;border:0;border-radius:0;object-fit:cover;object-position:center 20%;box-shadow:none;transform:scale(1.82);transform-origin:50% 24%}
 .nkc-mobile-wordmark{display:flex;align-items:baseline;min-width:0;font-style:italic;font-weight:900;line-height:1;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.28)}
 .nkc-mobile-wordmark>span{font-weight:900}
 .nkc-mobile-wordmark>b{font-weight:950}
@@ -350,7 +426,7 @@ body{overflow-y:visible;touch-action:pan-y pinch-zoom}
    header, especially the light KC Current and Daylight variants. */
 .nkc-mobile-bottom-nav .nkc-bottom-nav-item:not(.is-active){color:var(--nkc-bottom-inactive,#fff)!important;text-shadow:0 1px 3px rgba(0,0,0,.35)}
 .nkc-mobile-bottom-nav .nkc-bottom-nav-item:not(.is-active) span{opacity:1}
-.nkc-mobile-bottom-nav{background-image:linear-gradient(180deg,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 10%,transparent),transparent 72%);box-shadow:0 -8px 24px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 22%,transparent),inset 0 1px 0 color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 34%,transparent)}
+.nkc-mobile-bottom-nav{background-image:linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.22)),linear-gradient(180deg,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 12%,transparent),transparent 72%);box-shadow:0 -8px 24px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 22%,transparent),inset 0 1px 0 color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 34%,transparent)}
 @media (max-width:639px){
   .nkc-mobile-bottom-nav{height:70px;padding-left:8px;padding-right:8px}
   .nkc-bottom-nav-item{height:50px;max-width:82px;font-size:10px}
@@ -530,3 +606,604 @@ body{overflow-y:visible;touch-action:pan-y pinch-zoom}
 input,textarea,select{color:inherit;caret-color:currentColor}
 input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.72!important;-webkit-text-fill-color:currentColor!important}
 .nkc-themed-input{background:inherit;color:inherit}
+
+/* Final mobile mockup alignment. Keep these rules last so the legacy mobile
+   layers cannot restore the oversized toolbar or hide the forecast again. */
+@media(max-width:639px){
+  .nkc-mobile-top-header{position:relative!important;top:auto!important;z-index:40!important}
+  .nkc-mobile-top-row{height:44px!important;padding:0 10px!important}
+  .nkc-mobile-brand{gap:6px!important;font-size:15px!important;font-style:italic!important;letter-spacing:-.6px!important}
+  .nkc-mobile-theme-mark{width:27px!important;height:27px!important;flex-basis:27px!important;border-radius:7px!important;overflow:hidden!important}
+  .nkc-mobile-theme-mark img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 20%!important;transform:scale(1.82)!important;transform-origin:50% 24%!important}
+  .nkc-mobile-wordmark{font-size:15px!important;font-style:italic!important;font-weight:900!important}
+  .nkc-mobile-icon{width:29px!important;height:29px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+  .nkc-mobile-icon svg{width:18px!important;height:18px!important}
+  .nkc-forecast-banner{display:block!important;position:relative!important;z-index:20!important}
+  .nkc-page-content{padding-top:10px!important}
+  .nkc-mobile-bottom-nav{height:72px!important;padding:7px 10px calc(7px + env(safe-area-inset-bottom))!important;gap:6px!important;background-image:linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.22)),linear-gradient(180deg,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 12%,transparent),transparent 72%)!important}
+  .nkc-bottom-nav-item{max-width:92px!important;height:50px!important;padding:3px 2px!important;font-size:10px!important}
+  .nkc-bottom-nav-item svg{width:21px!important;height:21px!important}
+  .nkc-bottom-nav-plus{flex-basis:68px!important;width:68px!important;height:62px!important;margin-top:-19px!important}
+  .nkc-bottom-nav-plus svg{width:68px!important;height:62px!important}
+}
+
+/* Keep the user-approved top / middle / bottom reference styling last. */
+@media(max-width:639px){
+  .nkc-mobile-top-row{height:48px!important;padding:0 14px!important}
+  .nkc-mobile-brand{gap:8px!important;font-size:16px!important}
+  .nkc-mobile-theme-mark{width:30px!important;height:30px!important;flex-basis:30px!important;border-radius:8px!important}
+  .nkc-mobile-wordmark{font-size:16px!important}
+  .nkc-mobile-icon{width:27px!important;height:27px!important}
+  .nkc-mobile-icon svg{width:20px!important;height:20px!important}
+  .nkc-mobile-whats{height:40px!important;margin:0 14px 7px!important;width:calc(100% - 28px)!important;border-radius:10px!important;padding:0 9px!important;font-size:12px!important}
+  .nkc-mobile-tabs{height:36px!important;padding:0 10px!important}
+  .nkc-forecast-inner{padding:9px 14px 11px!important}
+  .nkc-forecast-title{font-size:11px!important;margin-bottom:8px!important}
+  .nkc-forecast-days{gap:8px!important}
+  .nkc-forecast-day{flex:0 0 calc((100vw - 52px)/4)!important;min-width:calc((100vw - 52px)/4)!important;min-height:66px!important;padding:7px 8px!important;border-radius:18px!important}
+  .nkc-forecast-icon{font-size:20px!important}
+  .nkc-forecast-day>strong{font-size:18px!important}
+  .nkc-mobile-bottom-nav{
+    height:88px!important;
+    padding:0 11vw calc(8px + env(safe-area-inset-bottom))!important;
+    gap:clamp(28px,12vw,72px)!important;
+    justify-content:center!important;
+    overflow:visible!important;
+    border-top:2px solid var(--nkc-bottom-glow,currentColor)!important;
+    background:linear-gradient(180deg,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 24%,transparent),transparent 42%),color-mix(in srgb,var(--nkc-bottom-surface,#071933) 88%,black)!important;
+  }
+  .nkc-bottom-nav-orb-item,.nkc-bottom-nav-plus{
+    flex:0 0 64px!important;width:64px!important;height:64px!important;margin-top:-19px!important;padding:0!important;
+    border-radius:999px!important;border:3px solid color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 52%,#6e7730)!important;
+    display:grid!important;place-items:center!important;
+    background:radial-gradient(circle at 42% 35%,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 18%,var(--nkc-bottom-surface,#071933)),color-mix(in srgb,var(--nkc-bottom-surface,#071933) 88%,black) 68%)!important;
+    color:var(--nkc-bottom-inactive,currentColor)!important;
+    box-shadow:inset 0 0 12px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 22%,transparent),0 6px 14px rgba(0,0,0,.48),0 0 12px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 26%,transparent)!important;
+    filter:none!important;text-decoration:none!important;
+  }
+  .nkc-bottom-nav-orb-item svg,.nkc-bottom-nav-plus svg{width:30px!important;height:30px!important;filter:drop-shadow(0 0 4px var(--nkc-bottom-glow,currentColor))}
+  .nkc-bottom-nav-orb-item.is-active{outline:2px solid color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 70%,white)!important;outline-offset:2px!important}
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"]::after{content:"PIP-BOY 3000";position:absolute;left:50%;bottom:3px;transform:translateX(-50%);min-width:122px;padding:2px 12px;border:2px solid #5e6c2b;border-radius:5px;background:#18220c;color:#a7ff6f;font:800 10px/1.1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:2px;text-align:center;text-shadow:0 0 6px #5cff3d;box-shadow:inset 0 0 8px #000,0 0 7px rgba(92,255,61,.25)}
+}
+
+/* Final header correction: show only the heart silhouette, without the
+   rectangular source-image background, at twice the original header size. */
+@media(max-width:639px){
+  /* Use the same themed surface and glow treatment as the bottom navigation. */
+  .nkc-mobile-top-header{
+    background:
+      linear-gradient(180deg,color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 24%,transparent),transparent 42%),
+      color-mix(in srgb,var(--nkc-bottom-surface,#071933) 88%,black)!important;
+    border-bottom:2px solid var(--nkc-bottom-glow,currentColor)!important;
+    box-shadow:0 8px 24px color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 20%,transparent),inset 0 -1px 0 color-mix(in srgb,var(--nkc-bottom-glow,currentColor) 54%,transparent)!important;
+  }
+  .nkc-mobile-top-row{height:68px!important}
+  .nkc-mobile-theme-mark{width:60px!important;height:60px!important;flex-basis:60px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;clip-path:polygon(50% 96%,10% 59%,3% 46%,0 32%,3% 18%,11% 7%,22% 2%,34% 3%,43% 8%,50% 17%,57% 8%,66% 3%,78% 2%,89% 7%,97% 18%,100% 32%,97% 46%,90% 59%)}
+  .nkc-mobile-theme-mark img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;transform:scale(1.15)!important;background:transparent!important;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--nkc-nav-accent,currentColor) 45%,transparent))}
+
+  /* Keep the wordmark in the space between the theme heart and action icons. */
+  .nkc-mobile-brand{flex:1 1 auto!important;width:auto!important;max-width:calc(100% - 68px)!important;gap:8px!important;overflow:hidden!important}
+  .nkc-mobile-wordmark{position:static!important;left:auto!important;top:auto!important;transform:none!important;flex:1 1 auto!important;justify-content:center!important;font-size:clamp(18px,5.4vw,23px)!important;letter-spacing:-.9px!important;overflow:hidden!important}
+  .nkc-mobile-top-icons{flex:0 0 auto!important;margin-left:4px!important}
+}
+
+/* NWS forecast details + expandable Kansas City precipitation/radar panel */
+.nkc-nws-source{font-size:9px;opacity:.55;margin-left:5px;letter-spacing:.04em}
+.nkc-forecast-day{cursor:pointer;color:inherit;font-family:inherit;text-align:left}
+.nkc-forecast-day-active{outline:2px solid currentColor;outline-offset:-2px}
+.nkc-forecast-rain{grid-column:1 / span 2;font-size:10px;font-weight:900;opacity:.75;margin-top:1px}
+.nkc-precip-panel{margin-top:9px;border:1px solid;border-radius:18px;padding:12px;overflow:hidden}
+.nkc-precip-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+.nkc-precip-panel-head>div{display:flex;flex-direction:column;gap:3px;font-size:12px}
+.nkc-precip-panel-head span{font-size:10px;opacity:.65}
+.nkc-precip-panel-head button{border:0;background:transparent;color:inherit;font-size:24px;line-height:20px;cursor:pointer;opacity:.65}
+.nkc-hourly-precip{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:1px 1px 9px}
+.nkc-hourly-precip::-webkit-scrollbar{display:none}
+.nkc-hourly-precip-item{flex:0 0 64px;border:1px solid rgba(127,127,127,.25);border-radius:13px;padding:7px 5px;display:flex;flex-direction:column;align-items:center;gap:3px;font-style:normal}
+.nkc-hourly-precip-item b{font-size:9px;opacity:.65}
+.nkc-hourly-precip-item span{font-size:17px}
+.nkc-hourly-precip-item strong{font-size:13px}
+.nkc-hourly-precip-item em{font-size:9px;font-style:normal;font-weight:900;opacity:.72}
+.nkc-radar-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:4px 1px 7px;font-size:11px}
+.nkc-radar-title span{font-size:9px;opacity:.55;text-align:right}
+.nkc-radar-link{display:block;border-radius:14px;overflow:hidden;background:#111;line-height:0}
+.nkc-radar-image{display:block;width:100%;max-height:390px;object-fit:cover}
+.nkc-weather-credit{text-align:right;font-size:9px;font-weight:700;opacity:.5;margin-top:6px}
+@media (max-width:640px){
+  .nkc-forecast-rain{font-size:9px}
+  .nkc-precip-panel{padding:9px;margin-top:8px;border-radius:16px}
+  .nkc-radar-title{align-items:flex-start;flex-direction:column;gap:2px}
+  .nkc-radar-title span{text-align:left}
+  .nkc-radar-image{max-height:300px}
+}
+
+
+
+/* Pip-Boy bottom navigation: three character icons only, no rings. */
+.nkc-pipboy-icon{
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  pointer-events:none;
+  user-select:none;
+}
+
+.nkc-mobile-bottom-nav[data-theme="pip-boy"]{
+  background:linear-gradient(180deg,rgba(0,20,5,.96),rgba(0,10,3,.99)) !important;
+}
+
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-orb-item,
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus{
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-orb-item::before,
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus::before{
+  display:none !important;
+  content:none !important;
+}
+
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-nav-icon,
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-plus-icon{
+  width:72px !important;
+  height:72px !important;
+  max-width:none !important;
+  filter:
+    drop-shadow(0 0 3px rgba(160,255,90,.95))
+    drop-shadow(0 0 9px rgba(80,255,90,.7))
+    drop-shadow(0 0 16px rgba(40,255,80,.35));
+  transition:transform .15s ease,filter .15s ease;
+}
+
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus .nkc-pipboy-plus-icon{
+  width:78px !important;
+  height:78px !important;
+}
+
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-orb-item:active .nkc-pipboy-nav-icon,
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus:active .nkc-pipboy-plus-icon{
+  transform:scale(.94);
+  filter:
+    brightness(1.15)
+    drop-shadow(0 0 5px rgba(190,255,110,1))
+    drop-shadow(0 0 12px rgba(80,255,90,.9));
+}
+
+.nkc-pipboy-post-actions button{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.nkc-pipboy-action-icon{
+  width:34px!important;
+  height:34px!important;
+  flex:0 0 34px;
+}
+.nkc-pipboy-action-icon.is-active{
+  filter:brightness(1.18) drop-shadow(0 0 5px rgba(100,255,145,.55));
+}
+.nkc-pipboy-create-header{
+  width:54px!important;
+  height:54px!important;
+  margin:0 auto 2px;
+}
+
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"]{
+    min-height:100px;
+    padding-top:8px !important;
+    padding-bottom:8px !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus{
+    width:86px !important;
+    height:86px !important;
+    padding:0 !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-nav-icon{
+    width:72px !important;
+    height:72px !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-plus-icon{
+    width:78px !important;
+    height:78px !important;
+  }
+
+  .nkc-pipboy-action-icon{
+    width:30px!important;
+    height:30px!important;
+    flex-basis:30px;
+  }
+}
+
+
+/* KCFD + KCBBQ custom icon themes */
+.nkc-theme-art-icon{
+  display:block;
+  object-fit:contain;
+  object-position:center;
+  pointer-events:none;
+  user-select:none;
+}
+
+.nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item,
+.nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus,
+.nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item,
+.nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+.nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item::before,
+.nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus::before,
+.nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item::before,
+.nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus::before{
+  display:none!important;
+  content:none!important;
+}
+
+.nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-nav-icon,
+.nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon{
+  width:72px!important;
+  height:72px!important;
+  max-width:none!important;
+  filter:drop-shadow(0 0 4px rgba(255,110,70,.95)) drop-shadow(0 0 10px rgba(255,55,35,.55));
+}
+.nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-nav-icon,
+.nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-plus-icon{
+  width:72px!important;
+  height:72px!important;
+  max-width:none!important;
+  filter:drop-shadow(0 0 4px rgba(255,145,65,.95)) drop-shadow(0 0 10px rgba(255,95,25,.55));
+}
+
+.nkc-custom-theme-post-actions button{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.nkc-custom-theme-action-icon{
+  width:34px!important;
+  height:34px!important;
+  flex:0 0 34px;
+}
+.nkc-custom-theme-action-icon.is-active{
+  filter:brightness(1.16) drop-shadow(0 0 6px currentColor);
+}
+.nkc-custom-theme-create-header{
+  width:54px!important;
+  height:54px!important;
+  margin:0 auto 2px;
+}
+
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="kcfd"],
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"]{
+    min-height:100px;
+    padding-top:8px!important;
+    padding-bottom:8px!important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus{
+    width:86px!important;
+    height:86px!important;
+    padding:0!important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-nav-icon{
+    width:72px!important;
+    height:72px!important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-plus-icon{
+    width:78px!important;
+    height:78px!important;
+  }
+  .nkc-custom-theme-action-icon{
+    width:30px!important;
+    height:30px!important;
+    flex-basis:30px;
+  }
+}
+
+
+/* KCFD mobile nav cleanup: transparent source art, even sizing, no clipping. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="kcfd"]{
+    min-height:92px !important;
+    padding-top:5px !important;
+    padding-bottom:5px !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus{
+    width:80px !important;
+    height:80px !important;
+    padding:2px !important;
+    overflow:visible !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon{
+    width:68px !important;
+    height:68px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon{
+    width:70px !important;
+    height:70px !important;
+  }
+}
+
+
+/* KCFD detailed red/gold nav icons */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="kcfd"]{
+    min-height:98px !important;
+    padding-top:4px !important;
+    padding-bottom:4px !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus{
+    width:86px !important;
+    height:86px !important;
+    padding:0 !important;
+    overflow:visible !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-nav-icon{
+    width:76px !important;
+    height:76px !important;
+    object-fit:contain !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon{
+    width:80px !important;
+    height:80px !important;
+    object-fit:contain !important;
+  }
+}
+
+
+
+
+/* Larger NeighborlyKC wordmark in the mobile header. */
+.nkc-mobile-wordmark{
+  font-size:clamp(1.75rem,7vw,2.25rem) !important;
+  line-height:.95 !important;
+  letter-spacing:-0.045em;
+}
+@media(max-width:420px){
+  .nkc-mobile-wordmark{
+    font-size:1.9rem !important;
+  }
+}
+
+
+/* Approved KCFD header treatment — keep the header live, not a flattened image. */
+[data-theme="kcfd"] .nkc-mobile-header,
+.nkc-mobile-header[data-theme="kcfd"]{
+  background:linear-gradient(180deg,#a90d24 0%,#8f091d 58%,#750716 100%) !important;
+  border-bottom:2px solid #d79a2b !important;
+}
+
+.nkc-mobile-wordmark{
+  font-size:clamp(1.75rem,7vw,2.25rem) !important;
+  line-height:1.28 !important;
+  padding-top:.08em !important;
+  padding-bottom:.18em !important;
+  overflow:visible !important;
+  letter-spacing:-0.045em;
+}
+
+[data-theme="kcfd"] .nkc-mobile-wordmark,
+.nkc-mobile-header[data-theme="kcfd"] .nkc-mobile-wordmark{
+  text-shadow:0 3px 2px rgba(0,0,0,.55),0 0 8px rgba(255,188,70,.12);
+}
+
+@media(max-width:420px){
+  .nkc-mobile-wordmark{
+    font-size:1.9rem !important;
+    line-height:1.3 !important;
+  }
+}
+
+
+/* Final KCFD nav cleanup: artwork only, no box/ring shadow behind icons. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus{
+    background:none !important;
+    background-color:transparent !important;
+    border:none !important;
+    outline:none !important;
+    box-shadow:none !important;
+    filter:none !important;
+    border-radius:0 !important;
+    overflow:visible !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus::after{
+    content:none !important;
+    display:none !important;
+    background:none !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon{
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+    filter:
+      drop-shadow(0 0 3px rgba(255,195,70,.85))
+      drop-shadow(0 0 8px rgba(210,20,48,.55)) !important;
+  }
+}
+
+
+/* Final KCFD tweak: slightly larger header heart only. */
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark,
+[data-theme="kcfd"] .nkc-mobile-theme-mark{
+  width:58px !important;
+  height:58px !important;
+  flex:0 0 58px !important;
+}
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark img,
+[data-theme="kcfd"] .nkc-mobile-theme-mark img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+}
+
+
+/* KCFD header heart: show the entire emblem inside its allotted space. */
+[data-theme="kcfd"] .nkc-mobile-theme-mark,
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark{
+  width:58px !important;
+  height:58px !important;
+  flex:0 0 58px !important;
+  overflow:visible !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+}
+
+[data-theme="kcfd"] .nkc-mobile-theme-mark img,
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-theme-mark img{
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  display:block !important;
+  transform:none !important;
+  clip-path:none !important;
+}
+
+[data-theme="kcfd"] .nkc-mobile-brand,
+.nkc-mobile-top-header[data-theme="kcfd"] .nkc-mobile-brand{
+  overflow:visible !important;
+}
+
+
+/* AIM bright-yellow custom bottom navigation */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="aim"]{
+    background:#ffdf00 !important;
+    border-top:2px solid #1456d9 !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="aim"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="aim"] .nkc-bottom-nav-plus{
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="aim"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="aim"] .nkc-custom-theme-plus-icon{
+    width:68px !important;
+    height:68px !important;
+    object-fit:contain !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    filter:drop-shadow(0 2px 2px rgba(0,0,0,.22)) !important;
+  }
+}
+
+
+/* AIM header: bright yellow with blue accents */
+.nkc-mobile-top-header[data-theme="aim"],
+[data-theme="aim"].nkc-mobile-top-header{
+  background:#ffdf00 !important;
+  border-bottom-color:#1456d9 !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-whats,
+[data-theme="aim"].nkc-mobile-top-header .nkc-mobile-whats{
+  background:#fffef2 !important;
+  border-color:#1456d9 !important;
+  color:#111111 !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-icon,
+[data-theme="aim"].nkc-mobile-top-header .nkc-mobile-icon{
+  color:#1456d9 !important;
+}
+
+
+/* AIM final header target: bright yellow + fully visible heart on the left. */
+.nkc-mobile-top-header[data-theme="aim"]{
+  background:#ffda22 !important;
+  border-bottom:3px solid #1456d9 !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-theme-mark{
+  width:58px !important;
+  height:58px !important;
+  flex:0 0 58px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:2px !important;
+  overflow:visible !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-theme-mark img{
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  display:block !important;
+  transform:none !important;
+  clip-path:none !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-whats{
+  background:#ffffff !important;
+  border:2px solid #1456d9 !important;
+  color:#3f3f3f !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-icon{
+  color:#1456d9 !important;
+}
+\n\n/* === Theme foundation lock (2026-08-22) ===\n   Root/header now carry data-theme. These final rules intentionally sit last so\n   older one-off experiments cannot override the active theme. */\n.nkc-app-shell[data-theme] .nkc-mobile-top-header{\n  background-color:var(--nkc-theme-header,inherit);\n}\n\n/* AIM: bright yellow with blue/white accents. */\n.nkc-app-shell[data-theme="aim"] .nkc-mobile-top-header{\n  background:#ffda22 !important;\n  border-bottom:3px solid #1456d9 !important;\n}\n.nkc-app-shell[data-theme="aim"] .nkc-mobile-icon{color:#1456d9 !important}\n.nkc-app-shell[data-theme="aim"] .nkc-mobile-whats{\n  background:#fff !important;color:#313131 !important;border:2px solid #1456d9 !important;\n}\n.nkc-app-shell[data-theme="aim"] .nkc-mobile-theme-mark{\n  width:52px !important;height:52px !important;flex:0 0 52px !important;overflow:visible !important;padding:0 !important;\n}\n.nkc-app-shell[data-theme="aim"] .nkc-mobile-theme-mark img{\n  width:100% !important;height:100% !important;object-fit:contain !important;object-position:center !important;transform:none !important;filter:none !important;\n}\n\n/* KCFD: fire-engine red, black detail, firehouse gold. */\n.nkc-app-shell[data-theme="kcfd"] .nkc-mobile-top-header{\n  background:linear-gradient(180deg,#c8102e 0%,#a30d26 60%,#83091d 100%) !important;\n  border-bottom:2px solid #f2b632 !important;\n}\n.nkc-app-shell[data-theme="kcfd"] .nkc-mobile-theme-mark{\n  width:58px !important;height:58px !important;flex:0 0 58px !important;overflow:visible !important;padding:0 !important;\n}\n.nkc-app-shell[data-theme="kcfd"] .nkc-mobile-theme-mark img{\n  width:100% !important;height:100% !important;object-fit:contain !important;object-position:center !important;transform:none !important;clip-path:none !important;\n}\n\n/* Royals: keep the polished deep-blue palette coherent in the header. */\n.nkc-app-shell[data-theme="royals"] .nkc-mobile-top-header{\n  background:#061b3d !important;border-bottom-color:#4aa8e8 !important;\n}\n\n/* Settings and theme picker inherit active-theme surfaces consistently. */\n.nkc-app-shell[data-theme] .nkc-settings-modal{\n  background:var(--nkc-settings-bg,transparent);\n}\n
+
+/* AIM header test: explicit bright yellow header now that data-theme is wired correctly. */
+[data-theme="aim"] .nkc-mobile-top-header,
+.nkc-mobile-top-header[data-theme="aim"]{
+  background:#ffdf00 !important;
+  border-bottom-color:#1456d9 !important;
+}
+
+[data-theme="aim"] .nkc-mobile-top-header .nkc-mobile-icon,
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-icon{
+  color:#1456d9 !important;
+}
+
+[data-theme="aim"] .nkc-mobile-top-header .nkc-mobile-whats,
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-whats{
+  background:#ffffff !important;
+  border-color:#1456d9 !important;
+  color:#111111 !important;
+}
