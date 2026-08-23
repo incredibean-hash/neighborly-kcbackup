@@ -1548,12 +1548,12 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 
-/* KCPD V2 nav artwork */
+/* Royals shared/subpage nav matches main feed: same art, no selected blue circle. */
 @media(max-width:640px){
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item.is-active,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus.is-active{
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item.is-active,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus.is-active{
     background:transparent !important;
     background-color:transparent !important;
     border:0 !important;
@@ -1561,19 +1561,22 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     outline:none !important;
     overflow:visible !important;
   }
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item::before,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item::after,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus::before,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus::after{
+
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus::after{
     content:none !important;
     display:none !important;
   }
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-nav-icon{
+
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-custom-theme-nav-icon{
     width:72px !important;
     height:72px !important;
     object-fit:contain !important;
   }
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-plus-icon{
+
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-custom-theme-plus-icon{
     width:76px !important;
     height:76px !important;
     object-fit:contain !important;
