@@ -1185,8 +1185,8 @@ export default function Page(){
   }
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden nkc-app-shell" style={{backgroundColor: theme.bg, color: theme.text, colorScheme: theme.id==='aim' ? 'light' : 'dark'}}>
-      <header className="nkc-mobile-top-header sm:hidden z-40 border-b" style={{backgroundColor:theme.header,color:heartHeader.primary,borderColor:theme.accent,'--nkc-nav-accent':heartHeader.primary,'--nkc-nav-border':theme.accent,'--nkc-bottom-glow':theme.accent,'--nkc-bottom-surface':theme.card} as any}>
+    <div className="min-h-screen w-full overflow-x-hidden nkc-app-shell" data-theme={theme.id} style={{backgroundColor: theme.bg, color: theme.text, colorScheme: theme.id==='aim' ? 'light' : 'dark'}}>
+      <header className="nkc-mobile-top-header sm:hidden z-40 border-b" data-theme={theme.id} style={{backgroundColor:theme.header,color:heartHeader.primary,borderColor:theme.accent,'--nkc-nav-accent':heartHeader.primary,'--nkc-nav-border':theme.accent,'--nkc-bottom-glow':theme.accent,'--nkc-bottom-surface':theme.card} as any}>
         <div className="nkc-mobile-top-row">
           <button type="button" className="nkc-mobile-brand" onClick={()=>window.scrollTo({top:0,behavior:'smooth'})} aria-label="NeighborlyKC home">
             <span className="nkc-mobile-theme-mark"><img src={theme.heartLogoImage || theme.themeButtonImage || '/icon-192.png'} alt="" /></span>
@@ -1428,7 +1428,7 @@ export default function Page(){
               <h2 className="font-black text-lg sm:text-xl" style={{color:theme.text}}>Settings</h2>
               <button 
                 onClick={()=>{setShowSettings(false);setShowThemePicker(false);setShowExplore(false)}} 
-                className="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center text-sm hover:bg-white/20 transition-colors"
+                className="w-8 h-8 rounded-full flex items-center justify-center text-sm transition-opacity hover:opacity-80" style={{backgroundColor:theme.input,color:theme.text,border:`1px solid ${theme.border}`}}
               >
                 ✕
               </button>
@@ -1444,10 +1444,10 @@ export default function Page(){
             </button>
 
             {showExplore&&<div className="nkc-explore-links mt-3 grid grid-cols-2 gap-2">
-              <Link href="/dms" className="rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center text-sm font-bold text-white">💬 Messages</Link>
-              <Link href="/people" className="rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center text-sm font-bold text-white">👥 People</Link>
-              <Link href="/connections" className="rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center text-sm font-bold text-white">🤝 Connections</Link>
-              <button type="button" onClick={()=>setShowThemePicker(true)} className="rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-center text-sm font-bold text-white">🎨 Themes</button>
+              <Link href="/dms" className="rounded-2xl border px-3 py-3 text-center text-sm font-bold" style={{backgroundColor:theme.input,color:theme.text,borderColor:theme.border}}>💬 Messages</Link>
+              <Link href="/people" className="rounded-2xl border px-3 py-3 text-center text-sm font-bold" style={{backgroundColor:theme.input,color:theme.text,borderColor:theme.border}}>👥 People</Link>
+              <Link href="/connections" className="rounded-2xl border px-3 py-3 text-center text-sm font-bold" style={{backgroundColor:theme.input,color:theme.text,borderColor:theme.border}}>🤝 Connections</Link>
+              <button type="button" onClick={()=>setShowThemePicker(true)} className="rounded-2xl border px-3 py-3 text-center text-sm font-bold" style={{backgroundColor:theme.input,color:theme.text,borderColor:theme.border}}>🎨 Themes</button>
             </div>}
             
             {profile
@@ -1473,7 +1473,7 @@ export default function Page(){
                 <p className="text-[10px] font-black uppercase tracking-[.16em] opacity-45">NeighborlyKC</p>
                 <h2 id="theme-picker-title" className="mt-1 font-black text-xl sm:text-2xl">Choose your theme</h2>
               </div>
-              <button type="button" onClick={()=>setShowThemePicker(false)} className="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Close theme picker">✕</button>
+              <button type="button" onClick={()=>setShowThemePicker(false)} className="w-9 h-9 rounded-full flex items-center justify-center transition-opacity hover:opacity-80" style={{backgroundColor:theme.input,color:theme.text,border:`1px solid ${theme.border}`}} aria-label="Close theme picker">✕</button>
             </div>
             <p className="mt-2 text-xs leading-5 opacity-65">Pick a NeighborlyKC look. Your choice saves automatically.</p>
             <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
