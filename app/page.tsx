@@ -1546,7 +1546,7 @@ export default function Page(){
                   data-theme-choice={id}
                   onClick={(event)=>{event.preventDefault();event.stopPropagation();setTheme(id)}}
                   className={`nkc-theme-choice relative w-full overflow-hidden rounded-xl border-2 transition-all hover:scale-[1.02] active:scale-[0.98] ${fullCard?'aspect-[9/16]':'aspect-square'} ${active?'is-active':''}`}
-                  style={{borderColor:active?t.accent:'rgba(255,255,255,0.15)',boxShadow:active?`0 0 0 2px ${t.accent}55`:'none',backgroundColor:'rgba(3,10,24,.72)'}}
+                  style={{borderColor:active?t.accent:'rgba(255,255,255,0.15)',boxShadow:active?`0 0 0 2px ${t.accent}55`:'none',backgroundColor:'#000000'}}
                 >
                   {t.themeButtonImage
                     ? <img src={t.themeButtonImage} alt={t.name} className={`w-full h-full ${fullCard?'object-contain':'object-cover'}`} loading="lazy" draggable={false} />
