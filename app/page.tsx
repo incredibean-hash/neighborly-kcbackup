@@ -1538,17 +1538,18 @@ export default function Page(){
               {['aim','sporting','royals','chiefs','pip-boy','space','kc-current','kcpd','kcfd','army','navy','marines','air-force','cowtown','kc-bbq','18th-vine','river-market','city-fountains'].map(id=>{
                 const t=THEMES[id];
                 const active=themeId===id;
+                const fullCard=String(t.themeButtonImage||'').startsWith('/theme-cards/');
                 return <button
                   key={id}
                   type="button"
                   aria-label={`Use ${t.name} theme`}
                   data-theme-choice={id}
                   onClick={(event)=>{event.preventDefault();event.stopPropagation();setTheme(id)}}
-                  className={`nkc-theme-choice relative aspect-square w-full overflow-hidden rounded-xl border-2 transition-all hover:scale-105 active:scale-95 ${active?'is-active':''}`}
-                  style={{borderColor:active?t.accent:'rgba(255,255,255,0.15)',boxShadow:active?`0 0 0 2px ${t.accent}55`:'none'}}
+                  className={`nkc-theme-choice relative w-full overflow-hidden rounded-xl border-2 transition-all hover:scale-[1.02] active:scale-[0.98] ${fullCard?'aspect-[9/16]':'aspect-square'} ${active?'is-active':''}`}
+                  style={{borderColor:active?t.accent:'rgba(255,255,255,0.15)',boxShadow:active?`0 0 0 2px ${t.accent}55`:'none',backgroundColor:'rgba(3,10,24,.72)'}}
                 >
                   {t.themeButtonImage
-                    ? <img src={t.themeButtonImage} alt={t.name} className="w-full h-full object-cover" loading="lazy" />
+                    ? <img src={t.themeButtonImage} alt={t.name} className={`w-full h-full ${fullCard?'object-contain':'object-cover'}`} loading="lazy" draggable={false} />
                     : <div className="nkc-theme-choice-fallback w-full h-full flex items-center justify-center p-1 text-center" style={{background:`linear-gradient(135deg,${t.header},${t.accent})`}}><span className="text-white text-[8px] sm:text-[10px] font-bold leading-tight">{t.name}</span></div>}
                   {active && <span className="absolute top-1 right-1 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shadow-lg" style={{backgroundColor:t.accent,color:t.pillTextActive}}>✓</span>}
                 </button>
