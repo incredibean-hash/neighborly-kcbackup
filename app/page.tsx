@@ -34,12 +34,31 @@ const linkifyText=(value:any)=>String(value||'').split(/(https?:\/\/[^\s<]+)/gi)
 );
 
 const customThemeIconPath=(themeId:string,name:string)=>{
-  if(themeId==='pip-boy') return `/pipboy/vaultboy_${name}.png`;
+  if(themeId==='pip-boy'){
+    if(name==='dms') return '/nav-v4/pipboy-messages-v4.png';
+    if(name==='create_post') return '/nav-v4/pipboy-post-v4.webp';
+    if(name==='settings') return '/nav-v4/pipboy-settings-v4.webp';
+  }
   if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
   if(themeId==='kc-bbq'){
-    if(name==='dms') return '/kcbbq/kcbbq_dms_v2.png';
-    if(name==='create_post') return '/kcbbq/kcbbq_create_post_v2.png';
-    if(name==='settings') return '/kcbbq/kcbbq_settings_v2.png';
+    if(name==='dms') return '/nav-v4/bbq-messages-v4.png';
+    if(name==='create_post') return '/nav-v4/bbq-post-v4.png';
+    if(name==='settings') return '/nav-v4/bbq-settings-v4.png';
+  }
+  if(themeId==='kc-current'){
+    if(name==='dms') return '/nav-v4/current-messages-v4.png';
+    if(name==='create_post') return '/nav-v4/current-post-v4.png';
+    if(name==='settings') return '/nav-v4/current-settings-v4.png';
+  }
+  if(themeId==='18th-vine'){
+    if(name==='dms') return '/nav-v4/18th-vine-messages-v4.png';
+    if(name==='create_post') return '/nav-v4/18th-vine-post-v4.png';
+    if(name==='settings') return '/nav-v4/18th-vine-settings-v4.png';
+  }
+  if(themeId==='river-market'){
+    if(name==='dms') return '/nav-v4/river-market-messages-v4.webp';
+    if(name==='create_post') return '/nav-v4/river-market-post-v4.webp';
+    if(name==='settings') return '/nav-v4/river-market-settings-v4.webp';
   }
   if(themeId==='aim') return `/aim/aim_${name}.png`;
   if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
@@ -68,11 +87,10 @@ const customThemeIconPath=(themeId:string,name:string)=>{
     if(name==='create_post') return '/city-fountains/fountains_create_post_v2.png';
     if(name==='settings') return '/city-fountains/fountains_settings_v2.png';
   }
-
   if(themeId==='cowtown'){
-    if(name==='dms') return '/cowtown/cowtown_dms_v2.png';
-    if(name==='create_post') return '/cowtown/cowtown_create_post_v2.png';
-    if(name==='settings') return '/cowtown/cowtown_settings_v2.png';
+    if(name==='dms') return '/nav-v4/cowtown-messages-v4.png';
+    if(name==='create_post') return '/nav-v4/cowtown-post-v4.png';
+    if(name==='settings') return '/nav-v4/cowtown-settings-v4.png';
   }
   if(themeId==='army'){
     if(name==='dms') return '/army/army_dms_v2.png';
@@ -96,7 +114,7 @@ const customThemeIconPath=(themeId:string,name:string)=>{
   }
   return '';
 };
-const hasCustomThemeIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'].includes(themeId);
+const hasCustomThemeIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','kc-current','18th-vine','river-market','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'].includes(themeId);
 const hasCustomPostActionIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq'].includes(themeId);
 const ThemeIcon=({themeId,name,alt='',className=''}:{themeId:string;name:string;alt?:string;className?:string})=>
   <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
