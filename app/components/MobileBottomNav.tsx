@@ -5,16 +5,41 @@ import Link from 'next/link';
 const iconPath=(themeId:string,name:string)=>{
   if(themeId==='pip-boy') return `/pipboy/vaultboy_${name}.png`;
   if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
-  if(themeId==='kc-bbq') return `/kcbbq/kcbbq_${name}.png`;
+  if(themeId==='kc-bbq'){
+    if(name==='dms') return '/kcbbq/kcbbq_dms_v2.png';
+    if(name==='create_post') return '/kcbbq/kcbbq_create_post_v2.png';
+    if(name==='settings') return '/kcbbq/kcbbq_settings_v2.png';
+  }
+  if(themeId==='aim') return `/aim/aim_${name}.png`;
   if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
   if(themeId==='royals'){
     if(name==='dms') return '/royals/royals_dms_v2.png';
     if(name==='create_post') return '/royals/royals_create_post_v2.png';
     if(name==='settings') return '/royals/royals_settings_v2.png';
   }
+  if(themeId==='chiefs'){
+    if(name==='dms') return '/chiefs/chiefs_dms_v2.png';
+    if(name==='create_post') return '/chiefs/chiefs_create_post_v2.png';
+    if(name==='settings') return '/chiefs/chiefs_settings_v2.png';
+  }
+  if(themeId==='space'){
+    if(name==='dms') return '/space/space_dms_v2.png';
+    if(name==='create_post') return '/space/space_create_post_v2.png';
+    if(name==='settings') return '/space/space_settings_v2.png';
+  }
+  if(themeId==='kcpd'){
+    if(name==='dms') return '/kcpd/kcpd_dms_v2.png';
+    if(name==='create_post') return '/kcpd/kcpd_create_post_v2.png';
+    if(name==='settings') return '/kcpd/kcpd_settings_v2.png';
+  }
+  if(themeId==='city-fountains'){
+    if(name==='dms') return '/city-fountains/fountains_dms_v2.png';
+    if(name==='create_post') return '/city-fountains/fountains_create_post_v2.png';
+    if(name==='settings') return '/city-fountains/fountains_settings_v2.png';
+  }
   return '';
 };
-const hasCustomIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='sporting'||themeId==='royals';
+const hasCustomIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains'].includes(themeId);
 const ThemeIcon=({themeId,name,className=''}:{themeId:string;name:string;className?:string})=><img src={iconPath(themeId,name)} alt="" className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
 const luminance=(hex:string)=>{const v=(hex||'#000000').replace('#','').slice(0,6).padEnd(6,'0');const c=[0,2,4].map(i=>parseInt(v.slice(i,i+2),16)/255).map(x=>x<=.03928?x/12.92:Math.pow((x+.055)/1.055,2.4));return .2126*c[0]+.7152*c[1]+.0722*c[2]};

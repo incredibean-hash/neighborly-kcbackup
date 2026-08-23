@@ -42,26 +42,35 @@ const customThemeIconPath=(themeId:string,name:string)=>{
     if(name==='settings') return '/kcbbq/kcbbq_settings_v2.png';
   }
   if(themeId==='aim') return `/aim/aim_${name}.png`;
-  if(themeId==='kcpd'){
-    if(name==='dms') return '/kcpd/kcpd_dms_v2.png';
-    if(name==='create_post') return '/kcpd/kcpd_create_post_v2.png';
-    if(name==='settings') return '/kcpd/kcpd_settings_v2.png';
+  if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
+  if(themeId==='royals'){
+    if(name==='dms') return '/royals/royals_dms_v2.png';
+    if(name==='create_post') return '/royals/royals_create_post_v2.png';
+    if(name==='settings') return '/royals/royals_settings_v2.png';
+  }
+  if(themeId==='chiefs'){
+    if(name==='dms') return '/chiefs/chiefs_dms_v2.png';
+    if(name==='create_post') return '/chiefs/chiefs_create_post_v2.png';
+    if(name==='settings') return '/chiefs/chiefs_settings_v2.png';
   }
   if(themeId==='space'){
     if(name==='dms') return '/space/space_dms_v2.png';
     if(name==='create_post') return '/space/space_create_post_v2.png';
     if(name==='settings') return '/space/space_settings_v2.png';
   }
-  if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
-  if(themeId==='royals') return `/royals/royals_${name}.png`;
-  if(themeId==='chiefs'){
-    if(name==='dms') return '/chiefs/chiefs_dms_v2.png';
-    if(name==='create_post') return '/chiefs/chiefs_create_post_v2.png';
-    if(name==='settings') return '/chiefs/chiefs_settings_v2.png';
+  if(themeId==='kcpd'){
+    if(name==='dms') return '/kcpd/kcpd_dms_v2.png';
+    if(name==='create_post') return '/kcpd/kcpd_create_post_v2.png';
+    if(name==='settings') return '/kcpd/kcpd_settings_v2.png';
+  }
+  if(themeId==='city-fountains'){
+    if(name==='dms') return '/city-fountains/fountains_dms_v2.png';
+    if(name==='create_post') return '/city-fountains/fountains_create_post_v2.png';
+    if(name==='settings') return '/city-fountains/fountains_settings_v2.png';
   }
   return '';
 };
-const hasCustomThemeIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='aim'||themeId==='sporting'||themeId==='royals'||themeId==='chiefs'||themeId==='space'||themeId==='kcpd';
+const hasCustomThemeIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains'].includes(themeId);
 const ThemeIcon=({themeId,name,alt='',className=''}:{themeId:string;name:string;alt?:string;className?:string})=>
   <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
