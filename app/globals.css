@@ -1253,3 +1253,26 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   border-color:#1456d9 !important;
   color:#111111 !important;
 }
+
+
+/* KC Current: teal-forward treatment with crisp aqua/white accents. */
+.nkc-app-shell[data-theme="kc-current"] .nkc-mobile-top-header,
+[data-theme="kc-current"] .nkc-mobile-top-header{
+  background:linear-gradient(180deg,#00aeb8 0%,#008d98 100%) !important;
+  border-bottom:2px solid #74eef0 !important;
+}
+.nkc-app-shell[data-theme="kc-current"] .nkc-mobile-icon,
+[data-theme="kc-current"] .nkc-mobile-icon{
+  color:#ffffff !important;
+}
+.nkc-app-shell[data-theme="kc-current"] .nkc-mobile-whats,
+[data-theme="kc-current"] .nkc-mobile-whats{
+  background:#ffffff !important;
+  color:#063b42 !important;
+  border:2px solid #74eef0 !important;
+}
+.nkc-app-shell[data-theme="kc-current"] .nkc-mobile-bottom-nav,
+[data-theme="kc-current"] .nkc-mobile-bottom-nav{
+  background:#007f89 !important;
+  border-top-color:#74eef0 !important;
+}
