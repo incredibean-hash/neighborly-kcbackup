@@ -1840,3 +1840,11 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     object-position:center !important;
   }
 }
+
+/* KCFD + Pip-Boy nav artwork already includes its own wording.
+   Do not add the generic Messages / Post / Settings captions underneath. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav:is([data-theme="kcfd"],[data-theme="pip-boy"]) .nkc-nav-label{
+    display:none !important;
+  }
+}
