@@ -1861,3 +1861,27 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     display:none !important;
   }
 }
+
+
+/* Full-card theme selector: portrait slots, no stretching/cropping. */
+.nkc-theme-choice{
+  aspect-ratio:173 / 191 !important;
+  min-height:0 !important;
+  background:#0b1020 !important;
+}
+
+.nkc-theme-choice img{
+  width:100% !important;
+  height:100% !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  transform:none !important;
+  padding:0 !important;
+}
+
+@media (max-width:639px){
+  .nkc-theme-choice{
+    border-radius:18px !important;
+  }
+}
