@@ -1328,3 +1328,45 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   background:#081a33 !important;
   border-top-color:#d4af37 !important;
 }
+
+
+/* Sporting KC custom bottom navigation */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="sporting"]{
+    background:#0c2340 !important;
+    border-top:2px solid #93b1d7 !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-plus{
+    width:86px !important;
+    height:86px !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-plus::after{
+    content:none !important;
+    display:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-custom-theme-nav-icon{
+    width:72px !important;
+    height:72px !important;
+    object-fit:contain !important;
+    filter:drop-shadow(0 0 4px rgba(147,177,215,.65)) !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-custom-theme-plus-icon{
+    width:76px !important;
+    height:76px !important;
+    object-fit:contain !important;
+    filter:drop-shadow(0 0 5px rgba(147,177,215,.75)) !important;
+  }
+}
