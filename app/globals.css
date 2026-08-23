@@ -1144,3 +1144,46 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 [data-theme="aim"].nkc-mobile-top-header .nkc-mobile-icon{
   color:#1456d9 !important;
 }
+
+
+/* AIM final header target: bright yellow + fully visible heart on the left. */
+.nkc-mobile-top-header[data-theme="aim"]{
+  background:#ffda22 !important;
+  border-bottom:3px solid #1456d9 !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-theme-mark{
+  width:58px !important;
+  height:58px !important;
+  flex:0 0 58px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:2px !important;
+  overflow:visible !important;
+  background:transparent !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-theme-mark img{
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  display:block !important;
+  transform:none !important;
+  clip-path:none !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-whats{
+  background:#ffffff !important;
+  border:2px solid #1456d9 !important;
+  color:#3f3f3f !important;
+}
+
+.nkc-mobile-top-header[data-theme="aim"] .nkc-mobile-icon{
+  color:#1456d9 !important;
+}
