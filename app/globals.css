@@ -1276,3 +1276,29 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   background:#007f89 !important;
   border-top-color:#74eef0 !important;
 }
+
+
+/* Chiefs: home-jersey inspired red with gold + white accents. */
+.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-top-header,
+[data-theme="chiefs"] .nkc-mobile-top-header{
+  background:linear-gradient(180deg,#e31837 0%,#c8102e 100%) !important;
+  border-bottom:2px solid #ffb81c !important;
+}
+
+.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-icon,
+[data-theme="chiefs"] .nkc-mobile-icon{
+  color:#ffffff !important;
+}
+
+.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-whats,
+[data-theme="chiefs"] .nkc-mobile-whats{
+  background:#ffffff !important;
+  color:#7a0016 !important;
+  border:2px solid #ffb81c !important;
+}
+
+.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-bottom-nav,
+[data-theme="chiefs"] .nkc-mobile-bottom-nav{
+  background:#c8102e !important;
+  border-top-color:#ffb81c !important;
+}
