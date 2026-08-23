@@ -1755,3 +1755,19 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     padding:3px 6px !important;
   }
 }
+
+
+/* City of Fountains theme-picker tile:
+   crop the baked-in white outer margin so it fills the tile like the others. */
+.nkc-theme-choice[data-theme-choice="city-fountains"]{
+  background:#032732 !important;
+}
+
+.nkc-theme-choice[data-theme-choice="city-fountains"] img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  transform:scale(1.13) !important;
+  transform-origin:center !important;
+}
