@@ -1302,3 +1302,29 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   background:#c8102e !important;
   border-top-color:#ffb81c !important;
 }
+
+
+/* Marines: dress-blues inspired navy, scarlet, gold, and white. */
+.nkc-app-shell[data-theme="marines"] .nkc-mobile-top-header,
+[data-theme="marines"] .nkc-mobile-top-header{
+  background:linear-gradient(180deg,#0a2344 0%,#06152a 100%) !important;
+  border-bottom:2px solid #d4af37 !important;
+}
+
+.nkc-app-shell[data-theme="marines"] .nkc-mobile-icon,
+[data-theme="marines"] .nkc-mobile-icon{
+  color:#ffffff !important;
+}
+
+.nkc-app-shell[data-theme="marines"] .nkc-mobile-whats,
+[data-theme="marines"] .nkc-mobile-whats{
+  background:#ffffff !important;
+  color:#06152a !important;
+  border:2px solid #c8102e !important;
+}
+
+.nkc-app-shell[data-theme="marines"] .nkc-mobile-bottom-nav,
+[data-theme="marines"] .nkc-mobile-bottom-nav{
+  background:#081a33 !important;
+  border-top-color:#d4af37 !important;
+}
