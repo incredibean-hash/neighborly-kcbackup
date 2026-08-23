@@ -1412,3 +1412,26 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     filter:drop-shadow(0 0 5px rgba(212,175,55,.6)) !important;
   }
 }
+
+
+/* Royals nav: artwork only. No blue selected circle/background. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item.is-active,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus.is-active{
+    background:transparent !important;
+    background-color:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    outline:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus::after{
+    content:none !important;
+    display:none !important;
+  }
+}

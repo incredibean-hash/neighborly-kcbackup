@@ -7,7 +7,11 @@ const iconPath=(themeId:string,name:string)=>{
   if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
   if(themeId==='kc-bbq') return `/kcbbq/kcbbq_${name}.png`;
   if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
-  if(themeId==='royals') return `/royals/royals_${name}.png`;
+  if(themeId==='royals'){
+    if(name==='dms') return '/royals/royals_dms_v2.png';
+    if(name==='create_post') return '/royals/royals_create_post_v2.png';
+    if(name==='settings') return '/royals/royals_settings_v2.png';
+  }
   return '';
 };
 const hasCustomIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='sporting'||themeId==='royals';

@@ -38,12 +38,14 @@ const customThemeIconPath=(themeId:string,name:string)=>{
   if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
   if(themeId==='kc-bbq') return `/kcbbq/kcbbq_${name}.png`;
   if(themeId==='aim') return `/aim/aim_${name}.png`;
-  if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
-  if(themeId==='royals') return `/royals/royals_${name}.png`;
-  if(themeId==='chiefs') return `/chiefs/chiefs_${name}.png`;
+  if(themeId==='royals'){
+    if(name==='dms') return '/royals/royals_dms_v2.png';
+    if(name==='create_post') return '/royals/royals_create_post_v2.png';
+    if(name==='settings') return '/royals/royals_settings_v2.png';
+  }
   return '';
 };
-const hasCustomThemeIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='aim'||themeId==='sporting'||themeId==='royals'||themeId==='chiefs';
+const hasCustomThemeIcons=(themeId:string)=>themeId==='pip-boy'||themeId==='kcfd'||themeId==='kc-bbq'||themeId==='aim'||themeId==='royals';
 const ThemeIcon=({themeId,name,alt='',className=''}:{themeId:string;name:string;alt?:string;className?:string})=>
   <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
