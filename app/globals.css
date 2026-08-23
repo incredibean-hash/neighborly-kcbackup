@@ -1480,3 +1480,69 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     display:none !important;
   }
 }
+
+
+/* Space V2 custom bottom navigation */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="space"]{
+    background:#140626 !important;
+    border-top:2px solid #7f57ff !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-orb-item.is-active,
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-plus.is-active{
+    background:transparent !important;
+    background-color:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    outline:none !important;
+    overflow:visible !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-bottom-nav-plus::after{
+    content:none !important;
+    display:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-custom-theme-nav-icon{
+    width:72px !important;
+    height:72px !important;
+    object-fit:contain !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="space"] .nkc-custom-theme-plus-icon{
+    width:76px !important;
+    height:76px !important;
+    object-fit:contain !important;
+  }
+}
+
+/* KCPD: dark navy with black accents */
+.nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-header,
+[data-theme="kcpd"] .nkc-mobile-top-header{
+  background:linear-gradient(180deg,#0a1830 0%,#050914 100%) !important;
+  border-bottom:2px solid #1f5fae !important;
+}
+
+.nkc-app-shell[data-theme="kcpd"] .nkc-mobile-whats,
+[data-theme="kcpd"] .nkc-mobile-whats{
+  background:#0b1220 !important;
+  color:#f5f8ff !important;
+  border:2px solid #1f5fae !important;
+}
+
+.nkc-app-shell[data-theme="kcpd"] .nkc-mobile-icon,
+[data-theme="kcpd"] .nkc-mobile-icon{
+  color:#8eb8ff !important;
+}
+
+.nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav,
+[data-theme="kcpd"] .nkc-mobile-bottom-nav{
+  background:#050914 !important;
+  border-top-color:#1f5fae !important;
+}
