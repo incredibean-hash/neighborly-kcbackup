@@ -1757,17 +1757,86 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 
-/* City of Fountains theme-picker tile:
-   crop the baked-in white outer margin so it fills the tile like the others. */
-.nkc-theme-choice[data-theme-choice="city-fountains"]{
-  background:#032732 !important;
-}
+/* Military custom navs: Army, Navy, Marines, Air Force.
+   Match the approved AIM 68px artwork size and keep selected states artwork-only. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ){
+    min-height:102px !important;
+  }
 
-.nkc-theme-choice[data-theme-choice="city-fountains"] img{
-  width:100% !important;
-  height:100% !important;
-  object-fit:cover !important;
-  object-position:center !important;
-  transform:scale(1.13) !important;
-  transform-origin:center !important;
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-bottom-nav-plus{
+    width:82px !important;
+    height:96px !important;
+    padding:3px 6px !important;
+    background:transparent !important;
+    background-color:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+    outline:none !important;
+    overflow:visible !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-bottom-nav-orb-item::before,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-bottom-nav-orb-item::after,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-bottom-nav-plus::before,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-bottom-nav-plus::after{
+    content:none !important;
+    display:none !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="army"],
+    [data-theme="navy"],
+    [data-theme="marines"],
+    [data-theme="air-force"]
+  ) .nkc-custom-theme-plus-icon{
+    width:68px !important;
+    height:68px !important;
+    max-width:68px !important;
+    max-height:68px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
 }

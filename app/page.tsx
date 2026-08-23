@@ -64,13 +64,34 @@ const customThemeIconPath=(themeId:string,name:string)=>{
     if(name==='settings') return '/kcpd/kcpd_settings_v2.png';
   }
   if(themeId==='city-fountains'){
-    if(name==='dms') return '/city-fountains/fountains_dms_v3.png';
-    if(name==='create_post') return '/city-fountains/fountains_create_post_v3.png';
-    if(name==='settings') return '/city-fountains/fountains_settings_v3.png';
+    if(name==='dms') return '/city-fountains/fountains_dms_v2.png';
+    if(name==='create_post') return '/city-fountains/fountains_create_post_v2.png';
+    if(name==='settings') return '/city-fountains/fountains_settings_v2.png';
+  }
+
+  if(themeId==='army'){
+    if(name==='dms') return '/army/army_dms_v2.png';
+    if(name==='create_post') return '/army/army_create_post_v2.png';
+    if(name==='settings') return '/army/army_settings_v2.png';
+  }
+  if(themeId==='navy'){
+    if(name==='dms') return '/navy/navy_dms_v2.png';
+    if(name==='create_post') return '/navy/navy_create_post_v2.png';
+    if(name==='settings') return '/navy/navy_settings_v2.png';
+  }
+  if(themeId==='marines'){
+    if(name==='dms') return '/marines/marines_dms_v2.png';
+    if(name==='create_post') return '/marines/marines_create_post_v2.png';
+    if(name==='settings') return '/marines/marines_settings_v2.png';
+  }
+  if(themeId==='air-force'){
+    if(name==='dms') return '/air-force/airforce_dms_v2.png';
+    if(name==='create_post') return '/air-force/airforce_create_post_v2.png';
+    if(name==='settings') return '/air-force/airforce_settings_v2.png';
   }
   return '';
 };
-const hasCustomThemeIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains'].includes(themeId);
+const hasCustomThemeIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq','aim','sporting','royals','chiefs','space','kcpd','city-fountains','army','navy','marines','air-force'].includes(themeId);
 const hasCustomPostActionIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq'].includes(themeId);
 const ThemeIcon=({themeId,name,alt='',className=''}:{themeId:string;name:string;alt?:string;className?:string})=>
   <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
