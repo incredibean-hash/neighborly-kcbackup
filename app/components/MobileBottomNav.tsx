@@ -33,9 +33,9 @@ const iconPath=(themeId:string,name:string)=>{
     if(name==='settings') return '/kcpd/kcpd_settings_v2.png';
   }
   if(themeId==='city-fountains'){
-    if(name==='dms') return '/city-fountains/fountains_dms_v2.png';
-    if(name==='create_post') return '/city-fountains/fountains_create_post_v2.png';
-    if(name==='settings') return '/city-fountains/fountains_settings_v2.png';
+    if(name==='dms') return '/city-fountains/fountains_dms_v3.png';
+    if(name==='create_post') return '/city-fountains/fountains_create_post_v3.png';
+    if(name==='settings') return '/city-fountains/fountains_settings_v3.png';
   }
   return '';
 };
