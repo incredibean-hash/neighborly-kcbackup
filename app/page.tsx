@@ -1341,7 +1341,7 @@ export default function Page(){
             const isCommenting = commenting[p.id] || false;
             return (
             <div key={p.id} className="rounded-2xl p-4 border nkc-surface nkc-fade-in nkc-post-card" style={{backgroundColor:theme.card,borderColor:theme.border}}>
-              <div className="flex justify-between gap-3"><div className="flex items-center gap-2 min-w-0"><div className="w-9 h-9 shrink-0 rounded-full overflow-hidden grid place-items-center font-black text-xs border" style={{backgroundColor:theme.input,borderColor:theme.border}}>{p.profiles?.avatar_url?<img src={p.profiles.avatar_url} alt="" className="w-full h-full object-contain"/>:(p.profiles?.full_name||p.author_name||'N').slice(0,1).toUpperCase()}</div><div><div className="flex items-center gap-1.5 flex-wrap"><p className="text-xs font-bold opacity-60">{(p.user_id||p.author_id)?<a href={`/profile/${p.user_id||p.author_id}`} className="hover:underline" title="View profile">{p.profiles?.full_name||p.author_name||'Neighbor'}</a>:(p.profiles?.full_name||p.author_name||'Neighbor')} · {p.category}</p>
+              <div className="flex justify-between gap-3"><div className="flex items-center gap-2 min-w-0"><div className="w-9 h-9 shrink-0 rounded-full overflow-hidden grid place-items-center font-black text-xs border" style={{backgroundColor:theme.input,borderColor:theme.border}}>{p.profiles?.avatar_url?<img src={p.profiles.avatar_url} alt="" className="w-full h-full object-cover"/>:(p.profiles?.full_name||p.author_name||'N').slice(0,1).toUpperCase()}</div><div><div className="flex items-center gap-1.5 flex-wrap"><p className="text-xs font-bold opacity-60">{(p.user_id||p.author_id)?<a href={`/profile/${p.user_id||p.author_id}`} className="hover:underline" title="View profile">{p.profiles?.full_name||p.author_name||'Neighbor'}</a>:(p.profiles?.full_name||p.author_name||'Neighbor')} · {p.category}</p>
                   </div>{scope==='kc'&&<p className="text-[11px] font-bold mt-1 opacity-45">📍 {neighborhoodName(p.neighborhood_id)}</p>}</div></div>
                 {canManage&&<details className="nkc-admin-menu relative shrink-0">
                   <summary className="nkc-admin-menu-trigger" aria-label="Post moderation menu">•••</summary>
@@ -1534,23 +1534,50 @@ export default function Page(){
               <button type="button" onClick={()=>setShowThemePicker(false)} className="w-9 h-9 rounded-full flex items-center justify-center transition-opacity hover:opacity-80" style={{backgroundColor:theme.input,color:theme.text,border:`1px solid ${theme.border}`}} aria-label="Close theme picker">✕</button>
             </div>
             <p className="mt-2 text-xs leading-5 opacity-65">Pick a NeighborlyKC look. Your choice saves automatically.</p>
-            <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+            <div className="mt-6 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {['aim','sporting','royals','chiefs','pip-boy','space','kc-current','kcpd','kcfd','army','navy','marines','air-force','cowtown','kc-bbq','18th-vine','river-market','city-fountains'].map(id=>{
                 const t=THEMES[id];
                 const active=themeId===id;
+                const subtitleMap:Record<string,string>={
+                  aim:'Y2K messenger',
+                  sporting:'Sporting blue',
+                  royals:'Royal blue',
+                  chiefs:'Red & gold',
+                  'pip-boy':'Retro terminal',
+                  space:'Cosmic purple',
+                  'kc-current':'Teal current',
+                  kcpd:'Dark blue',
+                  kcfd:'Firehouse red',
+                  army:'Army green',
+                  navy:'Navy & gold',
+                  marines:'Dress blues',
+                  'air-force':'Air Force blue',
+                  cowtown:'Western KC',
+                  'kc-bbq':'Smoke & fire',
+                  '18th-vine':'Jazz district',
+                  'river-market':'Market district',
+                  'city-fountains':'Fountains & teal'
+                };
                 return <button
                   key={id}
                   type="button"
                   aria-label={`Use ${t.name} theme`}
                   data-theme-choice={id}
                   onClick={(event)=>{event.preventDefault();event.stopPropagation();setTheme(id)}}
-                  className={`nkc-theme-choice relative w-full overflow-hidden rounded-xl border-2 transition-all hover:scale-[1.02] active:scale-[0.98] ${active?'is-active':''}`}
-                  style={{borderColor:active?t.accent:'rgba(255,255,255,0.15)',boxShadow:active?`0 0 0 2px ${t.accent}55`:'none'}}
+                  className={`nkc-theme-grid-card group relative text-left overflow-hidden transition-all ${active?'is-active':''}`}
+                  style={{'--nkc-card-accent':t.accent} as any}
                 >
-                  {t.themeButtonImage
-                    ? <img src={t.themeButtonImage} alt={t.name} className="w-full h-full object-contain" loading="lazy" />
-                    : <div className="nkc-theme-choice-fallback w-full h-full flex items-center justify-center p-1 text-center" style={{background:`linear-gradient(135deg,${t.header},${t.accent})`}}><span className="text-white text-[8px] sm:text-[10px] font-bold leading-tight">{t.name}</span></div>}
-                  {active && <span className="absolute top-1 right-1 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shadow-lg" style={{backgroundColor:t.accent,color:t.pillTextActive}}>✓</span>}
+                  <div className="nkc-theme-grid-preview">
+                    {t.themeButtonImage
+                      ? <img src={t.themeButtonImage} alt={`${t.name} theme preview`} loading="lazy" draggable={false} />
+                      : <div className="nkc-theme-grid-fallback" style={{background:`linear-gradient(180deg,${t.header},${t.accent})`}}><span>{t.emoji}</span></div>}
+                    <div className="nkc-theme-grid-image-shade" />
+                    {active && <span className="nkc-theme-grid-check">✓</span>}
+                  </div>
+                  <div className="nkc-theme-grid-label">
+                    <div className="nkc-theme-grid-name">{t.name}</div>
+                    <div className="nkc-theme-grid-subtitle">{subtitleMap[id] || 'NeighborlyKC theme'}</div>
+                  </div>
                 </button>
               })}
             </div>
