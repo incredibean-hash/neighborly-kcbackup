@@ -1634,3 +1634,74 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     display:none !important;
   }
 }
+
+
+/* FINAL NAV SIZE NORMALIZATION
+   All custom bottom-navigation artwork now uses the approved AIM 68px size
+   on the feed, DMs, and other pages that use MobileBottomNav. */
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kcfd"],
+    [data-theme="kc-bbq"],
+    [data-theme="aim"],
+    [data-theme="sporting"],
+    [data-theme="royals"],
+    [data-theme="chiefs"],
+    [data-theme="space"],
+    [data-theme="kcpd"],
+    [data-theme="city-fountains"]
+  ) .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kcfd"],
+    [data-theme="kc-bbq"],
+    [data-theme="aim"],
+    [data-theme="sporting"],
+    [data-theme="royals"],
+    [data-theme="chiefs"],
+    [data-theme="space"],
+    [data-theme="kcpd"],
+    [data-theme="city-fountains"]
+  ) .nkc-bottom-nav-plus{
+    width:80px !important;
+    height:80px !important;
+    padding:6px !important;
+    overflow:visible !important;
+  }
+
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kcfd"],
+    [data-theme="kc-bbq"],
+    [data-theme="aim"],
+    [data-theme="sporting"],
+    [data-theme="royals"],
+    [data-theme="chiefs"],
+    [data-theme="space"],
+    [data-theme="kcpd"],
+    [data-theme="city-fountains"]
+  ) .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav:is(
+    [data-theme="pip-boy"],
+    [data-theme="kcfd"],
+    [data-theme="kc-bbq"],
+    [data-theme="aim"],
+    [data-theme="sporting"],
+    [data-theme="royals"],
+    [data-theme="chiefs"],
+    [data-theme="space"],
+    [data-theme="kcpd"],
+    [data-theme="city-fountains"]
+  ) .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-pipboy-plus-icon{
+    width:68px !important;
+    height:68px !important;
+    max-width:68px !important;
+    max-height:68px !important;
+    flex:0 0 68px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+}
