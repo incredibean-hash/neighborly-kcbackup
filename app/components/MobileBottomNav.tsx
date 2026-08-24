@@ -6,9 +6,9 @@ const NAV_V7_THEME_IDS=['pip-boy','kcfd','kc-bbq','kc-current','kc-sunset','18th
 const iconPath=(themeId:string,name:string)=>{
   if(themeId==='marines'){
     const marineKey=name==='dms'?'messages':name==='create_post'?'post':'settings';
-    return `/marines-nav-direct/${marineKey}.webp`;
+    return `/marine-final-nav/${marineKey}.webp`;
   }
-  if(themeId==='city-fountains' && (name==='dms' || name==='create_post' || name==='settings')){
+if(themeId==='city-fountains' && (name==='dms' || name==='create_post' || name==='settings')){
     const fountainKey=name==='dms'?'messages':name==='create_post'?'post':'settings';
     return `/city-fountains-exact/${fountainKey}.png`;
   }
