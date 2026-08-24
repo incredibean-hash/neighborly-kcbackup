@@ -4984,59 +4984,92 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   ALL THEMES — DESKTOP HEADER LOCK
-   Desktop/tablet only. Mobile theme headers and 82px mobile navs untouched.
-   Uses each theme's approved illustrated header and one consistent footprint.
+   NAVY — APPROVED MOBILE SCREEN
+   Exact user-approved artwork. Mobile only. Desktop untouched.
    ===================================================================== */
-@media(min-width:640px){
-  .nkc-app-shell[data-theme] .nkc-main-header{
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-top-header{
     display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
     position:relative !important;
-    z-index:40 !important;
+    overflow:visible !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-top-row{
+    display:block !important;
+    position:relative !important;
     width:100% !important;
-    min-height:0 !important;
     height:auto !important;
-    overflow:hidden !important;
-  }
-
-  .nkc-app-shell[data-theme] .nkc-header-banner-wrap{
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    position:relative !important;
-    width:100% !important;
-    height:clamp(220px,27vw,410px) !important;
-    max-height:410px !important;
-    overflow:hidden !important;
-  }
-
-  .nkc-app-shell[data-theme] .nkc-header-banner-link{
-    display:block !important;
-    width:100% !important;
-    height:100% !important;
+    aspect-ratio:336 / 165 !important;
     padding:0 !important;
     margin:0 !important;
-    border:0 !important;
-    background:transparent !important;
+    background:#03162b url('/navy-approved-v2/navy_header.webp') center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #62c9ff !important;
   }
 
-  .nkc-app-shell[data-theme] .nkc-header-banner{
-    display:block !important;
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav,
+  .nkc-mobile-bottom-nav[data-theme="navy"]{
+    display:flex !important;
     visibility:visible !important;
     opacity:1 !important;
+    position:fixed !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    z-index:9999 !important;
     width:100% !important;
-    height:100% !important;
-    max-height:none !important;
-    aspect-ratio:auto !important;
-    object-fit:cover !important;
-    object-position:center center !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
     margin:0 !important;
+    gap:0 !important;
+    overflow:hidden !important;
+    border:0 !important;
+    border-top:2px solid #62c9ff !important;
+    background:#03162b url('/navy-approved-v2/navy_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.4) !important;
   }
 
-  /* The compact phone header never participates in desktop layout. */
-  .nkc-app-shell[data-theme] .nkc-mobile-top-header{
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-bottom-nav-orb-item,
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="navy"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="navy"] .nkc-bottom-nav-plus{
+    display:block !important;
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-theme-art-icon,
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-custom-theme-nav-icon,
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-custom-theme-plus-icon,
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-nav-label{
     display:none !important;
+  }
+
+  .nkc-app-shell[data-theme="navy"]{
+    padding-bottom:82px !important;
   }
 }
