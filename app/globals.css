@@ -2003,3 +2003,46 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     height:90px !important;
   }
 }
+
+
+/* === City of Fountains: full themed mobile header (2026-08-24) === */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{
+    min-height:94px !important;
+    background:
+      linear-gradient(90deg,rgba(0,24,38,.16),rgba(0,24,38,.02) 45%,rgba(0,24,38,.24)),
+      url('/headers/city_fountain_banner.webp') center center / cover no-repeat !important;
+    border-bottom:2px solid #42e3e8 !important;
+    box-shadow:0 7px 22px rgba(66,227,232,.22) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{
+    height:94px !important;
+    padding:8px 10px !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-brand{
+    align-self:stretch !important;
+    max-width:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-wordmark{
+    display:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-icons{
+    margin-left:auto !important;
+    align-self:flex-start !important;
+    gap:7px !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-icon{
+    width:38px !important;
+    height:38px !important;
+    border-radius:999px !important;
+    color:#ecfeff !important;
+    background:rgba(0,31,48,.70) !important;
+    border:1px solid rgba(142,246,250,.78) !important;
+    box-shadow:0 2px 10px rgba(0,0,0,.30),inset 0 0 12px rgba(66,227,232,.13) !important;
+    backdrop-filter:blur(4px);
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats{
+    margin-top:8px !important;
+  }
+}
