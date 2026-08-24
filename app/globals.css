@@ -4982,3 +4982,61 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     padding-bottom:82px !important;
   }
 }
+
+/* =====================================================================
+   ALL THEMES — DESKTOP HEADER LOCK
+   Desktop/tablet only. Mobile theme headers and 82px mobile navs untouched.
+   Uses each theme's approved illustrated header and one consistent footprint.
+   ===================================================================== */
+@media(min-width:640px){
+  .nkc-app-shell[data-theme] .nkc-main-header{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:relative !important;
+    z-index:40 !important;
+    width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme] .nkc-header-banner-wrap{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:relative !important;
+    width:100% !important;
+    height:clamp(220px,27vw,410px) !important;
+    max-height:410px !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme] .nkc-header-banner-link{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+    border:0 !important;
+    background:transparent !important;
+  }
+
+  .nkc-app-shell[data-theme] .nkc-header-banner{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:100% !important;
+    height:100% !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    margin:0 !important;
+  }
+
+  /* The compact phone header never participates in desktop layout. */
+  .nkc-app-shell[data-theme] .nkc-mobile-top-header{
+    display:none !important;
+  }
+}
