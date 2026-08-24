@@ -4351,7 +4351,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
    City Market + 18th & Vine composition. Mobile only. Desktop untouched.
    ===================================================================== */
 @media(max-width:639px){
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-top-header{
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-top-header{
     display:block !important;
     position:relative !important;
     overflow:visible !important;
@@ -4360,7 +4360,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:none !important;
   }
 
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-top-row{
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-top-row{
     display:block !important;
     position:relative !important;
     width:100% !important;
@@ -4372,16 +4372,16 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     border-bottom:2px solid #b8ff00 !important;
   }
 
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-brand,
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-theme-mark,
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-wordmark{
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-wordmark{
     opacity:0 !important;
     visibility:hidden !important;
     pointer-events:none !important;
   }
 
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-bottom-nav,
-  .nkc-mobile-bottom-nav[data-theme="y2k"]{
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-bottom-nav,
+  .nkc-mobile-bottom-nav[data-theme="aim"]{
     display:flex !important;
     visibility:visible !important;
     opacity:1 !important;
@@ -4404,10 +4404,10 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:0 -7px 18px rgba(0,0,0,.38) !important;
   }
 
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-bottom-nav .nkc-bottom-nav-orb-item,
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-bottom-nav .nkc-bottom-nav-plus,
-  .nkc-mobile-bottom-nav[data-theme="y2k"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="y2k"] .nkc-bottom-nav-plus{
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-bottom-nav .nkc-bottom-nav-orb-item,
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-bottom-nav .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="aim"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="aim"] .nkc-bottom-nav-plus{
     display:block !important;
     flex:1 1 33.333% !important;
     width:33.333% !important;
@@ -4425,14 +4425,14 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     overflow:hidden !important;
   }
 
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-bottom-nav .nkc-theme-art-icon,
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-bottom-nav .nkc-custom-theme-nav-icon,
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-bottom-nav .nkc-custom-theme-plus-icon,
-  .nkc-app-shell[data-theme="y2k"] .nkc-mobile-bottom-nav .nkc-nav-label{
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-bottom-nav .nkc-theme-art-icon,
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-bottom-nav .nkc-custom-theme-nav-icon,
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-bottom-nav .nkc-custom-theme-plus-icon,
+  .nkc-app-shell[data-theme="aim"] .nkc-mobile-bottom-nav .nkc-nav-label{
     display:none !important;
   }
 
-  .nkc-app-shell[data-theme="y2k"]{
+  .nkc-app-shell[data-theme="aim"]{
     padding-bottom:82px !important;
   }
 }
