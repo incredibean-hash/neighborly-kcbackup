@@ -1972,12 +1972,34 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   }
 }
 
-
-/* City/River Market palette matched to the wicker + market-red icon set */
-.nkc-app-shell[data-theme="river-market"] .nkc-mobile-bottom-nav{
-  background:linear-gradient(180deg,#6B3028 0%,#47241F 100%) !important;
-  border-top-color:#B88A59 !important;
+/* Pip-Boy V8 nav: use the final transparent CGI artwork and its built-in labels. */
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-nav-label{
+  display:none !important;
 }
-.nkc-app-shell[data-theme="river-market"] .nkc-mobile-top-header{
-  background:#6B3028 !important;
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-nav-icon,
+.nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-plus-icon{
+  width:86px !important;
+  height:86px !important;
+  max-width:none !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  filter:none !important;
+}
+@media(max-width:640px){
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"]{
+    min-height:100px !important;
+    padding-top:7px !important;
+    padding-bottom:7px !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus{
+    width:96px !important;
+    height:92px !important;
+    padding:0 !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-plus-icon{
+    width:90px !important;
+    height:90px !important;
+  }
 }
