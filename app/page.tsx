@@ -1329,6 +1329,7 @@ export default function Page(){
       <header className="nkc-mobile-top-header sm:hidden z-40 border-b" data-theme={theme.id} style={{backgroundColor:theme.header,color:heartHeader.primary,borderColor:theme.accent,'--nkc-nav-accent':heartHeader.primary,'--nkc-nav-border':theme.accent,'--nkc-bottom-glow':theme.accent,'--nkc-bottom-surface':theme.card} as any}>
         <div className="nkc-mobile-top-row">
           {theme.id==='river-market'&&<button type="button" className="nkc-market-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='city-fountains'&&<button type="button" className="nkc-fountains-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
           <button type="button" className="nkc-mobile-brand" onClick={()=>window.scrollTo({top:0,behavior:'smooth'})} aria-label="NeighborlyKC home">
             <span className="nkc-mobile-theme-mark"><img src={theme.heartLogoImage || theme.themeButtonImage || '/icon-192.png'} alt="" /></span>
             <span className="nkc-mobile-wordmark"><span style={{color:heartHeader.secondary}}>Neighborly</span><b style={{color:heartHeader.primary}}>KC</b></span>
