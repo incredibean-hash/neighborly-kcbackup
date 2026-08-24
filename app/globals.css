@@ -3568,3 +3568,253 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   .nkc-app-shell[data-theme="air-force"] .nkc-header-banner-wrap{max-height:330px !important;overflow:hidden !important}
   .nkc-app-shell[data-theme="air-force"] .nkc-header-banner{width:100% !important;height:auto !important;max-height:330px !important;object-fit:cover !important;object-position:center !important}
 }
+
+
+/* =====================================================================
+   MARINES — FULL USMC SCENE
+   Three-button nav fixed to the same 82px footprint as the other themes.
+   ===================================================================== */
+.nkc-app-shell[data-theme="marines"]{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(181,42,20,.20),transparent 34%),
+    linear-gradient(180deg,#2a0705 0%,#120504 55%,#070202 100%) !important;
+  color:#f5e1bd !important;
+}
+
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-top-header{
+    position:relative !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:0 0 7px !important;
+    border:0 !important;
+    background:#160403 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.34) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-top-row{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024/448 !important;
+    padding:0 !important;
+    background:url('/marines-scene/marines_header.webp') center/100% 100% no-repeat !important;
+    border-bottom:2px solid #b58a39 !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-marines-menu-hit{
+    display:block !important;
+    position:absolute !important;
+    z-index:9 !important;
+    left:2.2% !important;
+    top:4% !important;
+    width:12.5% !important;
+    aspect-ratio:1 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:transparent !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    z-index:9 !important;
+    right:2.2% !important;
+    top:4% !important;
+    width:24.5% !important;
+    height:19% !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8% !important;
+    margin:0 !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-icon{
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-whats{
+    width:calc(100% - 22px) !important;
+    height:50px !important;
+    min-height:50px !important;
+    margin:7px 11px 8px !important;
+    padding:5px 11px !important;
+    border:2px solid #9b1e16 !important;
+    border-radius:20px !important;
+    background:linear-gradient(180deg,#f5eadc,#dfc9ad) !important;
+    color:#2b0b08 !important;
+    font-weight:900 !important;
+    box-shadow:0 5px 13px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.75) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-avatar{
+    width:34px !important;
+    height:34px !important;
+    background:#8b160f !important;
+    border:1.5px solid #c0963d !important;
+    color:#fff1d2 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-whats-plus{
+    color:#8b160f !important;
+    font-size:24px !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-banner{
+    width:calc(100% - 18px) !important;
+    margin:0 9px 10px !important;
+    border:1.5px solid #a98736 !important;
+    border-radius:21px !important;
+    background:
+      radial-gradient(circle at 50% 0%,rgba(142,25,16,.22),transparent 42%),
+      linear-gradient(160deg,#210805,#090302) !important;
+    color:#f6e6c5 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.29),inset 0 1px 0 rgba(255,255,255,.05) !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-inner{padding:9px 8px 10px !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-title{
+    color:#f5e4c1 !important;
+    padding-bottom:7px !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-nws-source,
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-now{
+    color:#a89172 !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-days{
+    display:flex !important;
+    gap:6px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-day{
+    flex:0 0 78px !important;
+    width:78px !important;
+    min-width:78px !important;
+    min-height:88px !important;
+    padding:7px !important;
+    border:1px solid #6f4d27 !important;
+    border-radius:17px !important;
+    background:linear-gradient(180deg,#1a0906,#080302) !important;
+    color:#f5e6c9 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-low{color:#a18d72 !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-page-content{
+    position:relative !important;
+    padding:8px 9px 94px !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(154,27,17,.14),transparent 28%),
+      linear-gradient(180deg,#260805,#090302) !important;
+    border-top:1px solid rgba(175,135,52,.5) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] #composer{display:none !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="marines"] .nkc-post-card{
+    border:1.5px solid #7b4a2a !important;
+    border-radius:21px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(145,27,17,.12),transparent 34%),
+      linear-gradient(150deg,#31100c,#120504) !important;
+    color:#f4e1bc !important;
+    box-shadow:0 8px 18px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.045) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card{padding:16px !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card h1{
+    color:#f1d9aa !important;
+    font-size:23px !important;
+    line-height:1.1 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card p{color:#c0a287 !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-benefits > *{
+    background:#260b07 !important;
+    border-color:#765033 !important;
+    color:#e7cda7 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-post-card{padding:14px !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-post-image-frame{
+    border-color:#76472a !important;
+    background:#0c0302 !important;
+  }
+
+  /* Same fixed nav footprint as Air Force / City Market / 18th & Vine. */
+  .nkc-mobile-bottom-nav[data-theme="marines"]{
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
+    gap:0 !important;
+    border-top:2px solid #b68d3b !important;
+    background:url('/marines-scene/marines_nav.webp') center center/100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.35) !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon{
+    opacity:0 !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    max-width:none !important;
+    height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="marines"] [data-mobile-filter-fab="true"]{
+    position:fixed !important;
+    top:auto !important;
+    right:10px !important;
+    bottom:94px !important;
+    border-color:#b68d3b !important;
+    background:rgba(22,4,3,.95) !important;
+    z-index:45 !important;
+  }
+}
+
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="marines"] .nkc-main-header{
+    background:#160403 !important;
+    border-color:#75492d !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-header-banner-wrap{
+    max-height:330px !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-header-banner{
+    width:100% !important;
+    height:auto !important;
+    max-height:330px !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+}

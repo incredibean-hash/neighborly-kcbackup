@@ -1329,6 +1329,7 @@ export default function Page(){
       <header className="nkc-mobile-top-header sm:hidden z-40 border-b" data-theme={theme.id} style={{backgroundColor:theme.header,color:heartHeader.primary,borderColor:theme.accent,'--nkc-nav-accent':heartHeader.primary,'--nkc-nav-border':theme.accent,'--nkc-bottom-glow':theme.accent,'--nkc-bottom-surface':theme.card} as any}>
         <div className="nkc-mobile-top-row">
           {theme.id==='river-market'&&<button type="button" className="nkc-market-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='marines'&&<button type="button" className="nkc-marines-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
           {theme.id==='air-force'&&<button type="button" className="nkc-airforce-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
           {theme.id==='cowtown'&&<button type="button" className="nkc-cowtown-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
           {theme.id==='kc-bbq'&&<button type="button" className="nkc-bbq-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
