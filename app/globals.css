@@ -2736,3 +2736,212 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-filter-fab,.nkc-app-shell[data-theme="city-fountains"] [data-mobile-filter-fab="true"]{position:fixed!important;top:auto!important;right:10px!important;bottom:108px!important;z-index:45!important}
 }
 @media(min-width:640px){.nkc-app-shell[data-theme="city-fountains"] .nkc-main-header{background:#002938!important;border-color:#157e94!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-header-banner-wrap{max-height:300px!important;overflow:hidden!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-header-banner{width:100%!important;height:auto!important;max-height:300px!important;object-fit:cover!important;object-position:center!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{background:radial-gradient(circle at 75% 0%,rgba(72,220,232,.07),transparent 28%),linear-gradient(180deg,#073744,#022631)!important;border-radius:22px!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-post-card,.nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card,.nkc-app-shell[data-theme="city-fountains"] #composer,.nkc-app-shell[data-theme="city-fountains"] aside{background:linear-gradient(180deg,#073c4a,#042f3b)!important;color:#eaffff!important;border:1.5px solid #167f94!important;box-shadow:0 7px 18px rgba(0,10,18,.2)!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-banner{background:#073c4a!important;color:#efffff!important;border-color:#167f94!important}}
+
+
+/* =====================================================================
+   CITY OF FOUNTAINS — IMMERSIVE REVAMP PASS
+   A composition change, not a recolor: luminous water stage, floating
+   glass forecast, fountain-lit content cards, and integrated nav.
+   ===================================================================== */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"]{
+    background:
+      radial-gradient(ellipse at 50% 12%,rgba(49,230,255,.22),transparent 30%),
+      radial-gradient(ellipse at 12% 45%,rgba(21,147,205,.16),transparent 26%),
+      linear-gradient(180deg,#001b2c 0%,#00384a 34%,#00141e 100%) !important;
+  }
+
+  /* Make the illustrated skyline the opening scene rather than a banner strip. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{
+    padding:0 !important;
+    background:#001b2c !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{
+    aspect-ratio:832/337 !important;
+    border-bottom:0 !important;
+    box-shadow:
+      inset 0 -28px 28px -24px rgba(72,236,255,.75),
+      0 12px 24px rgba(0,8,20,.34) !important;
+  }
+
+  /* Composer becomes the illuminated pool lip attached to the scene. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats{
+    width:calc(100% - 28px) !important;
+    margin:-4px 14px 10px !important;
+    height:54px !important;
+    min-height:54px !important;
+    border:2px solid rgba(111,245,255,.86) !important;
+    border-radius:27px !important;
+    background:
+      radial-gradient(circle at 18% 0%,rgba(100,239,255,.18),transparent 34%),
+      linear-gradient(180deg,rgba(3,75,93,.98),rgba(0,38,54,.98)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -10px 18px rgba(0,19,31,.28),
+      0 0 0 4px rgba(19,161,188,.12),
+      0 9px 20px rgba(0,8,18,.30) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-avatar{
+    width:36px !important;height:36px !important;
+    border:2px solid #62edf5 !important;
+    background:linear-gradient(180deg,#0b6680,#063a52) !important;
+    box-shadow:0 0 12px rgba(78,229,241,.28) !important;
+  }
+
+  /* Forecast becomes a floating glass-water deck. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-banner{
+    width:calc(100% - 20px) !important;
+    margin:0 10px 12px !important;
+    border:1px solid rgba(99,232,243,.70) !important;
+    border-radius:24px !important;
+    background:
+      linear-gradient(145deg,rgba(10,82,99,.94),rgba(1,39,55,.97)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.16),
+      0 12px 25px rgba(0,8,18,.30),
+      0 0 28px rgba(31,197,221,.08) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-inner{
+    padding:11px 10px 12px !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-title{
+    font-size:12px !important;
+    letter-spacing:.02em !important;
+    text-shadow:0 1px 6px rgba(0,0,0,.35) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-day{
+    flex-basis:80px !important;
+    width:80px !important;
+    min-width:80px !important;
+    min-height:92px !important;
+    border:1px solid rgba(116,236,245,.52) !important;
+    border-radius:20px !important;
+    background:
+      radial-gradient(circle at 30% 0%,rgba(106,239,249,.15),transparent 38%),
+      linear-gradient(180deg,rgba(6,82,101,.96),rgba(2,46,63,.96)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.12),
+      0 5px 10px rgba(0,14,24,.16) !important;
+  }
+
+  /* The content is now a fountain plaza, not a generic dark feed. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{
+    position:relative !important;
+    padding:12px 10px 116px !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(70,225,238,.16),transparent 22%),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 42px),
+      linear-gradient(180deg,#003244 0%,#001e2c 45%,#00131d 100%) !important;
+    border-top:1px solid rgba(90,231,241,.55) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content:before{
+    content:"" !important;
+    position:absolute !important;
+    left:8% !important;right:8% !important;top:-8px !important;height:16px !important;
+    border-radius:50% !important;
+    background:radial-gradient(ellipse,rgba(92,236,245,.42),rgba(25,151,176,.08) 50%,transparent 72%) !important;
+    filter:blur(3px) !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card{
+    position:relative !important;
+    overflow:hidden !important;
+    padding:19px 17px 18px !important;
+    border:1px solid rgba(89,216,230,.68) !important;
+    border-radius:25px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(73,214,231,.18),transparent 38%),
+      linear-gradient(145deg,rgba(8,70,85,.98),rgba(2,39,53,.99)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.10),
+      0 10px 22px rgba(0,8,16,.25) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card:after{
+    content:"" !important;
+    position:absolute !important;
+    width:150px !important;height:150px !important;
+    right:-52px !important;top:-58px !important;
+    border:18px solid rgba(81,224,237,.055) !important;
+    border-radius:50% !important;
+    box-shadow:0 0 0 22px rgba(81,224,237,.025) !important;
+    pointer-events:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card h1{
+    font-size:24px !important;
+    line-height:1.08 !important;
+    text-shadow:0 2px 10px rgba(0,0,0,.28) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-benefits > *{
+    border-color:rgba(99,225,237,.52) !important;
+    background:rgba(4,56,71,.72) !important;
+    color:#dffcff !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-post-card{
+    border:1px solid rgba(78,202,219,.62) !important;
+    border-radius:24px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(54,207,224,.10),transparent 32%),
+      linear-gradient(155deg,rgba(7,61,76,.99),rgba(2,37,50,.99)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.07),
+      0 9px 20px rgba(0,8,16,.23) !important;
+  }
+
+  /* Nav is a glowing fountain ledge with the approved baked-label artwork. */
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"]{
+    height:102px !important;
+    min-height:102px !important;
+    border-top:1px solid rgba(104,239,247,.85) !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(73,224,237,.18),transparent 55%),
+      linear-gradient(180deg,rgba(5,67,82,.99),rgba(0,30,42,.995)) !important;
+    box-shadow:
+      0 -1px 0 rgba(255,255,255,.10),
+      0 -12px 28px rgba(0,12,21,.38),
+      0 -4px 20px rgba(50,220,236,.08) !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-plus-icon{
+    height:94px !important;
+    max-height:94px !important;
+    max-width:118px !important;
+    filter:drop-shadow(0 4px 5px rgba(0,8,16,.26)) !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="city-fountains"] [data-mobile-filter-fab="true"]{
+    bottom:114px !important;
+    border-color:#4fdde8 !important;
+    background:rgba(1,39,53,.92) !important;
+    box-shadow:0 4px 14px rgba(0,0,0,.30),0 0 0 3px rgba(55,206,224,.10) !important;
+  }
+}
+
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="city-fountains"]{
+    background:
+      radial-gradient(ellipse at 50% 5%,rgba(54,221,239,.15),transparent 34%),
+      linear-gradient(180deg,#00283a,#00131e) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-main-header{
+    box-shadow:0 14px 30px rgba(0,10,20,.28) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{
+    background:
+      radial-gradient(circle at 50% 0%,rgba(69,221,235,.12),transparent 26%),
+      linear-gradient(180deg,#043646,#001d2a) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-post-card,
+  .nkc-app-shell[data-theme="city-fountains"] #composer,
+  .nkc-app-shell[data-theme="city-fountains"] aside{
+    border-radius:24px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(67,216,232,.11),transparent 32%),
+      linear-gradient(150deg,#074555,#022d3b) !important;
+    border-color:#168fa5 !important;
+  }
+}
