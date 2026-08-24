@@ -4096,10 +4096,38 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   KCFD — LOCKED 82PX SCENE NAV
-   City Market + 18th & Vine mechanics. Existing KCFD artwork only.
+   KCFD — APPROVED MASTER INSTALL
+   City Market + Navy composition; City Market + 18th & Vine master logic.
+   Approved three-object scene. Single bottom nav locked at 82px.
    ===================================================================== */
 @media(max-width:639px){
+  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-top-header{
+    position:relative !important;
+    overflow:visible !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-top-row{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024 / 455 !important;
+    padding:0 !important;
+    margin:0 !important;
+    background:url('/kcfd-approved/kcfd_header.webp') center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #d79a2b !important;
+  }
+
+  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+
   .nkc-mobile-bottom-nav[data-theme="kcfd"]{
     display:flex !important;
     height:82px !important;
@@ -4110,10 +4138,11 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     gap:0 !important;
     border:0 !important;
     border-top:2px solid #d79a2b !important;
-    background:#46050c url('/kcfd/kcfd_nav_82.webp') center bottom / 100% 100% no-repeat !important;
+    background:#43060a url('/kcfd-approved/kcfd_nav.webp') center bottom / 100% 100% no-repeat !important;
     box-shadow:0 -7px 18px rgba(0,0,0,.34) !important;
     overflow:hidden !important;
   }
+
   .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item,
   .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus{
     position:relative !important;
@@ -4133,6 +4162,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:none !important;
     overflow:hidden !important;
   }
+
   .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-theme-art-icon,
   .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-nav-icon,
   .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon,
