@@ -4148,3 +4148,25 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     background:rgba(255,237,191,.10) !important;
   }
 }
+
+/* =====================================================================
+   MARINES — CONTENT CLEARANCE FOR SCENE NAV
+   Positioning reference: City Market + 18th & Vine only.
+   Keeps the illustrated nav unchanged and gives feed/content enough
+   bottom room to end above it rather than sliding underneath it.
+   ===================================================================== */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="marines"] .nkc-page-content{
+    padding-bottom:132px !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] main{
+    padding-bottom:132px !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="marines"] [data-mobile-filter-fab="true"]{
+    top:auto !important;
+    bottom:128px !important;
+  }
+}
