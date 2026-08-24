@@ -237,6 +237,32 @@ export default function Page(){
   const navThemeColor = themedNavColor(theme);
   const heartHeader = heartHeaderPalette(theme);
 
+  // Preload all optimized V7 nav artwork once so theme switching does not wait
+  // for a network request + image decode after the user chooses a new theme.
+  useEffect(()=>{
+    const themeIds=['pip-boy','kcfd','kc-bbq','kc-current','18th-vine','river-market','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'];
+    const iconNames=['messages','post','settings'];
+    const preload=()=>{
+      themeIds.forEach(themeKey=>{
+        iconNames.forEach(iconKey=>{
+          const img=new Image();
+          img.decoding='async';
+          img.src=`/nav-v7/${themeKey}-${iconKey}-v7.webp`;
+          if(typeof img.decode==='function') void img.decode().catch(()=>{});
+        });
+      });
+    };
+
+    const win=window as any;
+    if(typeof win.requestIdleCallback==='function'){
+      const id=win.requestIdleCallback(preload,{timeout:1200});
+      return()=>win.cancelIdleCallback?.(id);
+    }
+
+    const timer=window.setTimeout(preload,250);
+    return()=>window.clearTimeout(timer);
+  },[]);
+
   // Apply the saved theme before the browser paints the app. Using a normal
   // effect here lets the default theme flash first, which makes the whole
   // mobile layout appear to jitter on load.
