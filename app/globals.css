@@ -4096,27 +4096,24 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   MARINES — LOCKED MASTER FOOTPRINT
-   Reference: City Market + 18th & Vine only.
-   One full-width illustrated nav scene with three transparent hit zones.
-   Uses the master 82px mobile nav footprint; artwork fills the scene.
+   MARINES — CITY MARKET + 18TH & VINE SCENE NAV
+   One illustrated foreground scene; three transparent functional zones.
    ===================================================================== */
 @media(max-width:639px){
   .nkc-mobile-bottom-nav[data-theme="marines"]{
     display:flex !important;
-    height:82px !important;
-    min-height:82px !important;
-    max-height:82px !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:1024 / 336 !important;
     padding:0 !important;
     margin:0 !important;
     gap:0 !important;
     border:0 !important;
-    border-top:2px solid #b68d3b !important;
-    background:#220503 url('/marines-scene/marines_nav.webp') center center / 100% 100% no-repeat !important;
-    box-shadow:0 -7px 18px rgba(0,0,0,.35) !important;
+    background:#160403 url('/marines-scene/marines_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -4px 0 #b68d3b,0 -10px 22px rgba(22,4,3,.32) !important;
     overflow:hidden !important;
   }
-
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
     position:relative !important;
@@ -4125,9 +4122,10 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     width:33.333% !important;
     min-width:0 !important;
     max-width:none !important;
-    height:82px !important;
-    min-height:82px !important;
-    max-height:82px !important;
+    height:100% !important;
+    min-height:0 !important;
+    max-height:none !important;
+    align-self:stretch !important;
     margin:0 !important;
     padding:0 !important;
     border:0 !important;
@@ -4136,7 +4134,6 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:none !important;
     overflow:hidden !important;
   }
-
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-theme-art-icon,
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon,
@@ -4146,7 +4143,6 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     visibility:hidden !important;
     pointer-events:none !important;
   }
-
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item:active,
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus:active{
     background:rgba(255,237,191,.10) !important;
