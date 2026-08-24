@@ -4096,23 +4096,24 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   MARINES — CITY MARKET + 18TH & VINE MASTER NAV
-   Locked mechanics: one full-width illustrated scene using its native
-   aspect ratio, with three transparent functional hit targets.
+   MARINES — LOCKED MASTER FOOTPRINT
+   Reference: City Market + 18th & Vine only.
+   One full-width illustrated nav scene with three transparent hit zones.
+   Uses the master 82px mobile nav footprint; artwork fills the scene.
    ===================================================================== */
 @media(max-width:639px){
   .nkc-mobile-bottom-nav[data-theme="marines"]{
     display:flex !important;
-    height:auto !important;
-    min-height:0 !important;
-    max-height:none !important;
-    aspect-ratio:1024 / 118 !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
     padding:0 !important;
     margin:0 !important;
     gap:0 !important;
     border:0 !important;
+    border-top:2px solid #b68d3b !important;
     background:#220503 url('/marines-scene/marines_nav.webp') center center / 100% 100% no-repeat !important;
-    box-shadow:0 -4px 0 #b68d3b,0 -10px 22px rgba(22,4,3,.30) !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.35) !important;
     overflow:hidden !important;
   }
 
@@ -4124,10 +4125,9 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     width:33.333% !important;
     min-width:0 !important;
     max-width:none !important;
-    height:100% !important;
-    min-height:0 !important;
-    max-height:none !important;
-    align-self:stretch !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
     margin:0 !important;
     padding:0 !important;
     border:0 !important;
