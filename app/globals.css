@@ -2673,3 +2673,46 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     object-position:center 42% !important;
   }
 }
+
+
+/* === City Market mobile nav + filter cleanup === */
+@media(max-width:639px){
+  /* Shrink the illustrated nav and pin it lower so it stops covering feed content. */
+  .nkc-mobile-bottom-nav[data-theme="river-market"]{
+    height:82px !important;
+    min-height:82px !important;
+    padding:0 6px env(safe-area-inset-bottom) !important;
+    background-position:center bottom !important;
+    background-size:100% 100% !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-plus{
+    height:78px !important;
+    max-height:78px !important;
+    align-self:flex-end !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-custom-theme-plus-icon{
+    height:76px !important;
+    max-height:76px !important;
+    transform:scale(.84) !important;
+    transform-origin:center bottom !important;
+  }
+
+  /* Move the floating filter control out of the weather/feed seam. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="river-market"] [data-mobile-filter-fab="true"]{
+    top:auto !important;
+    right:10px !important;
+    bottom:96px !important;
+    position:fixed !important;
+    z-index:45 !important;
+  }
+
+  /* Give the feed breathing room above the shorter nav. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-page-content{
+    padding-bottom:92px !important;
+  }
+}
