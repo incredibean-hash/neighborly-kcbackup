@@ -4096,85 +4096,6 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   KCPD — APPROVED OPTION #1
-   City Market / Chiefs / Pip-Boy scene composition.
-   One illustrated foreground nav, locked at 82px.
-   ===================================================================== */
-@media(max-width:639px){
-  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-header{
-    position:relative !important;
-    overflow:visible !important;
-    border:0 !important;
-    background:transparent !important;
-    box-shadow:none !important;
-  }
-
-  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-row{
-    position:relative !important;
-    width:100% !important;
-    height:auto !important;
-    aspect-ratio:1024 / 420 !important;
-    padding:0 !important;
-    margin:0 !important;
-    background:url('/kcpd-approved/kcpd_header.webp') center / 100% 100% no-repeat !important;
-    border-bottom:2px solid #4c8cff !important;
-  }
-
-  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-brand,
-  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-theme-mark,
-  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-wordmark{
-    opacity:0 !important;
-    visibility:hidden !important;
-    pointer-events:none !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="kcpd"]{
-    display:flex !important;
-    height:82px !important;
-    min-height:82px !important;
-    max-height:82px !important;
-    padding:0 !important;
-    margin:0 !important;
-    gap:0 !important;
-    border:0 !important;
-    border-top:2px solid #4c8cff !important;
-    background:#020a1c url('/kcpd-approved/kcpd_nav.webp') center bottom / 100% 100% no-repeat !important;
-    box-shadow:0 -7px 18px rgba(0,0,0,.38),0 -2px 9px rgba(35,105,255,.22) !important;
-    overflow:hidden !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus{
-    position:relative !important;
-    display:block !important;
-    flex:1 1 33.333% !important;
-    width:33.333% !important;
-    min-width:0 !important;
-    max-width:none !important;
-    height:82px !important;
-    min-height:82px !important;
-    max-height:82px !important;
-    margin:0 !important;
-    padding:0 !important;
-    border:0 !important;
-    border-radius:0 !important;
-    background:transparent !important;
-    box-shadow:none !important;
-    overflow:hidden !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-theme-art-icon,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-nav-icon,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-plus-icon,
-  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-nav-label{
-    display:none !important;
-    opacity:0 !important;
-    visibility:hidden !important;
-    pointer-events:none !important;
-  }
-}
-
-/* =====================================================================
    KCPD — NAV HOOK FIX
    Force the approved nav scene through the app-shell theme selector too.
    This handles builds where the bottom-nav element's own data-theme is
@@ -4236,43 +4157,5 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 
   .nkc-app-shell[data-theme="kcpd"]{
     padding-bottom:82px !important;
-  }
-}
-
-/* =====================================================================
-   KCPD — DESKTOP HEADER RESTORE
-   Keep the approved mobile KCPD treatment below 640px.
-   On desktop/tablet, restore the normal full KCPD banner header.
-   ===================================================================== */
-@media(min-width:640px){
-  .nkc-app-shell[data-theme="kcpd"] .nkc-main-header{
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-  }
-
-  .nkc-app-shell[data-theme="kcpd"] .nkc-header-banner-wrap{
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    width:100% !important;
-    max-height:none !important;
-    overflow:hidden !important;
-  }
-
-  .nkc-app-shell[data-theme="kcpd"] .nkc-header-banner{
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    width:100% !important;
-    height:auto !important;
-    max-height:none !important;
-    aspect-ratio:1920 / 368 !important;
-    object-fit:cover !important;
-    object-position:center !important;
-  }
-
-  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-header{
-    display:none !important;
   }
 }
