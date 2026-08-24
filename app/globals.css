@@ -4436,3 +4436,94 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     padding-bottom:82px !important;
   }
 }
+
+/* =====================================================================
+   SPORTING KC — MOBILE MASTER
+   City Market + 18th & Vine composition. Mobile only. Desktop untouched.
+   ===================================================================== */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-top-header{
+    display:block !important;
+    position:relative !important;
+    overflow:visible !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-top-row{
+    display:block !important;
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024 / 490 !important;
+    padding:0 !important;
+    margin:0 !important;
+    background:#07162a url('/sporting-approved/sporting_header.webp') center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #6fa8dc !important;
+  }
+
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-bottom-nav,
+  .nkc-mobile-bottom-nav[data-theme="sporting"]{
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:fixed !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    z-index:9999 !important;
+    width:100% !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
+    margin:0 !important;
+    gap:0 !important;
+    overflow:hidden !important;
+    border:0 !important;
+    border-top:2px solid #6fa8dc !important;
+    background:#07162a url('/sporting-approved/sporting_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.34) !important;
+  }
+
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-bottom-nav .nkc-bottom-nav-orb-item,
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-bottom-nav .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-plus{
+    display:block !important;
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-bottom-nav .nkc-theme-art-icon,
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-bottom-nav .nkc-custom-theme-nav-icon,
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-bottom-nav .nkc-custom-theme-plus-icon,
+  .nkc-app-shell[data-theme="sporting"] .nkc-mobile-bottom-nav .nkc-nav-label{
+    display:none !important;
+  }
+
+  .nkc-app-shell[data-theme="sporting"]{
+    padding-bottom:82px !important;
+  }
+}
