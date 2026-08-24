@@ -4159,3 +4159,49 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     padding-bottom:82px !important;
   }
 }
+
+/* =====================================================================
+   KCPD — MOBILE HEADER ONLY
+   Keep confirmed 82px mobile nav unchanged. Do not alter desktop.
+   ===================================================================== */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-header{
+    display:block !important;
+    position:relative !important;
+    overflow:visible !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-row{
+    display:block !important;
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024 / 420 !important;
+    padding:0 !important;
+    margin:0 !important;
+    background-color:#020a1c !important;
+    background-image:url('/kcpd-approved/kcpd_header.webp') !important;
+    background-repeat:no-repeat !important;
+    background-position:center !important;
+    background-size:100% 100% !important;
+    border-bottom:2px solid #4c8cff !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-row > *{
+    position:relative !important;
+    z-index:2 !important;
+  }
+
+  /* Hide the old compact logo/wordmark only on KCPD mobile because
+     those elements are already part of the approved illustrated header. */
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+}
