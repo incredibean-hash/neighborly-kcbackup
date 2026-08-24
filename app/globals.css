@@ -4984,8 +4984,9 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   NAVY — APPROVED MOBILE SCREEN
-   Exact user-approved artwork. Mobile only. Desktop untouched.
+   NAVY — APPROVED FINAL MOBILE
+   Full original artwork. Mobile only. Desktop untouched.
+   Header keeps its natural composition; nav is one 82px foreground scene.
    ===================================================================== */
 @media(max-width:639px){
   .nkc-app-shell[data-theme="navy"] .nkc-mobile-top-header{
@@ -5002,16 +5003,17 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     position:relative !important;
     width:100% !important;
     height:auto !important;
-    aspect-ratio:336 / 165 !important;
+    aspect-ratio:1024 / 500 !important;
+    min-height:0 !important;
     padding:0 !important;
     margin:0 !important;
-    background:#03162b url('/navy-approved-v2/navy_header.webp') center / 100% 100% no-repeat !important;
-    border-bottom:2px solid #62c9ff !important;
+    overflow:hidden !important;
+    background:#03162b url('/navy-approved-final/navy_header.webp') center center / cover no-repeat !important;
+    border-bottom:2px solid #55c7ff !important;
   }
 
-  .nkc-app-shell[data-theme="navy"] .nkc-mobile-brand,
-  .nkc-app-shell[data-theme="navy"] .nkc-mobile-theme-mark,
-  .nkc-app-shell[data-theme="navy"] .nkc-mobile-wordmark{
+  /* Artwork already contains the complete Navy branding/header controls. */
+  .nkc-app-shell[data-theme="navy"] .nkc-mobile-top-row > *{
     opacity:0 !important;
     visibility:hidden !important;
     pointer-events:none !important;
@@ -5036,11 +5038,12 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     gap:0 !important;
     overflow:hidden !important;
     border:0 !important;
-    border-top:2px solid #62c9ff !important;
-    background:#03162b url('/navy-approved-v2/navy_nav.webp') center bottom / 100% 100% no-repeat !important;
-    box-shadow:0 -7px 18px rgba(0,0,0,.4) !important;
+    border-top:2px solid #55c7ff !important;
+    background:#03162b url('/navy-approved-final/navy_nav.webp') center bottom / cover no-repeat !important;
+    box-shadow:0 -6px 16px rgba(0,0,0,.35) !important;
   }
 
+  /* Keep the real three navigation hit targets, but let the artwork draw them. */
   .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-bottom-nav-orb-item,
   .nkc-app-shell[data-theme="navy"] .nkc-mobile-bottom-nav .nkc-bottom-nav-plus,
   .nkc-mobile-bottom-nav[data-theme="navy"] .nkc-bottom-nav-orb-item,
@@ -5053,8 +5056,8 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     height:82px !important;
     min-height:82px !important;
     max-height:82px !important;
-    margin:0 !important;
     padding:0 !important;
+    margin:0 !important;
     border:0 !important;
     border-radius:0 !important;
     background:transparent !important;
