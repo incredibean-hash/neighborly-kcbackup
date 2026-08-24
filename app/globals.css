@@ -3394,7 +3394,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 @media(max-width:639px){
   .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-top-header{padding:0 0 7px !important;background:#170d07 !important;border:0 !important;box-shadow:0 8px 20px rgba(0,0,0,.34) !important}
   .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-top-row{
-    position:relative !important;width:100% !important;height:auto !important;aspect-ratio:1024/645 !important;padding:0 !important;
+    position:relative !important;width:100% !important;height:auto !important;aspect-ratio:1023/442 !important;padding:0 !important;
     background:url('/cowtown-scene/cowtown_header.webp') center/100% 100% no-repeat !important;border-bottom:2px solid #b96d26 !important;
   }
   .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-brand,
