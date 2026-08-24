@@ -36,6 +36,10 @@ const linkifyText=(value:any)=>String(value||'').split(/(https?:\/\/[^\s<]+)/gi)
 
 const NAV_V7_THEME_IDS=['pip-boy','kcfd','kc-bbq','kc-current','kc-sunset','18th-vine','river-market','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'] as const;
 const customThemeIconPath=(themeId:string,name:string)=>{
+  if(themeId==='city-fountains' && (name==='dms' || name==='create_post' || name==='settings')){
+    const fountainKey=name==='dms'?'messages':name==='create_post'?'post':'settings';
+    return `/city-fountains-v10/${fountainKey}-v10.png`;
+  }
   // Bottom navigation uses the optimized V7 assets.
   if(name==='dms' || name==='create_post' || name==='settings'){
     const themeKey=themeId==='kc-sunset'?'kc-current':themeId;
@@ -53,16 +57,8 @@ const customThemeIconPath=(themeId:string,name:string)=>{
 };
 const hasCustomThemeIcons=(themeId:string)=>NAV_V7_THEME_IDS.includes(themeId as any);
 const hasCustomPostActionIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq'].includes(themeId);
-const FountainNavIcon=({name,className=''}:{name:string;className?:string})=>{
-  const common={viewBox:'0 0 96 96','aria-hidden':true,className:`nkc-fountain-nav-svg ${className}`} as any;
-  if(name==='dms') return <svg {...common}><defs><linearGradient id="fMsg" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#78ecff"/><stop offset="1" stopColor="#0876df"/></linearGradient></defs><circle cx="48" cy="45" r="36" fill="#082e59" stroke="#8af4ff" strokeWidth="3"/><path d="M24 29h48v31H45L32 70l3-10H24z" fill="url(#fMsg)" stroke="#d9fbff" strokeWidth="2.5" strokeLinejoin="round"/><circle cx="37" cy="45" r="4" fill="white"/><circle cx="48" cy="45" r="4" fill="white"/><circle cx="59" cy="45" r="4" fill="white"/></svg>;
-  if(name==='create_post') return <svg {...common}><defs><linearGradient id="fPost" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#7ef3ff"/><stop offset="1" stopColor="#0878df"/></linearGradient></defs><circle cx="48" cy="45" r="36" fill="#082e59" stroke="#8af4ff" strokeWidth="3"/><path d="M48 20c10 0 20 8 20 19 0 17-20 31-20 31S28 56 28 39c0-11 10-19 20-19z" fill="url(#fPost)" stroke="#d9fbff" strokeWidth="2.5"/><path d="M48 32v24M36 44h24" stroke="white" strokeWidth="6" strokeLinecap="round"/></svg>;
-  return <svg {...common}><defs><linearGradient id="fSet" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#83f5ff"/><stop offset="1" stopColor="#0873dc"/></linearGradient></defs><circle cx="48" cy="45" r="36" fill="#082e59" stroke="#8af4ff" strokeWidth="3"/><path d="M44 22h8l2 8 7 3 7-4 6 6-4 7 3 7 8 2v8l-8 2-3 7 4 7-6 6-7-4-7 3-2 8h-8l-2-8-7-3-7 4-6-6 4-7-3-7-8-2v-8l8-2 3-7-4-7 6-6 7 4 7-3z" fill="url(#fSet)" stroke="#d9fbff" strokeWidth="2" strokeLinejoin="round"/><circle cx="48" cy="53" r="10" fill="#082e59" stroke="white" strokeWidth="3"/></svg>;
-};
 const ThemeIcon=({themeId,name,alt='',className=''}:{themeId:string;name:string;alt?:string;className?:string})=>
-  themeId==='city-fountains'
-    ? <FountainNavIcon name={name} className={className}/>
-    : <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
+  <img src={customThemeIconPath(themeId,name)} alt={alt} className={`nkc-theme-art-icon ${className}`} draggable={false}/>;
 
 // Header-only colors sampled from the matching heart artwork. These do not
 // affect the bottom navigation, cards, composer, or the rest of each theme.
