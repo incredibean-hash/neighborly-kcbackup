@@ -56,9 +56,9 @@ const customThemeIconPath=(themeId:string,name:string)=>{
     if(name==='settings') return '/nav-v4/18th-vine-settings-v4.png';
   }
   if(themeId==='river-market'){
-    if(name==='dms') return '/nav-v4/river-market-messages-v4.webp';
-    if(name==='create_post') return '/nav-v4/river-market-post-v4.webp';
-    if(name==='settings') return '/nav-v4/river-market-settings-v4.webp';
+    if(name==='dms') return '/nav-v5/city-market-messages-v5.png';
+    if(name==='create_post') return '/nav-v5/city-market-post-v5.png';
+    if(name==='settings') return '/nav-v5/city-market-settings-v5.png';
   }
   if(themeId==='aim') return `/aim/aim_${name}.png`;
   if(themeId==='sporting') return `/sporting/sporting_${name}.png`;
@@ -83,9 +83,9 @@ const customThemeIconPath=(themeId:string,name:string)=>{
     if(name==='settings') return '/kcpd/kcpd_settings_v2.png';
   }
   if(themeId==='city-fountains'){
-    if(name==='dms') return '/city-fountains/fountains_dms_v2.png';
-    if(name==='create_post') return '/city-fountains/fountains_create_post_v2.png';
-    if(name==='settings') return '/city-fountains/fountains_settings_v2.png';
+    if(name==='dms') return '/nav-v5/fountains-messages-v5.png';
+    if(name==='create_post') return '/nav-v5/fountains-post-v5.png';
+    if(name==='settings') return '/nav-v5/fountains-settings-v5.png';
   }
   if(themeId==='cowtown'){
     if(name==='dms') return '/nav-v4/cowtown-messages-v4.png';
