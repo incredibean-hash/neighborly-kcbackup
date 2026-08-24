@@ -35,10 +35,20 @@ const linkifyText=(value:any)=>String(value||'').split(/(https?:\/\/[^\s<]+)/gi)
 
 const NAV_V7_THEME_IDS=['pip-boy','kcfd','kc-bbq','kc-current','kc-sunset','18th-vine','river-market','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'] as const;
 const customThemeIconPath=(themeId:string,name:string)=>{
-  const themeKey=themeId==='kc-sunset'?'kc-current':themeId;
-  if(!NAV_V7_THEME_IDS.includes(themeId as any)) return '';
-  const iconKey=name==='dms'?'messages':name==='create_post'?'post':'settings';
-  return `/nav-v7/${themeKey}-${iconKey}-v7.webp`;
+  // Bottom navigation uses the optimized V7 assets.
+  if(name==='dms' || name==='create_post' || name==='settings'){
+    const themeKey=themeId==='kc-sunset'?'kc-current':themeId;
+    if(!NAV_V7_THEME_IDS.includes(themeId as any)) return '';
+    const iconKey=name==='dms'?'messages':name==='create_post'?'post':'settings';
+    return `/nav-v7/${themeKey}-${iconKey}-v7.webp`;
+  }
+
+  // Post action icons stay on their dedicated artwork.
+  if(themeId==='pip-boy') return `/pipboy/vaultboy_${name}.png`;
+  if(themeId==='kcfd') return `/kcfd/kcfd_${name}.png`;
+  if(themeId==='kc-bbq') return `/kcbbq/kcbbq_${name}.png`;
+
+  return '';
 };
 const hasCustomThemeIcons=(themeId:string)=>NAV_V7_THEME_IDS.includes(themeId as any);
 const hasCustomPostActionIcons=(themeId:string)=>['pip-boy','kcfd','kc-bbq'].includes(themeId);
