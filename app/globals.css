@@ -3199,7 +3199,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
    Same composition standard as City Market / Fountains / 18th & Vine.
    Compact physical bottom nav at City Market height.
    ===================================================================== */
-.nkc-app-shell[data-theme="bbq"]{
+.nkc-app-shell[data-theme="kc-bbq"]{
   background:
     radial-gradient(ellipse at 50% 0%,rgba(217,76,20,.18),transparent 34%),
     linear-gradient(180deg,#2b0c05 0%,#160805 52%,#090403 100%) !important;
@@ -3207,7 +3207,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 @media(max-width:639px){
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-top-header{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-top-header{
     position:relative !important;
     min-height:0 !important;
     height:auto !important;
@@ -3217,7 +3217,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     background:#190704 !important;
     box-shadow:0 8px 20px rgba(0,0,0,.34) !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-top-row{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-top-row{
     position:relative !important;
     width:100% !important;
     height:auto !important;
@@ -3226,13 +3226,13 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     background:url('/kc-bbq-scene/kc_bbq_header.webp') center / 100% 100% no-repeat !important;
     border-bottom:2px solid #d35b24 !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-brand,
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-theme-mark,
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-wordmark{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-wordmark{
     opacity:0 !important;
     pointer-events:none !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-bbq-menu-hit{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-bbq-menu-hit{
     display:block !important;
     position:absolute !important;
     z-index:9 !important;
@@ -3244,7 +3244,7 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     border-radius:999px !important;
     background:transparent !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-top-icons{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-top-icons{
     position:absolute !important;
     z-index:9 !important;
     right:2.3% !important;
@@ -3256,13 +3256,13 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     gap:8% !important;
     margin:0 !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-icon{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-icon{
     width:100% !important;height:100% !important;padding:0 !important;
     border:0 !important;background:transparent !important;box-shadow:none !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-icon svg{opacity:0 !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-icon svg{opacity:0 !important}
 
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-whats{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-whats{
     width:calc(100% - 22px) !important;
     height:50px !important;min-height:50px !important;
     margin:7px 11px 8px !important;padding:5px 11px !important;
@@ -3271,13 +3271,13 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     color:#351208 !important;font-weight:900 !important;
     box-shadow:0 5px 13px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.7) !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-avatar{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-avatar{
     width:34px !important;height:34px !important;
     background:#a92816 !important;border:1.5px solid #d45c25 !important;color:#fff1d0 !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-whats-plus{color:#a92716 !important;font-size:24px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-whats-plus{color:#a92716 !important;font-size:24px !important}
 
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-banner{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-banner{
     width:calc(100% - 18px) !important;margin:0 9px 10px !important;
     border:1.5px solid #bd3e1f !important;border-radius:21px !important;
     background:
@@ -3287,24 +3287,24 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.07) !important;
     overflow:hidden !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-inner{padding:9px 8px 10px !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-title{color:#fff0d2 !important;padding-bottom:7px !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-nws-source,
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-now{color:#d99a82 !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-days{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-inner{padding:9px 8px 10px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-title{color:#fff0d2 !important;padding-bottom:7px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-nws-source,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-now{color:#d99a82 !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-days{
     display:flex !important;gap:6px !important;overflow-x:auto !important;overflow-y:hidden !important;
     scrollbar-width:none !important;-webkit-overflow-scrolling:touch !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-day{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-day{
     flex:0 0 78px !important;width:78px !important;min-width:78px !important;min-height:88px !important;
     padding:7px !important;border:1px solid #a92d1b !important;border-radius:18px !important;
     background:linear-gradient(180deg,#6b1a0d,#351007) !important;color:#fff0d3 !important;
     box-shadow:inset 0 1px 0 rgba(255,255,255,.06) !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-forecast-low{color:#d28e76 !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-low{color:#d28e76 !important}
 
-  .nkc-app-shell[data-theme="bbq"] .nkc-page-content{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-page-content{
     position:relative !important;
     padding:8px 9px 94px !important;
     background:
@@ -3312,9 +3312,9 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
       linear-gradient(180deg,#2b0d06,#0d0503 100%) !important;
     border-top:1px solid rgba(213,82,29,.52) !important;
   }
-  .nkc-app-shell[data-theme="bbq"] #composer{display:none !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-welcome-card,
-  .nkc-app-shell[data-theme="bbq"] .nkc-post-card{
+  .nkc-app-shell[data-theme="kc-bbq"] #composer{display:none !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-card{
     border:1.5px solid #97411f !important;border-radius:22px !important;
     background:
       radial-gradient(circle at 100% 0%,rgba(201,68,22,.12),transparent 34%),
@@ -3322,22 +3322,22 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     color:#fff0d4 !important;
     box-shadow:0 8px 18px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.05) !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-welcome-card{padding:16px !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-welcome-card h1{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card{padding:16px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card h1{
     color:#fff0d0 !important;font-size:23px !important;line-height:1.1 !important;
     text-shadow:0 2px 8px rgba(0,0,0,.36) !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-welcome-card p{color:#d9aa91 !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-welcome-benefits > *{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card p{color:#d9aa91 !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-benefits > *{
     background:#331008 !important;border-color:#92512f !important;color:#f7d5b5 !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-post-card{padding:14px !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-post-image-frame{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-card{padding:14px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-image-frame{
     border-color:#98401e !important;background:#180704 !important;
   }
 
   /* Physical smokehouse patio scene at the compact City Market height. */
-  .nkc-mobile-bottom-nav[data-theme="bbq"]{
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"]{
     height:82px !important;min-height:82px !important;
     padding:0 !important;gap:0 !important;
     border-top:2px solid #d05b25 !important;
@@ -3345,38 +3345,38 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:0 -7px 18px rgba(0,0,0,.34) !important;
     overflow:hidden !important;
   }
-  .nkc-mobile-bottom-nav[data-theme="bbq"] .nkc-nav-label,
-  .nkc-mobile-bottom-nav[data-theme="bbq"] .nkc-custom-theme-nav-icon,
-  .nkc-mobile-bottom-nav[data-theme="bbq"] .nkc-custom-theme-plus-icon{opacity:0 !important}
-  .nkc-mobile-bottom-nav[data-theme="bbq"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="bbq"] .nkc-bottom-nav-plus{
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-plus-icon{opacity:0 !important}
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus{
     flex:1 1 33.333% !important;width:33.333% !important;max-width:none !important;
     height:82px !important;margin:0 !important;padding:0 !important;
     border:0 !important;background:transparent !important;box-shadow:none !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-mobile-filter-fab,
-  .nkc-app-shell[data-theme="bbq"] [data-mobile-filter-fab="true"]{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="kc-bbq"] [data-mobile-filter-fab="true"]{
     position:fixed !important;top:auto !important;right:10px !important;bottom:94px !important;
     border-color:#d15b25 !important;background:rgba(35,9,4,.94) !important;z-index:45 !important;
   }
 }
 
 @media(min-width:640px){
-  .nkc-app-shell[data-theme="bbq"] .nkc-main-header{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-main-header{
     background:#180704 !important;border-color:#9e391c !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-header-banner-wrap{max-height:330px !important;overflow:hidden !important}
-  .nkc-app-shell[data-theme="bbq"] .nkc-header-banner{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-header-banner-wrap{max-height:330px !important;overflow:hidden !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-header-banner{
     width:100% !important;height:auto !important;max-height:330px !important;
     object-fit:cover !important;object-position:center !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-page-content{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-page-content{
     background:radial-gradient(circle at 50% 0%,rgba(201,65,19,.11),transparent 28%),linear-gradient(180deg,#2a0d06,#0c0503) !important;
   }
-  .nkc-app-shell[data-theme="bbq"] .nkc-welcome-card,
-  .nkc-app-shell[data-theme="bbq"] .nkc-post-card,
-  .nkc-app-shell[data-theme="bbq"] #composer,
-  .nkc-app-shell[data-theme="bbq"] aside{
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-card,
+  .nkc-app-shell[data-theme="kc-bbq"] #composer,
+  .nkc-app-shell[data-theme="kc-bbq"] aside{
     background:linear-gradient(150deg,#42140b,#1a0905) !important;
     color:#fff0d4 !important;border-color:#97411f !important;
   }
