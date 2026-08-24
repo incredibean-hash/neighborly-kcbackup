@@ -4238,3 +4238,41 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     padding-bottom:82px !important;
   }
 }
+
+/* =====================================================================
+   KCPD — DESKTOP HEADER RESTORE
+   Keep the approved mobile KCPD treatment below 640px.
+   On desktop/tablet, restore the normal full KCPD banner header.
+   ===================================================================== */
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="kcpd"] .nkc-main-header{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-header-banner-wrap{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:100% !important;
+    max-height:none !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-header-banner{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    aspect-ratio:1920 / 368 !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-header{
+    display:none !important;
+  }
+}
