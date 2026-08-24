@@ -6,6 +6,7 @@ import { supabase } from '../lib/community';
 import { THEMES, DEFAULT_THEME_ID } from '../lib/themes';
 
 const CATS = ['All','General','For Sale & Free','Safety Alert','Recommendation','Event','Lost & Found'];
+const THEME_PICKER_IDS = ['aim','sporting','royals','chiefs','pip-boy','space','kc-current','kcpd','kcfd','army','navy','marines','air-force','cowtown','kc-bbq','18th-vine','river-market','city-fountains'];
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '493019301743-e2djce6rmlpntl05terd0uopslij1gtu.apps.googleusercontent.com';
 
 // Google sign-in can fail or open a blank page inside social-media and other
@@ -236,6 +237,24 @@ export default function Page(){
   const cur = hoods.find((x:any)=>x.slug==hood) || hoods[0] || {name:'Meadow Brooks Heights', zip:'64155', id: '5fb249cb-1667-475b-ab8c-43e1df245ace', slug:'meadow-brooks-heights'};
   const navThemeColor = themedNavColor(theme);
   const heartHeader = heartHeaderPalette(theme);
+
+  // Warm the theme picker artwork shortly after startup so opening Themes is instant.
+  useEffect(()=>{
+    let cancelled=false;
+    const warmThemeCards=()=>{
+      if(cancelled) return;
+      THEME_PICKER_IDS.forEach(id=>{
+        const src=THEMES[id]?.themeButtonImage;
+        if(!src) return;
+        const img=new Image();
+        img.decoding='async';
+        img.src=src;
+        if(typeof img.decode==='function') void img.decode().catch(()=>{});
+      });
+    };
+    const timer=window.setTimeout(warmThemeCards,120);
+    return()=>{cancelled=true;window.clearTimeout(timer);};
+  },[]);
 
   // Preload all optimized V7 nav artwork once so theme switching does not wait
   // for a network request + image decode after the user chooses a new theme.
@@ -1564,7 +1583,7 @@ export default function Page(){
             </div>
             <p className="mt-2 text-xs leading-5 opacity-65">Pick a NeighborlyKC look. Your choice saves automatically.</p>
             <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
-              {['aim','sporting','royals','chiefs','pip-boy','space','kc-current','kcpd','kcfd','army','navy','marines','air-force','cowtown','kc-bbq','18th-vine','river-market','city-fountains'].map(id=>{
+              {THEME_PICKER_IDS.map(id=>{
                 const t=THEMES[id];
                 const active=themeId===id;
                 const fullCard=String(t.themeButtonImage||'').startsWith('/theme-cards/');
@@ -1578,7 +1597,7 @@ export default function Page(){
                   style={{borderColor:active?t.accent:'rgba(255,255,255,0.15)',boxShadow:active?`0 0 0 2px ${t.accent}55`:'none',backgroundColor:'#000000'}}
                 >
                   {t.themeButtonImage
-                    ? <img src={t.themeButtonImage} alt={t.name} className={`w-full h-full ${fullCard?'object-contain':'object-cover'}`} loading="lazy" draggable={false} />
+                    ? <img src={t.themeButtonImage} alt={t.name} className={`w-full h-full ${fullCard?'object-contain':'object-cover'}`} loading="eager" decoding="async" draggable={false} />
                     : <div className="nkc-theme-choice-fallback w-full h-full flex items-center justify-center p-1 text-center" style={{background:`linear-gradient(135deg,${t.header},${t.accent})`}}><span className="text-white text-[8px] sm:text-[10px] font-bold leading-tight">{t.name}</span></div>}
                   {active && <span className="absolute top-1 right-1 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shadow-lg" style={{backgroundColor:t.accent,color:t.pillTextActive}}>✓</span>}
                 </button>
