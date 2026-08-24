@@ -794,6 +794,14 @@ export default function Page(){
     return [...matches].sort((a:any,b:any)=>Number(Boolean(b.is_pinned))-Number(Boolean(a.is_pinned)) || new Date(b.created_at).getTime()-new Date(a.created_at).getTime());
   }, [cat, scopedPosts]);
 
+  useEffect(()=>{
+    if(!filtered.length) return;
+    const postId=new URLSearchParams(window.location.search).get('post');
+    if(!postId) return;
+    const target=document.getElementById(`post-${postId}`);
+    if(target) window.requestAnimationFrame(()=>target.scrollIntoView({behavior:'smooth',block:'center'}));
+  },[filtered]);
+
   const neighborhoodName = useCallback((id:any) => hoods.find((h:any)=>String(h.id)===String(id))?.name || cur?.name || 'Kansas City', [hoods, cur?.name]);
   const composerPrompt = !profile
     ? 'Join Neighborly KC to post…'
@@ -1052,6 +1060,35 @@ export default function Page(){
         headers:{'Content-Type':'application/json','Authorization':`Bearer ${session.access_token}`},
         body:JSON.stringify({commentId})
       }).catch(()=>{});
+    }
+  };
+
+  const sharePost = async (post:any) => {
+    const postText=String(post?.body||post?.content||'').trim();
+    const shareUrl=`${window.location.origin}/?post=${encodeURIComponent(post.id)}`;
+    const shareData={
+      title:'NeighborlyKC',
+      text:postText.length>180?`${postText.slice(0,177)}...`:postText || 'Check out this NeighborlyKC post',
+      url:shareUrl
+    };
+
+    try{
+      if(navigator.share){
+        await navigator.share(shareData);
+        return;
+      }
+      await navigator.clipboard.writeText(shareUrl);
+      setToast('✓ Post link copied');
+      window.setTimeout(()=>setToast(''),2600);
+    }catch(err:any){
+      if(err?.name==='AbortError') return;
+      try{
+        await navigator.clipboard.writeText(shareUrl);
+        setToast('✓ Post link copied');
+        window.setTimeout(()=>setToast(''),2600);
+      }catch{
+        alert(`Share this post: ${shareUrl}`);
+      }
     }
   };
 
@@ -1330,7 +1367,7 @@ export default function Page(){
                     {postText}
                   </p>
                   {needsScrunch&&<button type="button" onClick={()=>setExpandedPosts(prev=>({...prev,[p.id]:!prev[p.id]}))} className="mt-1 text-xs font-black hover:opacity-75" style={{color:theme.accent}} aria-expanded={isExpanded}>{isExpanded?'Show less':'Read more'}</button>}
-                </div>{p.image_url&&<div className="mt-3 nkc-post-image-frame rounded-xl overflow-hidden border" style={{borderColor:theme.border,backgroundColor:theme.input}} onContextMenu={event=>event.preventDefault()}><img src={p.image_url} alt="post" className="nkc-post-image w-full" loading="lazy" draggable={false} onDragStart={event=>event.preventDefault()} /></div>}<p className="text-xs opacity-40 mt-2">{new Date(p.created_at).toLocaleString()}</p><div className={`mt-3 pt-3 border-t flex gap-3 min-w-0 ${hasCustomPostActionIcons(theme.id)?'nkc-custom-theme-post-actions':''}`} style={{borderColor:theme.border}}><button onClick={()=>togglePostLike(p.id)} className="shrink-0 text-xs font-bold transition-colors hover:opacity-70">{hasCustomPostActionIcons(theme.id)?<><ThemeIcon themeId={theme.id} name="like" alt="Like" className={`nkc-custom-theme-action-icon ${liked?'is-active':''}`}/><span>{pLikes.length}</span></>:<>{liked?'❤️':'🤍'} {pLikes.length}</>}</button><button onClick={()=>setOpenComments(prev=>({...prev,[p.id]:!prev[p.id]}))} className="shrink-0 text-xs font-bold opacity-60 transition-opacity hover:opacity-100">{hasCustomPostActionIcons(theme.id)?<><ThemeIcon themeId={theme.id} name="comment" alt="Comments" className="nkc-custom-theme-action-icon"/><span>{cList.length}</span></>:<>💬 {cList.length} {isOpen?'▲':'▼'}</>}</button>{!isOwner&&<button onClick={()=>profile?setReportingPost(p):setShowJoin(true)} className="ml-auto shrink-0 text-xs font-bold opacity-55 hover:opacity-100">{hasCustomPostActionIcons(theme.id)?<ThemeIcon themeId={theme.id} name="report" alt="Report" className="nkc-custom-theme-action-icon"/>:<>🚩 Report</>}</button>}</div>{isOpen&&<div className="mt-3 rounded-xl p-2 sm:p-3 space-y-2 min-w-0 overflow-hidden" style={{backgroundColor:theme.input}}>{cList.map((c:any)=>{const cl=cLikes[c.id]||[];const cliked=cl.some((l:any)=>l.author_id===profile?.user_id||l.author_name===profile?.full_name);const canDelC=(profile&&c.author_name===profile.full_name)||isAdmin;return <div key={c.id} className="text-sm rounded-lg p-2 flex justify-between gap-2 min-w-0" style={{backgroundColor:theme.card}}><div className="min-w-0 break-words"><b className="text-xs">{c.author_name}:</b> <span className="break-words">{c.content||c.body}</span><button onClick={()=>toggleCommentLike(c.id)} className="ml-3 text-xs transition-colors hover:opacity-70">{cliked?'❤️':'🤍'} {cl.length}</button></div>{canDelC&&<button onClick={()=>deleteComment(c.id,p.id)} className="shrink-0 text-[10px] opacity-30 hover:opacity-100 transition-opacity">🗑️</button>}</div>})}{p.comments_locked?<p className="text-xs font-bold opacity-60 text-center py-2">🔒 Comments are locked by a moderator.</p>:<div className="flex gap-2 pt-2 min-w-0"><input value={commentText[p.id]||''} onChange={e=>setCommentText(prev=>({...prev,[p.id]:e.target.value}))} placeholder="Add a comment..." className="min-w-0 flex-1 border rounded-full px-3 py-2 text-sm outline-none transition-colors" style={{backgroundColor:theme.card,borderColor:theme.border,color:theme.text}} onKeyDown={(e)=>{if(e.key==='Enter' && !e.shiftKey){e.preventDefault();addComment(p.id);}}}/><button onClick={()=>addComment(p.id)} disabled={isCommenting || !commentText[p.id]?.trim()} className="shrink-0 px-3 sm:px-4 py-2 rounded-full text-xs font-bold disabled:opacity-50 transition-opacity" style={{backgroundColor:theme.accent,color:theme.pillTextActive}}>{isCommenting?'...':'Reply'}</button></div>}</div>}
+                </div>{p.image_url&&<div className="mt-3 nkc-post-image-frame rounded-xl overflow-hidden border" style={{borderColor:theme.border,backgroundColor:theme.input}} onContextMenu={event=>event.preventDefault()}><img src={p.image_url} alt="post" className="nkc-post-image w-full" loading="lazy" draggable={false} onDragStart={event=>event.preventDefault()} /></div>}<p className="text-xs opacity-40 mt-2">{new Date(p.created_at).toLocaleString()}</p><div className={`mt-3 pt-3 border-t flex gap-3 min-w-0 ${hasCustomPostActionIcons(theme.id)?'nkc-custom-theme-post-actions':''}`} style={{borderColor:theme.border}}><button onClick={()=>togglePostLike(p.id)} className="shrink-0 text-xs font-bold transition-colors hover:opacity-70">{hasCustomPostActionIcons(theme.id)?<><ThemeIcon themeId={theme.id} name="like" alt="Like" className={`nkc-custom-theme-action-icon ${liked?'is-active':''}`}/><span>{pLikes.length}</span></>:<>{liked?'❤️':'🤍'} {pLikes.length}</>}</button><button onClick={()=>setOpenComments(prev=>({...prev,[p.id]:!prev[p.id]}))} className="shrink-0 text-xs font-bold opacity-60 transition-opacity hover:opacity-100">{hasCustomPostActionIcons(theme.id)?<><ThemeIcon themeId={theme.id} name="comment" alt="Comments" className="nkc-custom-theme-action-icon"/><span>{cList.length}</span></>:<>💬 {cList.length} {isOpen?'▲':'▼'}</>}</button><button type="button" onClick={()=>sharePost(p)} className="shrink-0 text-xs font-bold opacity-60 transition-opacity hover:opacity-100" aria-label="Share post">↗ Share</button>{!isOwner&&<button onClick={()=>profile?setReportingPost(p):setShowJoin(true)} className="ml-auto shrink-0 text-xs font-bold opacity-55 hover:opacity-100">{hasCustomPostActionIcons(theme.id)?<ThemeIcon themeId={theme.id} name="report" alt="Report" className="nkc-custom-theme-action-icon"/>:<>🚩 Report</>}</button>}</div>{isOpen&&<div className="mt-3 rounded-xl p-2 sm:p-3 space-y-2 min-w-0 overflow-hidden" style={{backgroundColor:theme.input}}>{cList.map((c:any)=>{const cl=cLikes[c.id]||[];const cliked=cl.some((l:any)=>l.author_id===profile?.user_id||l.author_name===profile?.full_name);const canDelC=(profile&&c.author_name===profile.full_name)||isAdmin;return <div key={c.id} className="text-sm rounded-lg p-2 flex justify-between gap-2 min-w-0" style={{backgroundColor:theme.card}}><div className="min-w-0 break-words"><b className="text-xs">{c.author_name}:</b> <span className="break-words">{c.content||c.body}</span><button onClick={()=>toggleCommentLike(c.id)} className="ml-3 text-xs transition-colors hover:opacity-70">{cliked?'❤️':'🤍'} {cl.length}</button></div>{canDelC&&<button onClick={()=>deleteComment(c.id,p.id)} className="shrink-0 text-[10px] opacity-30 hover:opacity-100 transition-opacity">🗑️</button>}</div>})}{p.comments_locked?<p className="text-xs font-bold opacity-60 text-center py-2">🔒 Comments are locked by a moderator.</p>:<div className="flex gap-2 pt-2 min-w-0"><input value={commentText[p.id]||''} onChange={e=>setCommentText(prev=>({...prev,[p.id]:e.target.value}))} placeholder="Add a comment..." className="min-w-0 flex-1 border rounded-full px-3 py-2 text-sm outline-none transition-colors" style={{backgroundColor:theme.card,borderColor:theme.border,color:theme.text}} onKeyDown={(e)=>{if(e.key==='Enter' && !e.shiftKey){e.preventDefault();addComment(p.id);}}}/><button onClick={()=>addComment(p.id)} disabled={isCommenting || !commentText[p.id]?.trim()} className="shrink-0 px-3 sm:px-4 py-2 rounded-full text-xs font-bold disabled:opacity-50 transition-opacity" style={{backgroundColor:theme.accent,color:theme.pillTextActive}}>{isCommenting?'...':'Reply'}</button></div>}</div>}
               </>}
             </div>
             );
