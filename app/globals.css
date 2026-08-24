@@ -4094,3 +4094,61 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     background:rgba(255,226,145,.08) !important;
   }
 }
+
+/* =====================================================================
+   MARINES — CITY MARKET + 18TH & VINE MASTER NAV
+   Locked mechanics: one full-width illustrated scene using its native
+   aspect ratio, with three transparent functional hit targets.
+   ===================================================================== */
+@media(max-width:639px){
+  .nkc-mobile-bottom-nav[data-theme="marines"]{
+    display:flex !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:1024 / 118 !important;
+    padding:0 !important;
+    margin:0 !important;
+    gap:0 !important;
+    border:0 !important;
+    background:#220503 url('/marines-scene/marines_nav.webp') center center / 100% 100% no-repeat !important;
+    box-shadow:0 -4px 0 #b68d3b,0 -10px 22px rgba(22,4,3,.30) !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
+    position:relative !important;
+    display:block !important;
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:100% !important;
+    min-height:0 !important;
+    max-height:none !important;
+    align-self:stretch !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-theme-art-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label{
+    display:none !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item:active,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus:active{
+    background:rgba(255,237,191,.10) !important;
+  }
+}
