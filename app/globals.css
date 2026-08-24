@@ -2290,3 +2290,27 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     z-index:12 !important;
   }
 }
+
+
+/* === City of Fountains: soften composer transition === */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{
+    padding-bottom:10px !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats{
+    width:calc(100% - 28px) !important;
+    height:38px !important;
+    min-height:38px !important;
+    margin:4px 14px 2px !important;
+    border-radius:14px !important;
+    border:1px solid rgba(83,225,235,.48) !important;
+    background:rgba(0,61,76,.78) !important;
+    box-shadow:0 2px 8px rgba(0,0,0,.12) !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats-input,
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats-text{
+    font-size:13px !important;
+  }
+}
