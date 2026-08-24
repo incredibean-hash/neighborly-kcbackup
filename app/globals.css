@@ -1915,3 +1915,47 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     flex:0 0 92px !important;
   }
 }
+
+
+/* =========================================================
+   UNIVERSAL HEADER HEART V6
+   All theme hearts share one clean footprint with no box,
+   no crop/zoom, and no theme-specific size overrides.
+   ========================================================= */
+@media (max-width:639px){
+  .nkc-app-shell[data-theme] .nkc-mobile-top-header .nkc-mobile-theme-mark,
+  .nkc-mobile-top-header[data-theme] .nkc-mobile-theme-mark{
+    width:44px !important;
+    height:44px !important;
+    flex:0 0 44px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:0 !important;
+    margin:0 !important;
+    overflow:visible !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme] .nkc-mobile-top-header .nkc-mobile-theme-mark img,
+  .nkc-mobile-top-header[data-theme] .nkc-mobile-theme-mark img{
+    display:block !important;
+    width:44px !important;
+    height:44px !important;
+    max-width:44px !important;
+    max-height:44px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    transform:none !important;
+    transform-origin:center !important;
+    clip-path:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    filter:drop-shadow(0 0 4px color-mix(in srgb,var(--nkc-nav-accent,currentColor) 35%,transparent)) !important;
+  }
+}
