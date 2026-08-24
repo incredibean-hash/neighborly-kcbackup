@@ -3820,34 +3820,47 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 
-/* === Marines bottom-nav render fix === */
+/* === Marines nav V2 — mirror proven Air Force implementation exactly === */
 @media(max-width:639px){
   .nkc-mobile-bottom-nav[data-theme="marines"]{
     height:82px !important;
     min-height:82px !important;
     max-height:82px !important;
     padding:0 !important;
+    margin:0 !important;
+    gap:0 !important;
+    border-top:2px solid #b68d3b !important;
+    background-color:#220503 !important;
     background-image:url('/marines-scene/marines_nav.webp') !important;
     background-size:100% 100% !important;
     background-position:center center !important;
     background-repeat:no-repeat !important;
-    background-color:#250704 !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.35) !important;
     overflow:hidden !important;
   }
+
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label,
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon{
     opacity:0 !important;
+    visibility:hidden !important;
   }
+
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
   .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
-    width:33.333% !important;
+    display:block !important;
     flex:1 1 33.333% !important;
+    width:33.333% !important;
+    min-width:0 !important;
+    max-width:none !important;
     height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
     margin:0 !important;
     padding:0 !important;
-    background:transparent !important;
     border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
     box-shadow:none !important;
   }
 }
