@@ -2564,3 +2564,112 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     background:#ffe7b6 !important;color:#2c1a13 !important;border-color:#bd5b36 !important;
   }
 }
+
+
+/* === City Market responsive cleanup pass === */
+@media(max-width:639px){
+  /* Pull the live controls closer together so the feed arrives sooner. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-whats{
+    min-height:48px !important;
+    height:48px !important;
+    margin:7px 10px 7px !important;
+    width:calc(100% - 20px) !important;
+    padding:5px 11px !important;
+    border-radius:18px !important;
+    box-shadow:0 3px 0 #7b281c,0 5px 11px rgba(73,24,15,.16) !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-avatar{
+    width:32px !important;
+    height:32px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-whats-plus{
+    font-size:23px !important;
+  }
+
+  /* Compact forecast with a real horizontal rail; no clipped fourth card. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-banner{
+    margin:0 8px 8px !important;
+    width:calc(100% - 16px) !important;
+    border-width:2px !important;
+    border-radius:19px !important;
+    box-shadow:0 3px 0 #7b281c,0 6px 12px rgba(62,20,14,.16) !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-inner{
+    padding:8px 8px 9px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-title{
+    padding:0 2px 6px !important;
+    font-size:12px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-days{
+    display:flex !important;
+    gap:6px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    padding:0 1px 3px !important;
+    scroll-snap-type:x proximity !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-days::-webkit-scrollbar{
+    display:none !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-day{
+    flex:0 0 76px !important;
+    width:76px !important;
+    min-width:76px !important;
+    min-height:86px !important;
+    padding:7px 7px 6px !important;
+    border-radius:16px !important;
+    scroll-snap-align:start !important;
+  }
+
+  /* Bring actual feed content into the first screen. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-page-content{
+    padding:4px 9px 112px !important;
+    gap:8px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] main{
+    gap:8px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card{
+    padding:15px !important;
+    border-radius:19px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card h1{
+    font-size:22px !important;
+    line-height:1.12 !important;
+    margin-top:5px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card p{
+    line-height:1.4 !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-benefits{
+    margin-top:10px !important;
+    gap:5px !important;
+  }
+
+  /* Shorter fixed nav preserves the approved art but stops burying the feed. */
+  .nkc-mobile-bottom-nav[data-theme="river-market"]{
+    height:96px !important;
+    min-height:96px !important;
+    aspect-ratio:auto !important;
+    background-size:100% 100% !important;
+  }
+}
+
+/* Keep City Market desktop header proportional instead of turning it into a huge crop. */
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="river-market"] .nkc-header-banner-wrap{
+    max-height:250px !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-header-banner{
+    width:100% !important;
+    height:auto !important;
+    max-height:250px !important;
+    object-fit:cover !important;
+    object-position:center 42% !important;
+  }
+}
