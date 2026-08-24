@@ -306,6 +306,43 @@ export default function Page(){
     };
   },[]);
 
+  // Do not let the browser reopen the main feed at an old scroll position.
+  // Explicit deep links (shared post/category/composer/settings) keep their
+  // own navigation behavior.
+  useLayoutEffect(()=>{
+    if(typeof window==='undefined') return;
+    const params=new URLSearchParams(window.location.search);
+    const hasIntent=
+      params.has('post') ||
+      params.has('category') ||
+      params.has('compose') ||
+      params.has('settings') ||
+      window.location.hash==='#composer';
+
+    const previous=window.history.scrollRestoration;
+    window.history.scrollRestoration='manual';
+
+    if(!hasIntent){
+      const reset=()=>window.scrollTo({top:0,left:0,behavior:'auto'});
+      reset();
+      const frame1=window.requestAnimationFrame(()=>{
+        reset();
+        window.requestAnimationFrame(reset);
+      });
+      const onPageShow=(event:PageTransitionEvent)=>{
+        if(event.persisted) reset();
+      };
+      window.addEventListener('pageshow',onPageShow);
+      return()=>{
+        window.cancelAnimationFrame(frame1);
+        window.removeEventListener('pageshow',onPageShow);
+        window.history.scrollRestoration=previous;
+      };
+    }
+
+    return()=>{ window.history.scrollRestoration=previous; };
+  },[]);
+
   const trackSignupEvent = useCallback((name:string, method?:string) => {
     if(typeof window==='undefined') return;
     track(name,method?{method}:undefined);
@@ -1291,6 +1328,14 @@ export default function Page(){
     <div className="min-h-screen w-full overflow-x-hidden nkc-app-shell" data-theme={theme.id} style={{backgroundColor: theme.bg, color: theme.text, colorScheme: theme.id==='aim' ? 'light' : 'dark'}}>
       <header className="nkc-mobile-top-header sm:hidden z-40 border-b" data-theme={theme.id} style={{backgroundColor:theme.header,color:heartHeader.primary,borderColor:theme.accent,'--nkc-nav-accent':heartHeader.primary,'--nkc-nav-border':theme.accent,'--nkc-bottom-glow':theme.accent,'--nkc-bottom-surface':theme.card} as any}>
         <div className="nkc-mobile-top-row">
+          {theme.id==='river-market'&&<button type="button" className="nkc-market-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='chiefs'&&<button type="button" className="nkc-chiefs-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='marines'&&<button type="button" className="nkc-marines-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='air-force'&&<button type="button" className="nkc-airforce-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='cowtown'&&<button type="button" className="nkc-cowtown-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='kc-bbq'&&<button type="button" className="nkc-bbq-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='18th-vine'&&<button type="button" className="nkc-vine-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
+          {theme.id==='city-fountains'&&<button type="button" className="nkc-fountains-menu-hit" aria-label="Open menu" onClick={()=>{setShowSettings(false);setShowExplore(true)}} />}
           <button type="button" className="nkc-mobile-brand" onClick={()=>window.scrollTo({top:0,behavior:'smooth'})} aria-label="NeighborlyKC home">
             <span className="nkc-mobile-theme-mark"><img src={theme.heartLogoImage || theme.themeButtonImage || '/icon-192.png'} alt="" /></span>
             <span className="nkc-mobile-wordmark"><span style={{color:heartHeader.secondary}}>Neighborly</span><b style={{color:heartHeader.primary}}>KC</b></span>

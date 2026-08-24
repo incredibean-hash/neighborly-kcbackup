@@ -1277,100 +1277,6 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 
-/* Chiefs: home-jersey inspired red with gold + white accents. */
-.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-top-header,
-[data-theme="chiefs"] .nkc-mobile-top-header{
-  background:linear-gradient(180deg,#e31837 0%,#c8102e 100%) !important;
-  border-bottom:2px solid #ffb81c !important;
-}
-
-.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-icon,
-[data-theme="chiefs"] .nkc-mobile-icon{
-  color:#ffffff !important;
-}
-
-.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-whats,
-[data-theme="chiefs"] .nkc-mobile-whats{
-  background:#ffffff !important;
-  color:#7a0016 !important;
-  border:2px solid #ffb81c !important;
-}
-
-.nkc-app-shell[data-theme="chiefs"] .nkc-mobile-bottom-nav,
-[data-theme="chiefs"] .nkc-mobile-bottom-nav{
-  background:#c8102e !important;
-  border-top-color:#ffb81c !important;
-}
-
-
-/* Marines: dress-blues inspired navy, scarlet, gold, and white. */
-.nkc-app-shell[data-theme="marines"] .nkc-mobile-top-header,
-[data-theme="marines"] .nkc-mobile-top-header{
-  background:linear-gradient(180deg,#0a2344 0%,#06152a 100%) !important;
-  border-bottom:2px solid #d4af37 !important;
-}
-
-.nkc-app-shell[data-theme="marines"] .nkc-mobile-icon,
-[data-theme="marines"] .nkc-mobile-icon{
-  color:#ffffff !important;
-}
-
-.nkc-app-shell[data-theme="marines"] .nkc-mobile-whats,
-[data-theme="marines"] .nkc-mobile-whats{
-  background:#ffffff !important;
-  color:#06152a !important;
-  border:2px solid #c8102e !important;
-}
-
-.nkc-app-shell[data-theme="marines"] .nkc-mobile-bottom-nav,
-[data-theme="marines"] .nkc-mobile-bottom-nav{
-  background:#081a33 !important;
-  border-top-color:#d4af37 !important;
-}
-
-
-/* Sporting KC custom bottom navigation */
-@media(max-width:640px){
-  .nkc-mobile-bottom-nav[data-theme="sporting"]{
-    background:#0c2340 !important;
-    border-top:2px solid #93b1d7 !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-plus{
-    width:86px !important;
-    height:86px !important;
-    padding:0 !important;
-    background:transparent !important;
-    border:0 !important;
-    box-shadow:none !important;
-    overflow:visible !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-orb-item::before,
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-orb-item::after,
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-plus::before,
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-bottom-nav-plus::after{
-    content:none !important;
-    display:none !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-custom-theme-nav-icon{
-    width:72px !important;
-    height:72px !important;
-    object-fit:contain !important;
-    filter:drop-shadow(0 0 4px rgba(147,177,215,.65)) !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="sporting"] .nkc-custom-theme-plus-icon{
-    width:76px !important;
-    height:76px !important;
-    object-fit:contain !important;
-    filter:drop-shadow(0 0 5px rgba(147,177,215,.75)) !important;
-  }
-}
-
-
 /* KC Royals custom bottom navigation */
 @media(max-width:640px){
   .nkc-mobile-bottom-nav[data-theme="royals"]{
@@ -1430,29 +1336,6 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item::after,
   .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus::before,
   .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus::after{
-    content:none !important;
-    display:none !important;
-  }
-}
-
-
-/* Chiefs nav: artwork only; no selected circle/background. */
-@media(max-width:640px){
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-plus,
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-orb-item.is-active,
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-plus.is-active{
-    background:transparent !important;
-    background-color:transparent !important;
-    border:0 !important;
-    box-shadow:none !important;
-    outline:none !important;
-  }
-
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-orb-item::before,
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-orb-item::after,
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-plus::before,
-  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-plus::after{
     content:none !important;
     display:none !important;
   }
@@ -2312,5 +2195,1846 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats-input,
   .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats-text{
     font-size:13px !important;
+  }
+}
+
+/* =====================================================================
+   SUPER AWESOME UI — CITY MARKET MASTER SKIN
+   The approved City Market mockup is the visual source for this theme.
+   Functionality stays live; only the presentation layer changes.
+   ===================================================================== */
+.nkc-app-shell[data-theme="river-market"]{
+  --market-cream:#fff1d2;
+  --market-cream-2:#ffe3a8;
+  --market-red:#c93d28;
+  --market-red-dark:#81251b;
+  --market-green:#0c4b37;
+  --market-ink:#2c1a13;
+  --market-gold:#e4a83a;
+  --market-wood:#7a321f;
+  background-color:#7c2d22 !important;
+  background-image:
+    linear-gradient(rgba(93,29,20,.16),rgba(93,29,20,.16)),
+    repeating-linear-gradient(0deg,rgba(255,207,137,.045) 0 1px,transparent 1px 42px),
+    repeating-linear-gradient(90deg,transparent 0 84px,rgba(62,16,12,.18) 84px 87px) !important;
+  color:var(--market-ink) !important;
+}
+
+@media(max-width:639px){
+  /* Full illustrated City Market header from the approved design. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-top-header{
+    position:relative !important;
+    overflow:visible !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-top-row{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024 / 500 !important;
+    padding:0 !important;
+    background:url('/city-market-ui/city-market-header.webp') center center / 100% 100% no-repeat !important;
+    border-bottom:5px solid #7f281d !important;
+    box-shadow:0 7px 14px rgba(56,19,13,.30) !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+  /* Invisible live hit targets line up with the illustrated menu/search/bell. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-market-menu-hit{
+    display:block !important;
+    position:absolute !important;
+    z-index:8 !important;
+    left:2.5% !important;
+    top:3% !important;
+    width:12.5% !important;
+    aspect-ratio:1 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:transparent !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    z-index:8 !important;
+    right:2.4% !important;
+    top:3% !important;
+    width:23.8% !important;
+    height:13% !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:10% !important;
+    margin:0 !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-icon{
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  /* Composer is a real button styled to match the cream/red market panel. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-whats{
+    position:relative !important;
+    inset:auto !important;
+    transform:none !important;
+    width:calc(100% - 24px) !important;
+    min-height:58px !important;
+    margin:10px 12px 10px !important;
+    padding:8px 13px !important;
+    border:2px solid #b84d2e !important;
+    border-radius:22px !important;
+    background:linear-gradient(180deg,#fff6df 0%,#ffe8b8 100%) !important;
+    color:#60311f !important;
+    box-shadow:0 4px 0 #7b281c,0 8px 18px rgba(73,24,15,.20) !important;
+    font-size:15px !important;
+    font-weight:900 !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-avatar{
+    width:38px !important;height:38px !important;
+    border:1px solid #b77d46 !important;
+    background:#f6d9a1 !important;
+    color:#4b2418 !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-whats-plus{
+    color:#d33b28 !important;
+    font-size:27px !important;
+    text-shadow:0 1px 0 #fff0cf !important;
+  }
+
+  /* Cream forecast panel with market-red edge, like the approved design. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-banner{
+    margin:0 10px 12px !important;
+    width:calc(100% - 20px) !important;
+    border:3px solid #c74b2d !important;
+    border-radius:22px !important;
+    background:linear-gradient(180deg,#fff2d0 0%,#ffe7b8 100%) !important;
+    color:#2d1b13 !important;
+    box-shadow:0 4px 0 #7b281c,0 9px 18px rgba(62,20,14,.22) !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-inner{padding:11px 10px 12px !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-title{
+    color:#3c2318 !important;
+    font-size:13px !important;
+    padding:0 2px 8px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-nws-source{color:#9a795f !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-now{color:#4a2c1f !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-days{gap:7px !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-day{
+    min-width:0 !important;
+    border:1.5px solid #c68a50 !important;
+    border-radius:19px !important;
+    background:linear-gradient(180deg,#fff8e6,#ffefcd) !important;
+    color:#2a1a13 !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.9) !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-low{color:#8d725f !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-precip-panel{
+    border:2px solid #bd643b !important;
+    background:#fff2d0 !important;
+    color:#2c1a13 !important;
+  }
+
+  /* Tight mobile canvas — cards sit on a brick/market wall, not a generic page. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-page-content{
+    padding:6px 10px 150px !important;
+    gap:10px !important;
+    background:
+      repeating-linear-gradient(0deg,rgba(255,177,110,.055) 0 2px,transparent 2px 39px),
+      linear-gradient(180deg,#8e3425 0%,#6b251b 100%) !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] main{gap:10px !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-post-card,
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="river-market"] #composer{
+    border:3px solid #c34a2c !important;
+    border-radius:23px !important;
+    background:linear-gradient(180deg,#fff7df 0%,#ffe7b5 100%) !important;
+    color:#2a1811 !important;
+    box-shadow:0 4px 0 #77261b,0 8px 16px rgba(54,15,10,.25),inset 0 1px 0 rgba(255,255,255,.95) !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] #composer{display:none !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-post-card{padding:16px !important}
+  .nkc-app-shell[data-theme="river-market"] .nkc-post-card .nkc-admin-menu-trigger{
+    background:#f6dfad !important;color:#321d14 !important;border-color:#d1a665 !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-moderation-label{
+    background:#f1d59c !important;color:#5a281a !important;border-color:#d6a45e !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-post-image-frame{
+    border:2px solid #bd6841 !important;background:#f8dca4 !important;
+  }
+
+  /* Approved illustrated City Market nav is the actual visible nav artwork.
+     Live links/buttons remain invisible hit targets on top of it. */
+  .nkc-mobile-bottom-nav[data-theme="river-market"]{
+    height:auto !important;
+    min-height:0 !important;
+    aspect-ratio:1024 / 296 !important;
+    padding:0 !important;
+    gap:0 !important;
+    border:0 !important;
+    background:#562217 url('/city-market-ui/city-market-nav.webp') center center / 100% 100% no-repeat !important;
+    box-shadow:0 -4px 0 #7e291d,0 -10px 22px rgba(66,20,13,.28) !important;
+    overflow:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-plus{
+    position:relative !important;
+    width:33.333% !important;
+    max-width:none !important;
+    height:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    flex:1 1 33.333% !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-nav-label{
+    opacity:0 !important;
+    visibility:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-orb-item:active,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-plus:active{
+    background:rgba(255,237,191,.10) !important;
+  }
+
+  .nkc-app-shell[data-theme="river-market"] footer{color:#ffe6b2 !important}
+}
+
+/* Desktop/tablet keeps the same City Market visual language while preserving
+   the existing multi-column app layout and controls. */
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="river-market"] .nkc-main-header{
+    background:#6e2419 !important;
+    border-color:#b44a2e !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-header-banner{
+    width:100% !important;
+    max-height:330px !important;
+    object-fit:cover !important;
+    object-position:center 48% !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-page-content{
+    background:
+      repeating-linear-gradient(0deg,rgba(255,177,110,.05) 0 2px,transparent 2px 44px),
+      linear-gradient(180deg,#8d3425,#682419) !important;
+    border-radius:24px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-post-card,
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="river-market"] #composer,
+  .nkc-app-shell[data-theme="river-market"] aside{
+    background:linear-gradient(180deg,#fff6dc,#ffe8b9) !important;
+    color:#2c1a13 !important;
+    border:2px solid #bd5b36 !important;
+    box-shadow:0 5px 0 #75261b,0 10px 20px rgba(60,18,12,.20) !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-banner{
+    background:#ffe7b6 !important;color:#2c1a13 !important;border-color:#bd5b36 !important;
+  }
+}
+
+
+/* === City Market responsive cleanup pass === */
+@media(max-width:639px){
+  /* Pull the live controls closer together so the feed arrives sooner. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-whats{
+    min-height:48px !important;
+    height:48px !important;
+    margin:7px 10px 7px !important;
+    width:calc(100% - 20px) !important;
+    padding:5px 11px !important;
+    border-radius:18px !important;
+    box-shadow:0 3px 0 #7b281c,0 5px 11px rgba(73,24,15,.16) !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-avatar{
+    width:32px !important;
+    height:32px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-whats-plus{
+    font-size:23px !important;
+  }
+
+  /* Compact forecast with a real horizontal rail; no clipped fourth card. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-banner{
+    margin:0 8px 8px !important;
+    width:calc(100% - 16px) !important;
+    border-width:2px !important;
+    border-radius:19px !important;
+    box-shadow:0 3px 0 #7b281c,0 6px 12px rgba(62,20,14,.16) !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-inner{
+    padding:8px 8px 9px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-title{
+    padding:0 2px 6px !important;
+    font-size:12px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-days{
+    display:flex !important;
+    gap:6px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    padding:0 1px 3px !important;
+    scroll-snap-type:x proximity !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-days::-webkit-scrollbar{
+    display:none !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-forecast-day{
+    flex:0 0 76px !important;
+    width:76px !important;
+    min-width:76px !important;
+    min-height:86px !important;
+    padding:7px 7px 6px !important;
+    border-radius:16px !important;
+    scroll-snap-align:start !important;
+  }
+
+  /* Bring actual feed content into the first screen. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-page-content{
+    padding:4px 9px 112px !important;
+    gap:8px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] main{
+    gap:8px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card{
+    padding:15px !important;
+    border-radius:19px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card h1{
+    font-size:22px !important;
+    line-height:1.12 !important;
+    margin-top:5px !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-card p{
+    line-height:1.4 !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-welcome-benefits{
+    margin-top:10px !important;
+    gap:5px !important;
+  }
+
+  /* Shorter fixed nav preserves the approved art but stops burying the feed. */
+  .nkc-mobile-bottom-nav[data-theme="river-market"]{
+    height:96px !important;
+    min-height:96px !important;
+    aspect-ratio:auto !important;
+    background-size:100% 100% !important;
+  }
+}
+
+/* Keep City Market desktop header proportional instead of turning it into a huge crop. */
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="river-market"] .nkc-header-banner-wrap{
+    max-height:250px !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="river-market"] .nkc-header-banner{
+    width:100% !important;
+    height:auto !important;
+    max-height:250px !important;
+    object-fit:cover !important;
+    object-position:center 42% !important;
+  }
+}
+
+
+/* === City Market mobile nav + filter cleanup === */
+@media(max-width:639px){
+  /* Shrink the illustrated nav and pin it lower so it stops covering feed content. */
+  .nkc-mobile-bottom-nav[data-theme="river-market"]{
+    height:82px !important;
+    min-height:82px !important;
+    padding:0 6px env(safe-area-inset-bottom) !important;
+    background-position:center bottom !important;
+    background-size:100% 100% !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-bottom-nav-plus{
+    height:78px !important;
+    max-height:78px !important;
+    align-self:flex-end !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="river-market"] .nkc-custom-theme-plus-icon{
+    height:76px !important;
+    max-height:76px !important;
+    transform:scale(.84) !important;
+    transform-origin:center bottom !important;
+  }
+
+  /* Move the floating filter control out of the weather/feed seam. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="river-market"] [data-mobile-filter-fab="true"]{
+    top:auto !important;
+    right:10px !important;
+    bottom:96px !important;
+    position:fixed !important;
+    z-index:45 !important;
+  }
+
+  /* Give the feed breathing room above the shorter nav. */
+  .nkc-app-shell[data-theme="river-market"] .nkc-page-content{
+    padding-bottom:92px !important;
+  }
+}
+
+
+/* CITY OF FOUNTAINS — SUPER AWESOME UI */
+.nkc-app-shell[data-theme="city-fountains"]{background:radial-gradient(circle at 50% -15%,rgba(63,226,244,.14),transparent 34%),linear-gradient(180deg,#063b4a 0%,#022630 48%,#001923 100%)!important;color:#e9fdff!important}
+@media(max-width:639px){
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{position:relative!important;overflow:visible!important;min-height:0!important;height:auto!important;padding:0 0 8px!important;border:0!important;background:linear-gradient(180deg,#00283a,#003847)!important;box-shadow:0 6px 18px rgba(0,8,18,.28)!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{position:relative!important;width:100%!important;height:auto!important;aspect-ratio:832/337!important;padding:0!important;background:url('/headers/city_fountains_approved_header.webp') center/100% 100% no-repeat!important;border-bottom:2px solid rgba(86,236,243,.85)!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-brand,.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-theme-mark,.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-wordmark{opacity:0!important;pointer-events:none!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-fountains-menu-hit{display:block!important;position:absolute!important;z-index:9!important;left:2.5%!important;top:6%!important;width:11.5%!important;aspect-ratio:1!important;border:0!important;border-radius:999px!important;background:transparent!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-icons{position:absolute!important;z-index:9!important;right:2.1%!important;top:6%!important;width:23.5%!important;height:24%!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:9%!important;margin:0!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-icon{width:100%!important;height:100%!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-icon svg{opacity:0!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats{position:relative!important;inset:auto!important;transform:none!important;width:calc(100% - 20px)!important;height:48px!important;min-height:48px!important;margin:7px 10px!important;padding:5px 11px!important;border:1.5px solid rgba(82,235,241,.7)!important;border-radius:18px!important;background:linear-gradient(180deg,rgba(7,70,84,.92),rgba(2,49,62,.94))!important;color:#dffcff!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.09),0 3px 10px rgba(0,0,0,.18)!important;font-weight:900!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-avatar{width:32px!important;height:32px!important;background:#06445a!important;border:1px solid #2ac6d2!important;color:#ecffff!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats-plus{color:#55eff2!important;font-size:23px!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-banner{margin:0 8px 8px!important;width:calc(100% - 16px)!important;border:1.5px solid #16859a!important;border-radius:19px!important;background:linear-gradient(180deg,rgba(4,60,75,.97),rgba(2,45,59,.98))!important;color:#efffff!important;box-shadow:0 5px 14px rgba(0,13,22,.22)!important;overflow:hidden!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-inner{padding:8px 8px 9px!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-title{padding:0 2px 6px!important;color:#efffff!important;font-size:12px!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-nws-source{color:#8fbec8!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-now{color:#b8dce2!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-days{display:flex!important;gap:6px!important;overflow-x:auto!important;overflow-y:hidden!important;padding:0 1px 3px!important;scroll-snap-type:x proximity!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-days::-webkit-scrollbar{display:none!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-day{flex:0 0 76px!important;width:76px!important;min-width:76px!important;min-height:86px!important;padding:7px 7px 6px!important;border:1px solid rgba(68,193,211,.55)!important;border-radius:16px!important;background:linear-gradient(180deg,rgba(5,70,86,.95),rgba(3,50,65,.96))!important;color:#f4ffff!important;scroll-snap-align:start!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-low{color:#86b4bf!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{padding:5px 9px 116px!important;gap:8px!important;background:radial-gradient(circle at 90% 5%,rgba(81,233,240,.07),transparent 24%),linear-gradient(180deg,#021f2b 0%,#00151e 100%)!important}.nkc-app-shell[data-theme="city-fountains"] main{gap:8px!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-post-card,.nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card,.nkc-app-shell[data-theme="city-fountains"] #composer{border:1.5px solid #167d92!important;border-radius:19px!important;background:linear-gradient(180deg,rgba(7,56,70,.98),rgba(3,41,53,.99))!important;color:#e9fdff!important;box-shadow:0 6px 14px rgba(0,9,17,.22),inset 0 1px 0 rgba(255,255,255,.05)!important}.nkc-app-shell[data-theme="city-fountains"] #composer{display:none!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card{padding:15px!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card h1{font-size:22px!important;line-height:1.12!important;margin-top:5px!important;color:#f2ffff!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card p{color:#a9ced5!important;line-height:1.4!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-post-card{padding:14px!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-post-image-frame{border:1.5px solid #167f94!important;background:#022f3c!important}
+.nkc-mobile-bottom-nav[data-theme="city-fountains"]{height:96px!important;min-height:96px!important;padding:0 5px env(safe-area-inset-bottom)!important;gap:4px!important;justify-content:space-between!important;border-top:2px solid #49e5eb!important;background:linear-gradient(180deg,#064453 0%,#022d39 100%)!important;box-shadow:0 -8px 18px rgba(0,15,24,.3)!important;overflow:hidden!important}.nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-nav-label{display:none!important}.nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-orb-item,.nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-plus{flex:1 1 0!important;width:auto!important;max-width:32%!important;min-width:0!important;height:91px!important;margin:0!important;padding:0!important;align-self:flex-end!important;background:transparent!important;border:0!important;box-shadow:none!important}.nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-nav-icon,.nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-plus-icon{display:block!important;width:100%!important;height:88px!important;max-width:112px!important;max-height:88px!important;margin:auto!important;object-fit:contain!important;object-position:center bottom!important;transform:none!important}
+.nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-filter-fab,.nkc-app-shell[data-theme="city-fountains"] [data-mobile-filter-fab="true"]{position:fixed!important;top:auto!important;right:10px!important;bottom:108px!important;z-index:45!important}
+}
+@media(min-width:640px){.nkc-app-shell[data-theme="city-fountains"] .nkc-main-header{background:#002938!important;border-color:#157e94!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-header-banner-wrap{max-height:300px!important;overflow:hidden!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-header-banner{width:100%!important;height:auto!important;max-height:300px!important;object-fit:cover!important;object-position:center!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{background:radial-gradient(circle at 75% 0%,rgba(72,220,232,.07),transparent 28%),linear-gradient(180deg,#073744,#022631)!important;border-radius:22px!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-post-card,.nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card,.nkc-app-shell[data-theme="city-fountains"] #composer,.nkc-app-shell[data-theme="city-fountains"] aside{background:linear-gradient(180deg,#073c4a,#042f3b)!important;color:#eaffff!important;border:1.5px solid #167f94!important;box-shadow:0 7px 18px rgba(0,10,18,.2)!important}.nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-banner{background:#073c4a!important;color:#efffff!important;border-color:#167f94!important}}
+
+
+/* =====================================================================
+   CITY OF FOUNTAINS — IMMERSIVE REVAMP PASS
+   A composition change, not a recolor: luminous water stage, floating
+   glass forecast, fountain-lit content cards, and integrated nav.
+   ===================================================================== */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"]{
+    background:
+      radial-gradient(ellipse at 50% 12%,rgba(49,230,255,.22),transparent 30%),
+      radial-gradient(ellipse at 12% 45%,rgba(21,147,205,.16),transparent 26%),
+      linear-gradient(180deg,#001b2c 0%,#00384a 34%,#00141e 100%) !important;
+  }
+
+  /* Make the illustrated skyline the opening scene rather than a banner strip. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{
+    padding:0 !important;
+    background:#001b2c !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{
+    aspect-ratio:832/337 !important;
+    border-bottom:0 !important;
+    box-shadow:
+      inset 0 -28px 28px -24px rgba(72,236,255,.75),
+      0 12px 24px rgba(0,8,20,.34) !important;
+  }
+
+  /* Composer becomes the illuminated pool lip attached to the scene. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats{
+    width:calc(100% - 28px) !important;
+    margin:-4px 14px 10px !important;
+    height:54px !important;
+    min-height:54px !important;
+    border:2px solid rgba(111,245,255,.86) !important;
+    border-radius:27px !important;
+    background:
+      radial-gradient(circle at 18% 0%,rgba(100,239,255,.18),transparent 34%),
+      linear-gradient(180deg,rgba(3,75,93,.98),rgba(0,38,54,.98)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -10px 18px rgba(0,19,31,.28),
+      0 0 0 4px rgba(19,161,188,.12),
+      0 9px 20px rgba(0,8,18,.30) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-avatar{
+    width:36px !important;height:36px !important;
+    border:2px solid #62edf5 !important;
+    background:linear-gradient(180deg,#0b6680,#063a52) !important;
+    box-shadow:0 0 12px rgba(78,229,241,.28) !important;
+  }
+
+  /* Forecast becomes a floating glass-water deck. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-banner{
+    width:calc(100% - 20px) !important;
+    margin:0 10px 12px !important;
+    border:1px solid rgba(99,232,243,.70) !important;
+    border-radius:24px !important;
+    background:
+      linear-gradient(145deg,rgba(10,82,99,.94),rgba(1,39,55,.97)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.16),
+      0 12px 25px rgba(0,8,18,.30),
+      0 0 28px rgba(31,197,221,.08) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-inner{
+    padding:11px 10px 12px !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-title{
+    font-size:12px !important;
+    letter-spacing:.02em !important;
+    text-shadow:0 1px 6px rgba(0,0,0,.35) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-forecast-day{
+    flex-basis:80px !important;
+    width:80px !important;
+    min-width:80px !important;
+    min-height:92px !important;
+    border:1px solid rgba(116,236,245,.52) !important;
+    border-radius:20px !important;
+    background:
+      radial-gradient(circle at 30% 0%,rgba(106,239,249,.15),transparent 38%),
+      linear-gradient(180deg,rgba(6,82,101,.96),rgba(2,46,63,.96)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.12),
+      0 5px 10px rgba(0,14,24,.16) !important;
+  }
+
+  /* The content is now a fountain plaza, not a generic dark feed. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{
+    position:relative !important;
+    padding:12px 10px 116px !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(70,225,238,.16),transparent 22%),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 42px),
+      linear-gradient(180deg,#003244 0%,#001e2c 45%,#00131d 100%) !important;
+    border-top:1px solid rgba(90,231,241,.55) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content:before{
+    content:"" !important;
+    position:absolute !important;
+    left:8% !important;right:8% !important;top:-8px !important;height:16px !important;
+    border-radius:50% !important;
+    background:radial-gradient(ellipse,rgba(92,236,245,.42),rgba(25,151,176,.08) 50%,transparent 72%) !important;
+    filter:blur(3px) !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card{
+    position:relative !important;
+    overflow:hidden !important;
+    padding:19px 17px 18px !important;
+    border:1px solid rgba(89,216,230,.68) !important;
+    border-radius:25px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(73,214,231,.18),transparent 38%),
+      linear-gradient(145deg,rgba(8,70,85,.98),rgba(2,39,53,.99)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.10),
+      0 10px 22px rgba(0,8,16,.25) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card:after{
+    content:"" !important;
+    position:absolute !important;
+    width:150px !important;height:150px !important;
+    right:-52px !important;top:-58px !important;
+    border:18px solid rgba(81,224,237,.055) !important;
+    border-radius:50% !important;
+    box-shadow:0 0 0 22px rgba(81,224,237,.025) !important;
+    pointer-events:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card h1{
+    font-size:24px !important;
+    line-height:1.08 !important;
+    text-shadow:0 2px 10px rgba(0,0,0,.28) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-benefits > *{
+    border-color:rgba(99,225,237,.52) !important;
+    background:rgba(4,56,71,.72) !important;
+    color:#dffcff !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-post-card{
+    border:1px solid rgba(78,202,219,.62) !important;
+    border-radius:24px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(54,207,224,.10),transparent 32%),
+      linear-gradient(155deg,rgba(7,61,76,.99),rgba(2,37,50,.99)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.07),
+      0 9px 20px rgba(0,8,16,.23) !important;
+  }
+
+  /* Nav is a glowing fountain ledge with the approved baked-label artwork. */
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"]{
+    height:102px !important;
+    min-height:102px !important;
+    border-top:1px solid rgba(104,239,247,.85) !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(73,224,237,.18),transparent 55%),
+      linear-gradient(180deg,rgba(5,67,82,.99),rgba(0,30,42,.995)) !important;
+    box-shadow:
+      0 -1px 0 rgba(255,255,255,.10),
+      0 -12px 28px rgba(0,12,21,.38),
+      0 -4px 20px rgba(50,220,236,.08) !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-plus-icon{
+    height:94px !important;
+    max-height:94px !important;
+    max-width:118px !important;
+    filter:drop-shadow(0 4px 5px rgba(0,8,16,.26)) !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="city-fountains"] [data-mobile-filter-fab="true"]{
+    bottom:114px !important;
+    border-color:#4fdde8 !important;
+    background:rgba(1,39,53,.92) !important;
+    box-shadow:0 4px 14px rgba(0,0,0,.30),0 0 0 3px rgba(55,206,224,.10) !important;
+  }
+}
+
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="city-fountains"]{
+    background:
+      radial-gradient(ellipse at 50% 5%,rgba(54,221,239,.15),transparent 34%),
+      linear-gradient(180deg,#00283a,#00131e) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-main-header{
+    box-shadow:0 14px 30px rgba(0,10,20,.28) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{
+    background:
+      radial-gradient(circle at 50% 0%,rgba(69,221,235,.12),transparent 26%),
+      linear-gradient(180deg,#043646,#001d2a) !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-post-card,
+  .nkc-app-shell[data-theme="city-fountains"] #composer,
+  .nkc-app-shell[data-theme="city-fountains"] aside{
+    border-radius:24px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(67,216,232,.11),transparent 32%),
+      linear-gradient(150deg,#074555,#022d3b) !important;
+    border-color:#168fa5 !important;
+  }
+}
+
+
+/* === City of Fountains approved scene artwork install === */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{
+    aspect-ratio:1024 / 604 !important;
+    background:url('/city-fountains-scene/city_fountains_scene_header.webp') center center / 100% 100% no-repeat !important;
+  }
+
+  /* The approved scene already contains its own menu/search/bell artwork. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-fountains-menu-hit{
+    left:2.2% !important;
+    top:4.5% !important;
+    width:12% !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-icons{
+    right:2.2% !important;
+    top:4.5% !important;
+    width:24% !important;
+    height:18% !important;
+  }
+
+  /* Replace floating icons with the complete wet-stone fountain-plaza scene. */
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"]{
+    height:112px !important;
+    min-height:112px !important;
+    padding:0 !important;
+    border-top:1px solid rgba(104,239,247,.85) !important;
+    background:url('/city-fountains-scene/city_fountains_scene_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -10px 24px rgba(0,10,20,.32) !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-nav-label{
+    opacity:0 !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    max-width:none !important;
+    height:112px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{
+    padding-bottom:124px !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="city-fountains"] [data-mobile-filter-fab="true"]{
+    bottom:124px !important;
+  }
+}
+
+
+/* =====================================================================
+   18TH & VINE — LIGHTER JAZZ DISTRICT SCENE
+   Full composition pass using the approved lighter artwork.
+   Bottom nav intentionally matches City Market's compact height.
+   ===================================================================== */
+.nkc-app-shell[data-theme="18th-vine"]{
+  background:
+    radial-gradient(ellipse at 50% 5%,rgba(145,44,198,.22),transparent 34%),
+    linear-gradient(180deg,#160823 0%,#0b0712 55%,#07050a 100%) !important;
+  color:#fff1d6 !important;
+}
+
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-top-header{
+    position:relative !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:0 0 7px !important;
+    border:0 !important;
+    overflow:visible !important;
+    background:#110719 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.32) !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-top-row{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024 / 584 !important;
+    padding:0 !important;
+    background:url('/18th-vine-scene/18th_vine_header.webp') center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #d89a31 !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-vine-menu-hit{
+    display:block !important;
+    position:absolute !important;
+    z-index:9 !important;
+    left:2.3% !important;
+    top:4.2% !important;
+    width:12.5% !important;
+    aspect-ratio:1 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:transparent !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    z-index:9 !important;
+    right:2.3% !important;
+    top:4.2% !important;
+    width:24.5% !important;
+    height:19% !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8% !important;
+    margin:0 !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-icon{
+    width:100% !important;height:100% !important;padding:0 !important;
+    border:0 !important;background:transparent !important;box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-whats{
+    width:calc(100% - 22px) !important;
+    height:50px !important;min-height:50px !important;
+    margin:7px 11px 8px !important;padding:5px 11px !important;
+    border:2px solid #d79a38 !important;border-radius:20px !important;
+    background:linear-gradient(180deg,#fff1cf,#f6dba9) !important;
+    color:#3b1748 !important;font-weight:900 !important;
+    box-shadow:0 5px 13px rgba(0,0,0,.23),inset 0 1px 0 rgba(255,255,255,.75) !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-avatar{
+    width:34px !important;height:34px !important;
+    background:#43155b !important;border:1.5px solid #d99c3c !important;color:#fff2d3 !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-whats-plus{color:#7c238d !important;font-size:24px !important}
+
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-banner{
+    width:calc(100% - 18px) !important;margin:0 9px 10px !important;
+    border:1.5px solid #c67d31 !important;border-radius:21px !important;
+    background:
+      radial-gradient(circle at 50% 0%,rgba(145,48,177,.22),transparent 42%),
+      linear-gradient(160deg,#281039,#12091f) !important;
+    color:#fff0d4 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.08) !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-inner{padding:9px 8px 10px !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-title{color:#fff1d4 !important;padding-bottom:7px !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-nws-source,
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-now{color:#c9a8c8 !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-days{
+    display:flex !important;gap:6px !important;overflow-x:auto !important;overflow-y:hidden !important;
+    scrollbar-width:none !important;-webkit-overflow-scrolling:touch !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-day{
+    flex:0 0 78px !important;width:78px !important;min-width:78px !important;min-height:88px !important;
+    padding:7px !important;border:1px solid #a35a79 !important;border-radius:18px !important;
+    background:linear-gradient(180deg,#321442,#190c27) !important;color:#fff1d7 !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.07) !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-forecast-low{color:#b996b8 !important}
+
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-page-content{
+    position:relative !important;
+    padding:8px 9px 94px !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(134,42,177,.17),transparent 26%),
+      linear-gradient(180deg,#160920,#09070d 100%) !important;
+    border-top:1px solid rgba(218,151,49,.55) !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] #composer{display:none !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-post-card{
+    border:1.5px solid #a95a79 !important;border-radius:22px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(144,43,179,.14),transparent 34%),
+      linear-gradient(150deg,#271032,#120a1a) !important;
+    color:#fff0d5 !important;
+    box-shadow:0 8px 18px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.06) !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-welcome-card{padding:16px !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-welcome-card h1{
+    color:#fff1d3 !important;font-size:23px !important;line-height:1.1 !important;
+    text-shadow:0 2px 8px rgba(0,0,0,.35) !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-welcome-card p{color:#cbb3c8 !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-welcome-benefits > *{
+    background:#21102d !important;border-color:#9b5b76 !important;color:#f8dfc3 !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-post-card{padding:14px !important}
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-post-image-frame{
+    border-color:#a96558 !important;background:#130a18 !important;
+  }
+
+  /* One compact street scene, same vertical footprint as City Market. */
+  .nkc-mobile-bottom-nav[data-theme="18th-vine"]{
+    height:82px !important;min-height:82px !important;
+    padding:0 !important;gap:0 !important;
+    border-top:2px solid #d49a35 !important;
+    background:url('/18th-vine-scene/18th_vine_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.32) !important;
+    overflow:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="18th-vine"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="18th-vine"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="18th-vine"] .nkc-custom-theme-plus-icon{opacity:0 !important}
+  .nkc-mobile-bottom-nav[data-theme="18th-vine"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="18th-vine"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;width:33.333% !important;max-width:none !important;
+    height:82px !important;margin:0 !important;padding:0 !important;
+    border:0 !important;background:transparent !important;box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="18th-vine"] [data-mobile-filter-fab="true"]{
+    position:fixed !important;top:auto !important;right:10px !important;bottom:94px !important;
+    border-color:#d49a35 !important;background:rgba(22,8,31,.94) !important;z-index:45 !important;
+  }
+}
+
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-main-header{
+    background:#100718 !important;border-color:#a86443 !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-header-banner-wrap{
+    max-height:330px !important;overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-header-banner{
+    width:100% !important;height:auto !important;max-height:330px !important;
+    object-fit:cover !important;object-position:center !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-page-content{
+    background:radial-gradient(circle at 50% 0%,rgba(133,42,178,.12),transparent 28%),linear-gradient(180deg,#170a21,#09070d) !important;
+  }
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="18th-vine"] .nkc-post-card,
+  .nkc-app-shell[data-theme="18th-vine"] #composer,
+  .nkc-app-shell[data-theme="18th-vine"] aside{
+    background:linear-gradient(150deg,#2b1238,#140b1d) !important;
+    color:#fff0d5 !important;border-color:#9e5a72 !important;
+  }
+}
+
+
+/* =====================================================================
+   KC BARBECUE — FULL SMOKEHOUSE SCENE
+   Same composition standard as City Market / Fountains / 18th & Vine.
+   Compact physical bottom nav at City Market height.
+   ===================================================================== */
+.nkc-app-shell[data-theme="kc-bbq"]{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(217,76,20,.18),transparent 34%),
+    linear-gradient(180deg,#2b0c05 0%,#160805 52%,#090403 100%) !important;
+  color:#fff0d2 !important;
+}
+
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-top-header{
+    position:relative !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:0 0 7px !important;
+    border:0 !important;
+    overflow:visible !important;
+    background:#190704 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.34) !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-top-row{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024 / 628 !important;
+    padding:0 !important;
+    background:url('/kc-bbq-scene/kc_bbq_header.webp') center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #d35b24 !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-bbq-menu-hit{
+    display:block !important;
+    position:absolute !important;
+    z-index:9 !important;
+    left:2.3% !important;
+    top:4.2% !important;
+    width:12.5% !important;
+    aspect-ratio:1 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:transparent !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    z-index:9 !important;
+    right:2.3% !important;
+    top:4.2% !important;
+    width:24.5% !important;
+    height:19% !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8% !important;
+    margin:0 !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-icon{
+    width:100% !important;height:100% !important;padding:0 !important;
+    border:0 !important;background:transparent !important;box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-whats{
+    width:calc(100% - 22px) !important;
+    height:50px !important;min-height:50px !important;
+    margin:7px 11px 8px !important;padding:5px 11px !important;
+    border:2px solid #c84b24 !important;border-radius:20px !important;
+    background:linear-gradient(180deg,#ffe8b8,#f4c982) !important;
+    color:#351208 !important;font-weight:900 !important;
+    box-shadow:0 5px 13px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.7) !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-avatar{
+    width:34px !important;height:34px !important;
+    background:#a92816 !important;border:1.5px solid #d45c25 !important;color:#fff1d0 !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-whats-plus{color:#a92716 !important;font-size:24px !important}
+
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-banner{
+    width:calc(100% - 18px) !important;margin:0 9px 10px !important;
+    border:1.5px solid #bd3e1f !important;border-radius:21px !important;
+    background:
+      radial-gradient(circle at 50% 0%,rgba(211,72,25,.16),transparent 42%),
+      linear-gradient(160deg,#5a160b,#260a05) !important;
+    color:#fff0d2 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.07) !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-inner{padding:9px 8px 10px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-title{color:#fff0d2 !important;padding-bottom:7px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-nws-source,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-now{color:#d99a82 !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-days{
+    display:flex !important;gap:6px !important;overflow-x:auto !important;overflow-y:hidden !important;
+    scrollbar-width:none !important;-webkit-overflow-scrolling:touch !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-day{
+    flex:0 0 78px !important;width:78px !important;min-width:78px !important;min-height:88px !important;
+    padding:7px !important;border:1px solid #a92d1b !important;border-radius:18px !important;
+    background:linear-gradient(180deg,#6b1a0d,#351007) !important;color:#fff0d3 !important;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06) !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-forecast-low{color:#d28e76 !important}
+
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-page-content{
+    position:relative !important;
+    padding:8px 9px 94px !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(206,64,18,.13),transparent 27%),
+      linear-gradient(180deg,#2b0d06,#0d0503 100%) !important;
+    border-top:1px solid rgba(213,82,29,.52) !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] #composer{display:none !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-card{
+    border:1.5px solid #97411f !important;border-radius:22px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(201,68,22,.12),transparent 34%),
+      linear-gradient(150deg,#42140b,#1b0905) !important;
+    color:#fff0d4 !important;
+    box-shadow:0 8px 18px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.05) !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card{padding:16px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card h1{
+    color:#fff0d0 !important;font-size:23px !important;line-height:1.1 !important;
+    text-shadow:0 2px 8px rgba(0,0,0,.36) !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card p{color:#d9aa91 !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-benefits > *{
+    background:#331008 !important;border-color:#92512f !important;color:#f7d5b5 !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-card{padding:14px !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-image-frame{
+    border-color:#98401e !important;background:#180704 !important;
+  }
+
+  /* Physical smokehouse patio scene at the compact City Market height. */
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"]{
+    height:82px !important;min-height:82px !important;
+    padding:0 !important;gap:0 !important;
+    border-top:2px solid #d05b25 !important;
+    background:url('/kc-bbq-scene/kc_bbq_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.34) !important;
+    overflow:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-custom-theme-plus-icon{opacity:0 !important}
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kc-bbq"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;width:33.333% !important;max-width:none !important;
+    height:82px !important;margin:0 !important;padding:0 !important;
+    border:0 !important;background:transparent !important;box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="kc-bbq"] [data-mobile-filter-fab="true"]{
+    position:fixed !important;top:auto !important;right:10px !important;bottom:94px !important;
+    border-color:#d15b25 !important;background:rgba(35,9,4,.94) !important;z-index:45 !important;
+  }
+}
+
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-main-header{
+    background:#180704 !important;border-color:#9e391c !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-header-banner-wrap{max-height:330px !important;overflow:hidden !important}
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-header-banner{
+    width:100% !important;height:auto !important;max-height:330px !important;
+    object-fit:cover !important;object-position:center !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-page-content{
+    background:radial-gradient(circle at 50% 0%,rgba(201,65,19,.11),transparent 28%),linear-gradient(180deg,#2a0d06,#0c0503) !important;
+  }
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="kc-bbq"] .nkc-post-card,
+  .nkc-app-shell[data-theme="kc-bbq"] #composer,
+  .nkc-app-shell[data-theme="kc-bbq"] aside{
+    background:linear-gradient(150deg,#42140b,#1a0905) !important;
+    color:#fff0d4 !important;border-color:#97411f !important;
+  }
+}
+
+
+/* =====================================================================
+   COWTOWN — FULL WEST BOTTOMS / STOCKYARDS SCENE
+   Compact physical nav; app behavior remains unchanged.
+   ===================================================================== */
+.nkc-app-shell[data-theme="cowtown"]{
+  background:radial-gradient(ellipse at 50% 0%,rgba(210,112,30,.18),transparent 34%),linear-gradient(180deg,#2a160b,#120b07 58%,#090604) !important;
+  color:#f8dfb4 !important;
+}
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-top-header{padding:0 0 7px !important;background:#170d07 !important;border:0 !important;box-shadow:0 8px 20px rgba(0,0,0,.34) !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-top-row{
+    position:relative !important;width:100% !important;height:auto !important;aspect-ratio:1024/645 !important;padding:0 !important;
+    background:url('/cowtown-scene/cowtown_header.webp') center/100% 100% no-repeat !important;border-bottom:2px solid #b96d26 !important;
+  }
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-wordmark{opacity:0 !important;pointer-events:none !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-cowtown-menu-hit{display:block !important;position:absolute !important;z-index:9 !important;left:2.2% !important;top:4% !important;width:12.5% !important;aspect-ratio:1 !important;border:0 !important;border-radius:999px !important;background:transparent !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-top-icons{position:absolute !important;z-index:9 !important;right:2.2% !important;top:4% !important;width:24.5% !important;height:19% !important;display:grid !important;grid-template-columns:1fr 1fr !important;gap:8% !important;margin:0 !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-icon{width:100% !important;height:100% !important;padding:0 !important;border:0 !important;background:transparent !important;box-shadow:none !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-whats{
+    width:calc(100% - 22px) !important;height:50px !important;min-height:50px !important;margin:7px 11px 8px !important;padding:5px 11px !important;
+    border:2px solid #9f5b24 !important;border-radius:19px !important;background:linear-gradient(180deg,#f2d19d,#dca965) !important;color:#351c0d !important;font-weight:900 !important;
+    box-shadow:0 5px 13px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.55) !important;
+  }
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-avatar{width:34px !important;height:34px !important;background:#542a12 !important;border:1.5px solid #a8682c !important;color:#f8dfb4 !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-whats-plus{color:#6d3518 !important;font-size:24px !important}
+
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-banner{
+    width:calc(100% - 18px) !important;margin:0 9px 10px !important;border:1.5px solid #875124 !important;border-radius:20px !important;
+    background:radial-gradient(circle at 50% 0%,rgba(178,98,29,.12),transparent 42%),linear-gradient(160deg,#3b2514,#1d130c) !important;color:#f6ddb3 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.29),inset 0 1px 0 rgba(255,255,255,.06) !important;overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-inner{padding:9px 8px 10px !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-title{color:#f5d7a5 !important;padding-bottom:7px !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-nws-source,
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-now{color:#b89570 !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-days{display:flex !important;gap:6px !important;overflow-x:auto !important;overflow-y:hidden !important;scrollbar-width:none !important;-webkit-overflow-scrolling:touch !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-day{flex:0 0 78px !important;width:78px !important;min-width:78px !important;min-height:88px !important;padding:7px !important;border:1px solid #79502e !important;border-radius:17px !important;background:linear-gradient(180deg,#432817,#24170e) !important;color:#f7dfb7 !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-forecast-low{color:#b79573 !important}
+
+  .nkc-app-shell[data-theme="cowtown"] .nkc-page-content{position:relative !important;padding:8px 9px 94px !important;background:radial-gradient(ellipse at 50% 0%,rgba(174,91,24,.12),transparent 27%),linear-gradient(180deg,#28170d,#0d0906) !important;border-top:1px solid rgba(181,105,37,.5) !important}
+  .nkc-app-shell[data-theme="cowtown"] #composer{display:none !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="cowtown"] .nkc-post-card{border:1.5px solid #76502e !important;border-radius:21px !important;background:radial-gradient(circle at 100% 0%,rgba(177,98,29,.1),transparent 34%),linear-gradient(150deg,#342116,#19110b) !important;color:#f7dfb6 !important;box-shadow:0 8px 18px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.045) !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-welcome-card{padding:16px !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-welcome-card h1{color:#f4d5a1 !important;font-size:23px !important;line-height:1.1 !important;text-shadow:0 2px 8px rgba(0,0,0,.38) !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-welcome-card p{color:#c6a17c !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-welcome-benefits > *{background:#2a1b11 !important;border-color:#735134 !important;color:#e8c69c !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-post-card{padding:14px !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-post-image-frame{border-color:#77502d !important;background:#160e09 !important}
+
+  .nkc-mobile-bottom-nav[data-theme="cowtown"]{
+    height:82px !important;min-height:82px !important;padding:0 !important;gap:0 !important;border-top:2px solid #b66a28 !important;
+    background:url('/cowtown-scene/cowtown_nav.webp') center bottom/100% 100% no-repeat !important;box-shadow:0 -7px 18px rgba(0,0,0,.35) !important;overflow:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="cowtown"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="cowtown"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="cowtown"] .nkc-custom-theme-plus-icon{opacity:0 !important}
+  .nkc-mobile-bottom-nav[data-theme="cowtown"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="cowtown"] .nkc-bottom-nav-plus{flex:1 1 33.333% !important;width:33.333% !important;max-width:none !important;height:82px !important;margin:0 !important;padding:0 !important;border:0 !important;background:transparent !important;box-shadow:none !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="cowtown"] [data-mobile-filter-fab="true"]{position:fixed !important;top:auto !important;right:10px !important;bottom:94px !important;border-color:#ad672a !important;background:rgba(31,18,10,.95) !important;z-index:45 !important}
+}
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="cowtown"] .nkc-main-header{background:#170d07 !important;border-color:#7e4c26 !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-header-banner-wrap{max-height:330px !important;overflow:hidden !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-header-banner{width:100% !important;height:auto !important;max-height:330px !important;object-fit:cover !important;object-position:center !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-page-content{background:radial-gradient(circle at 50% 0%,rgba(174,91,24,.1),transparent 28%),linear-gradient(180deg,#28170d,#0d0906) !important}
+  .nkc-app-shell[data-theme="cowtown"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="cowtown"] .nkc-post-card,
+  .nkc-app-shell[data-theme="cowtown"] #composer,
+  .nkc-app-shell[data-theme="cowtown"] aside{background:linear-gradient(150deg,#342116,#19110b) !important;color:#f7dfb6 !important;border-color:#76502e !important}
+}
+
+
+/* =====================================================================
+   AIR FORCE — APPROVED DESIGN + APPROVED THREE-PANEL NAV
+   Nav footprint is fixed at 82px. No secondary navigation strip.
+   ===================================================================== */
+.nkc-app-shell[data-theme="air-force"]{
+  background:linear-gradient(180deg,#071d33 0%,#061523 55%,#030b12 100%) !important;
+  color:#e9eef3 !important;
+}
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-top-header{
+    position:relative !important;min-height:0 !important;height:auto !important;padding:0 0 7px !important;
+    border:0 !important;background:#06192b !important;box-shadow:0 8px 20px rgba(0,0,0,.32) !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-top-row{
+    position:relative !important;width:100% !important;height:auto !important;
+    aspect-ratio:1023/454 !important;padding:0 !important;
+    background:url('/air-force-scene/air_force_header.webp') center/100% 100% no-repeat !important;
+    border-bottom:2px solid #8fa6b9 !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-wordmark{opacity:0 !important;pointer-events:none !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-airforce-menu-hit{
+    display:block !important;position:absolute !important;z-index:9 !important;left:2.2% !important;top:4% !important;
+    width:12.5% !important;aspect-ratio:1 !important;border:0 !important;border-radius:999px !important;background:transparent !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-top-icons{
+    position:absolute !important;z-index:9 !important;right:2.2% !important;top:4% !important;width:24.5% !important;height:19% !important;
+    display:grid !important;grid-template-columns:1fr 1fr !important;gap:8% !important;margin:0 !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-icon{
+    width:100% !important;height:100% !important;padding:0 !important;border:0 !important;background:transparent !important;box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-whats{
+    width:calc(100% - 22px) !important;height:50px !important;min-height:50px !important;margin:7px 11px 8px !important;padding:5px 11px !important;
+    border:2px solid #728da5 !important;border-radius:20px !important;background:linear-gradient(180deg,#f4f6f8,#d8dfe5) !important;
+    color:#0a2b4d !important;font-weight:900 !important;box-shadow:0 5px 13px rgba(0,0,0,.24),inset 0 1px 0 white !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-avatar{width:34px !important;height:34px !important;background:#0c3762 !important;border:1.5px solid #8ea5b9 !important;color:white !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-whats-plus{color:#0b3763 !important;font-size:24px !important}
+
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-banner{
+    width:calc(100% - 18px) !important;margin:0 9px 10px !important;border:1.5px solid #71899e !important;border-radius:21px !important;
+    background:linear-gradient(160deg,#0b3559,#061b30) !important;color:#eef3f6 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.09) !important;overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-inner{padding:9px 8px 10px !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-title{color:#f0f3f5 !important;padding-bottom:7px !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-nws-source,
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-now{color:#9aabba !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-days{display:flex !important;gap:6px !important;overflow-x:auto !important;overflow-y:hidden !important;scrollbar-width:none !important;-webkit-overflow-scrolling:touch !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-day{
+    flex:0 0 78px !important;width:78px !important;min-width:78px !important;min-height:88px !important;padding:7px !important;
+    border:1px solid #58758e !important;border-radius:17px !important;background:linear-gradient(180deg,#0d3b61,#08243d) !important;color:#f1f4f6 !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-forecast-low{color:#93a5b4 !important}
+
+  .nkc-app-shell[data-theme="air-force"] .nkc-page-content{
+    position:relative !important;padding:8px 9px 94px !important;
+    background:radial-gradient(ellipse at 50% 0%,rgba(53,105,151,.15),transparent 28%),linear-gradient(180deg,#081e32,#030c14) !important;
+    border-top:1px solid rgba(139,164,185,.5) !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] #composer{display:none !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="air-force"] .nkc-post-card{
+    border:1.5px solid #61798e !important;border-radius:21px !important;
+    background:linear-gradient(150deg,#153956,#091c2c) !important;color:#edf1f4 !important;
+    box-shadow:0 8px 18px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.06) !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-welcome-card{padding:16px !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-welcome-card h1{color:#f0f3f5 !important;font-size:23px !important;line-height:1.1 !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-welcome-card p{color:#b1bec9 !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-welcome-benefits > *{background:#0c2b47 !important;border-color:#61798e !important;color:#dce4ea !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-post-card{padding:14px !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-post-image-frame{border-color:#657f95 !important;background:#061421 !important}
+
+  /* EXACT SAME 82PX FOOTPRINT AS THE OTHER COMPLETED THEMES.
+     Only these three illustrated panels appear; there is no second strip below. */
+  .nkc-mobile-bottom-nav[data-theme="air-force"]{
+    height:82px !important;min-height:82px !important;max-height:82px !important;padding:0 !important;gap:0 !important;
+    border-top:2px solid #839aae !important;
+    background:url('/air-force-scene/air_force_nav.webp') center center/100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.34) !important;overflow:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="air-force"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="air-force"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="air-force"] .nkc-custom-theme-plus-icon{opacity:0 !important}
+  .nkc-mobile-bottom-nav[data-theme="air-force"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="air-force"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;width:33.333% !important;max-width:none !important;height:82px !important;
+    margin:0 !important;padding:0 !important;border:0 !important;background:transparent !important;box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="air-force"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="air-force"] [data-mobile-filter-fab="true"]{
+    position:fixed !important;top:auto !important;right:10px !important;bottom:94px !important;
+    border-color:#839aae !important;background:rgba(5,20,34,.95) !important;z-index:45 !important;
+  }
+}
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="air-force"] .nkc-main-header{background:#06192b !important;border-color:#667f94 !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-header-banner-wrap{max-height:330px !important;overflow:hidden !important}
+  .nkc-app-shell[data-theme="air-force"] .nkc-header-banner{width:100% !important;height:auto !important;max-height:330px !important;object-fit:cover !important;object-position:center !important}
+}
+
+
+/* =====================================================================
+   MARINES — FULL USMC SCENE
+   Three-button nav fixed to the same 82px footprint as the other themes.
+   ===================================================================== */
+.nkc-app-shell[data-theme="marines"]{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(181,42,20,.20),transparent 34%),
+    linear-gradient(180deg,#2a0705 0%,#120504 55%,#070202 100%) !important;
+  color:#f5e1bd !important;
+}
+
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-top-header{
+    position:relative !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:0 0 7px !important;
+    border:0 !important;
+    background:#160403 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.34) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-top-row{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:1024/448 !important;
+    padding:0 !important;
+    background:url('/marines-scene/marines_header.webp') center/100% 100% no-repeat !important;
+    border-bottom:2px solid #b58a39 !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-marines-menu-hit{
+    display:block !important;
+    position:absolute !important;
+    z-index:9 !important;
+    left:2.2% !important;
+    top:4% !important;
+    width:12.5% !important;
+    aspect-ratio:1 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:transparent !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    z-index:9 !important;
+    right:2.2% !important;
+    top:4% !important;
+    width:24.5% !important;
+    height:19% !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8% !important;
+    margin:0 !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-icon{
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-whats{
+    width:calc(100% - 22px) !important;
+    height:50px !important;
+    min-height:50px !important;
+    margin:7px 11px 8px !important;
+    padding:5px 11px !important;
+    border:2px solid #9b1e16 !important;
+    border-radius:20px !important;
+    background:linear-gradient(180deg,#f5eadc,#dfc9ad) !important;
+    color:#2b0b08 !important;
+    font-weight:900 !important;
+    box-shadow:0 5px 13px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.75) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-avatar{
+    width:34px !important;
+    height:34px !important;
+    background:#8b160f !important;
+    border:1.5px solid #c0963d !important;
+    color:#fff1d2 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-whats-plus{
+    color:#8b160f !important;
+    font-size:24px !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-banner{
+    width:calc(100% - 18px) !important;
+    margin:0 9px 10px !important;
+    border:1.5px solid #a98736 !important;
+    border-radius:21px !important;
+    background:
+      radial-gradient(circle at 50% 0%,rgba(142,25,16,.22),transparent 42%),
+      linear-gradient(160deg,#210805,#090302) !important;
+    color:#f6e6c5 !important;
+    box-shadow:0 8px 20px rgba(0,0,0,.29),inset 0 1px 0 rgba(255,255,255,.05) !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-inner{padding:9px 8px 10px !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-title{
+    color:#f5e4c1 !important;
+    padding-bottom:7px !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-nws-source,
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-now{
+    color:#a89172 !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-days{
+    display:flex !important;
+    gap:6px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-day{
+    flex:0 0 78px !important;
+    width:78px !important;
+    min-width:78px !important;
+    min-height:88px !important;
+    padding:7px !important;
+    border:1px solid #6f4d27 !important;
+    border-radius:17px !important;
+    background:linear-gradient(180deg,#1a0906,#080302) !important;
+    color:#f5e6c9 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-forecast-low{color:#a18d72 !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-page-content{
+    position:relative !important;
+    padding:8px 9px 94px !important;
+    background:
+      radial-gradient(ellipse at 50% 0%,rgba(154,27,17,.14),transparent 28%),
+      linear-gradient(180deg,#260805,#090302) !important;
+    border-top:1px solid rgba(175,135,52,.5) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] #composer{display:none !important}
+
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="marines"] .nkc-post-card{
+    border:1.5px solid #7b4a2a !important;
+    border-radius:21px !important;
+    background:
+      radial-gradient(circle at 100% 0%,rgba(145,27,17,.12),transparent 34%),
+      linear-gradient(150deg,#31100c,#120504) !important;
+    color:#f4e1bc !important;
+    box-shadow:0 8px 18px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.045) !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card{padding:16px !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card h1{
+    color:#f1d9aa !important;
+    font-size:23px !important;
+    line-height:1.1 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-card p{color:#c0a287 !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-welcome-benefits > *{
+    background:#260b07 !important;
+    border-color:#765033 !important;
+    color:#e7cda7 !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-post-card{padding:14px !important}
+  .nkc-app-shell[data-theme="marines"] .nkc-post-image-frame{
+    border-color:#76472a !important;
+    background:#0c0302 !important;
+  }
+
+  /* Same fixed nav footprint as Air Force / City Market / 18th & Vine. */
+  .nkc-mobile-bottom-nav[data-theme="marines"]{
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
+    gap:0 !important;
+    border-top:2px solid #b68d3b !important;
+    background:url('/marines-scene/marines_nav.webp') center center/100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.35) !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon{
+    opacity:0 !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    max-width:none !important;
+    height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="marines"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="marines"] [data-mobile-filter-fab="true"]{
+    position:fixed !important;
+    top:auto !important;
+    right:10px !important;
+    bottom:94px !important;
+    border-color:#b68d3b !important;
+    background:rgba(22,4,3,.95) !important;
+    z-index:45 !important;
+  }
+}
+
+@media(min-width:640px){
+  .nkc-app-shell[data-theme="marines"] .nkc-main-header{
+    background:#160403 !important;
+    border-color:#75492d !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-header-banner-wrap{
+    max-height:330px !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="marines"] .nkc-header-banner{
+    width:100% !important;
+    height:auto !important;
+    max-height:330px !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+}
+
+
+/* === Marines DIRECT three-panel nav — no background image dependency === */
+@media(max-width:639px){
+  .nkc-mobile-bottom-nav[data-theme="marines"]{
+    display:flex !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
+    margin:0 !important;
+    gap:0 !important;
+    border-top:2px solid #b68d3b !important;
+    background:#220503 !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.35) !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
+    display:flex !important;
+    align-items:stretch !important;
+    justify-content:stretch !important;
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:100% !important;
+    height:82px !important;
+    min-width:100% !important;
+    max-width:none !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    object-fit:fill !important;
+    object-position:center !important;
+    margin:0 !important;
+    padding:0 !important;
+    transform:none !important;
+    filter:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label{
+    display:none !important;
+  }
+}
+
+
+/* === MARINES FINAL NAV — approved three-panel artwork === */
+@media(max-width:639px){
+  .nkc-mobile-bottom-nav[data-theme="marines"]{
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    display:flex !important;
+    padding:0 !important;
+    gap:0 !important;
+    background:#210503 !important;
+    border-top:2px solid #b68d3b !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
+    margin:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-theme-art-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    width:100% !important;
+    min-width:100% !important;
+    max-width:none !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    object-fit:fill !important;
+    transform:none !important;
+    filter:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label{
+    display:none !important;
+  }
+}
+
+
+/* =====================================================================
+   CHIEFS — CLEAN CITY MARKET MIRROR
+   Old Chiefs overrides removed first. This follows the working
+   City Market structure rather than layering another nav system on top.
+   ===================================================================== */
+.nkc-app-shell[data-theme="chiefs"]{
+  --chiefs-cream:#fff1d2;
+  --chiefs-red:#c8102e;
+  --chiefs-dark:#7a0016;
+  --chiefs-gold:#ffb81c;
+  --chiefs-ink:#35120d;
+  background-color:#8f001c !important;
+  background-image:
+    linear-gradient(rgba(100,0,15,.12),rgba(100,0,15,.12)),
+    repeating-linear-gradient(0deg,rgba(255,184,28,.045) 0 1px,transparent 1px 42px) !important;
+  color:#fff4e5 !important;
+}
+
+@media(max-width:639px){
+  /* Same header mechanics as City Market. */
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-top-header{
+    position:relative !important;
+    overflow:visible !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-top-row{
+    position:relative !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:998 / 472 !important;
+    padding:0 !important;
+    background:url('/chiefs-citymarket/chiefs_header.webp') center center / 100% 100% no-repeat !important;
+    border-bottom:5px solid #7a0016 !important;
+    box-shadow:0 7px 14px rgba(70,0,7,.30) !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-wordmark{
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-chiefs-menu-hit{
+    display:block !important;
+    position:absolute !important;
+    z-index:8 !important;
+    left:2.5% !important;
+    top:3% !important;
+    width:12.5% !important;
+    aspect-ratio:1 !important;
+    border:0 !important;
+    border-radius:999px !important;
+    background:transparent !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    z-index:8 !important;
+    right:2.4% !important;
+    top:3% !important;
+    width:23.8% !important;
+    height:13% !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:10% !important;
+    margin:0 !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-icon{
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-icon svg{opacity:0 !important}
+
+  /* Same real composer pattern as City Market. */
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-whats{
+    position:relative !important;
+    inset:auto !important;
+    transform:none !important;
+    width:calc(100% - 24px) !important;
+    margin:8px 12px !important;
+    min-height:48px !important;
+    padding:5px 11px !important;
+    border:2px solid #ffb81c !important;
+    border-radius:18px !important;
+    background:linear-gradient(180deg,#fff6df,#ffe6b3) !important;
+    color:#5d0011 !important;
+    font-weight:900 !important;
+    box-shadow:0 3px 0 #7a0016,0 5px 11px rgba(70,0,8,.16) !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-avatar{
+    width:32px !important;
+    height:32px !important;
+    background:#c8102e !important;
+    border:1px solid #ffb81c !important;
+    color:#fff !important;
+  }
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-whats-plus{
+    color:#c8102e !important;
+    font-size:23px !important;
+  }
+
+  /* Forecast follows the same compact card rail as City Market. */
+  .nkc-app-shell[data-theme="chiefs"] .nkc-forecast-banner{
+    margin:0 8px 8px !important;
+    width:calc(100% - 16px) !important;
+    border:2px solid #ffb81c !important;
+    border-radius:19px !important;
+    background:linear-gradient(180deg,#b20b24,#7a0016) !important;
+    color:#fff6df !important;
+    box-shadow:0 3px 0 #690010,0 6px 12px rgba(60,0,7,.16) !important;
+    overflow:hidden !important;
+  }
+  .nkc-app-shell[data-theme="chiefs"] .nkc-forecast-inner{padding:8px 8px 9px !important}
+  .nkc-app-shell[data-theme="chiefs"] .nkc-forecast-title{padding:0 2px 6px !important}
+  .nkc-app-shell[data-theme="chiefs"] .nkc-forecast-days{
+    display:flex !important;
+    gap:6px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    padding:0 1px 3px !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+  .nkc-app-shell[data-theme="chiefs"] .nkc-forecast-days::-webkit-scrollbar{display:none !important}
+  .nkc-app-shell[data-theme="chiefs"] .nkc-forecast-day{
+    flex:0 0 76px !important;
+    width:76px !important;
+    min-width:76px !important;
+    min-height:86px !important;
+    padding:7px 7px 6px !important;
+    border:1px solid #ffb81c !important;
+    border-radius:16px !important;
+    background:linear-gradient(180deg,#b80c27,#870018) !important;
+    color:#fff !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-page-content{
+    padding:4px 9px 92px !important;
+    gap:8px !important;
+    background:
+      repeating-linear-gradient(0deg,rgba(255,184,28,.04) 0 2px,transparent 2px 42px),
+      linear-gradient(180deg,#a60920,#760014) !important;
+  }
+  .nkc-app-shell[data-theme="chiefs"] main{gap:8px !important}
+  .nkc-app-shell[data-theme="chiefs"] #composer{display:none !important}
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-welcome-card,
+  .nkc-app-shell[data-theme="chiefs"] .nkc-post-card{
+    border:2px solid #ffb81c !important;
+    border-radius:19px !important;
+    background:linear-gradient(180deg,#bd0c27,#8a0019) !important;
+    color:#fff7e5 !important;
+    box-shadow:0 4px 0 #650010,0 8px 16px rgba(55,0,6,.20) !important;
+  }
+
+  /* This is copied from the WORKING City Market nav mechanics. */
+  .nkc-mobile-bottom-nav[data-theme="chiefs"]{
+    height:82px !important;
+    min-height:82px !important;
+    padding:0 6px env(safe-area-inset-bottom) !important;
+    gap:0 !important;
+    border:0 !important;
+    background:#6d0012 url('/chiefs-citymarket/chiefs_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -4px 0 #ffb81c,0 -10px 22px rgba(65,0,7,.28) !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-plus{
+    position:relative !important;
+    width:33.333% !important;
+    max-width:none !important;
+    height:78px !important;
+    max-height:78px !important;
+    margin:0 !important;
+    padding:0 !important;
+    flex:1 1 33.333% !important;
+    align-self:flex-end !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-theme-art-icon,
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-nav-label{
+    opacity:0 !important;
+    visibility:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-orb-item:active,
+  .nkc-mobile-bottom-nav[data-theme="chiefs"] .nkc-bottom-nav-plus:active{
+    background:rgba(255,237,191,.10) !important;
+  }
+
+  .nkc-app-shell[data-theme="chiefs"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="chiefs"] [data-mobile-filter-fab="true"]{
+    top:auto !important;
+    right:10px !important;
+    bottom:96px !important;
+    position:fixed !important;
+    z-index:45 !important;
   }
 }
