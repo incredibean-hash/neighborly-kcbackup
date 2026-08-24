@@ -2046,3 +2046,34 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     margin-top:8px !important;
   }
 }
+
+
+/* === City of Fountains header dial-in v2 === */
+@media(max-width:639px){
+  /* Full banner already carries the theme identity: no extra heart badge. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-theme-mark{
+    display:none !important;
+  }
+
+  /* Keep controls inside the artwork instead of riding above its top edge. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    top:14px !important;
+    right:10px !important;
+    margin:0 !important;
+    align-self:auto !important;
+    z-index:5 !important;
+  }
+
+  /* The banner itself contains NeighborlyKC; bias the crop slightly upward
+     so the wordmark sits more naturally in the visual center. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{
+    background-position:center 46% !important;
+  }
+
+  /* Give the artwork the full header canvas. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-brand{
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+}
