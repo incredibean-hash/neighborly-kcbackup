@@ -3818,3 +3818,36 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     object-position:center !important;
   }
 }
+
+
+/* === Marines bottom-nav render fix === */
+@media(max-width:639px){
+  .nkc-mobile-bottom-nav[data-theme="marines"]{
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
+    background-image:url('/marines-scene/marines_nav.webp') !important;
+    background-size:100% 100% !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+    background-color:#250704 !important;
+    overflow:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon{
+    opacity:0 !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
+    width:33.333% !important;
+    flex:1 1 33.333% !important;
+    height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+}
