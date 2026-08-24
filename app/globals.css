@@ -4173,3 +4173,68 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     pointer-events:none !important;
   }
 }
+
+/* =====================================================================
+   KCPD — NAV HOOK FIX
+   Force the approved nav scene through the app-shell theme selector too.
+   This handles builds where the bottom-nav element's own data-theme is
+   missing or overridden while preserving the 82px approved footprint.
+   ===================================================================== */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"]{
+    display:flex !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    position:fixed !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    z-index:9999 !important;
+    width:100% !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    padding:0 !important;
+    margin:0 !important;
+    gap:0 !important;
+    overflow:hidden !important;
+    border:0 !important;
+    border-top:2px solid #4c8cff !important;
+    background-color:#020a1c !important;
+    background-image:url('/kcpd-approved/kcpd_nav.webp') !important;
+    background-repeat:no-repeat !important;
+    background-position:center bottom !important;
+    background-size:100% 100% !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav .nkc-bottom-nav-orb-item,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav .nkc-bottom-nav-plus,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus{
+    display:block !important;
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    height:82px !important;
+    min-height:82px !important;
+    max-height:82px !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav .nkc-theme-art-icon,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav .nkc-custom-theme-nav-icon,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav .nkc-custom-theme-plus-icon,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-bottom-nav .nkc-nav-label{
+    display:none !important;
+  }
+
+  .nkc-app-shell[data-theme="kcpd"]{
+    padding-bottom:82px !important;
+  }
+}
