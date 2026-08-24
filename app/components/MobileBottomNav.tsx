@@ -4,6 +4,11 @@ import Link from 'next/link';
 
 const NAV_V7_THEME_IDS=['pip-boy','kcfd','kc-bbq','kc-current','kc-sunset','18th-vine','river-market','aim','sporting','royals','chiefs','space','kcpd','city-fountains','cowtown','army','navy','marines','air-force'] as const;
 const iconPath=(themeId:string,name:string)=>{
+  if(themeId==='city-fountains' && (name==='dms' || name==='create_post' || name==='settings')){
+    const fountainKey=name==='dms'?'messages':name==='create_post'?'post':'settings';
+    return `/city-fountains-exact/${fountainKey}.png`;
+  }
+
   if(themeId==='city-fountains'){
     const fountainKey=name==='dms'?'messages':name==='create_post'?'post':'settings';
     return `/city-fountains-v10/${fountainKey}-v10.png`;

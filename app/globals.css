@@ -2118,3 +2118,138 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     object-fit:contain !important;
   }
 }
+
+
+/* === City of Fountains V10.1: keep all three nav icons on-screen === */
+@media(max-width:639px){
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"]{
+    min-height:112px !important;
+    padding-left:max(8px, env(safe-area-inset-left)) !important;
+    padding-right:max(8px, env(safe-area-inset-right)) !important;
+    gap:8px !important;
+    justify-content:space-between !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-plus{
+    width:31vw !important;
+    max-width:108px !important;
+    min-width:0 !important;
+    height:108px !important;
+    flex:0 1 31vw !important;
+    margin:0 !important;
+  }
+
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-plus-icon{
+    width:100% !important;
+    height:104px !important;
+    max-width:104px !important;
+    max-height:104px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+}
+
+
+/* === City of Fountains APPROVED header: exact generated artwork === */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{
+    width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    aspect-ratio:832 / 337 !important;
+    background:
+      url('/headers/city_fountains_approved_header.webp')
+      center center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #42e3e8 !important;
+    box-shadow:none !important;
+    overflow:hidden !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    padding:0 !important;
+    pointer-events:none !important;
+  }
+
+  /* The approved header artwork already contains the brand/menu/search/bell.
+     Keep the real search/bell hit targets active, but make their duplicate
+     visual buttons transparent. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-wordmark{
+    display:none !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-icons{
+    position:absolute !important;
+    top:6% !important;
+    right:2.7% !important;
+    height:25% !important;
+    gap:2.5vw !important;
+    margin:0 !important;
+    z-index:10 !important;
+    pointer-events:auto !important;
+  }
+
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-icon{
+    width:12vw !important;
+    height:12vw !important;
+    max-width:54px !important;
+    max-height:54px !important;
+    min-width:42px !important;
+    min-height:42px !important;
+    opacity:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  /* Search/post composer stays below the header instead of covering it. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-whats{
+    margin-top:0 !important;
+  }
+}
+
+
+/* === City of Fountains exact baked-label nav artwork === */
+@media(max-width:639px){
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"]{
+    padding-left:max(6px, env(safe-area-inset-left)) !important;
+    padding-right:max(6px, env(safe-area-inset-right)) !important;
+    gap:4px !important;
+    justify-content:space-between !important;
+    overflow:hidden !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-nav-label{
+    display:none !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-plus{
+    flex:1 1 0 !important;
+    width:auto !important;
+    min-width:0 !important;
+    max-width:32% !important;
+    height:116px !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-plus-icon{
+    display:block !important;
+    width:100% !important;
+    height:112px !important;
+    max-width:118px !important;
+    max-height:112px !important;
+    margin:auto !important;
+    object-fit:contain !important;
+  }
+}
