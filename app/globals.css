@@ -2077,3 +2077,50 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     pointer-events:none !important;
   }
 }
+
+/* === City of Fountains app implementation v3 ===
+   Preserve banner proportions and use the lightweight blue nav artwork from
+   the approved City of Fountains direction. */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-header{
+    background-size:cover !important;
+    background-position:center center !important;
+    background-repeat:no-repeat !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{
+    min-height:0 !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"]{
+    min-height:104px !important;
+    height:104px !important;
+    padding-top:5px !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-plus{
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:0 !important;
+    margin-top:-10px !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-fountain-nav-svg{
+    display:block !important;
+    width:76px !important;
+    height:76px !important;
+    max-width:76px !important;
+    max-height:76px !important;
+    overflow:visible !important;
+    filter:drop-shadow(0 3px 5px rgba(0,0,0,.32)) !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-nav-label{
+    display:block !important;
+    margin-top:-5px !important;
+    color:#f4feff !important;
+    font-size:11px !important;
+    line-height:12px !important;
+    font-weight:900 !important;
+    letter-spacing:.1px !important;
+    text-shadow:0 2px 3px rgba(0,0,0,.75) !important;
+  }
+}
