@@ -306,6 +306,43 @@ export default function Page(){
     };
   },[]);
 
+  // Do not let the browser reopen the main feed at an old scroll position.
+  // Explicit deep links (shared post/category/composer/settings) keep their
+  // own navigation behavior.
+  useLayoutEffect(()=>{
+    if(typeof window==='undefined') return;
+    const params=new URLSearchParams(window.location.search);
+    const hasIntent=
+      params.has('post') ||
+      params.has('category') ||
+      params.has('compose') ||
+      params.has('settings') ||
+      window.location.hash==='#composer';
+
+    const previous=window.history.scrollRestoration;
+    window.history.scrollRestoration='manual';
+
+    if(!hasIntent){
+      const reset=()=>window.scrollTo({top:0,left:0,behavior:'auto'});
+      reset();
+      const frame1=window.requestAnimationFrame(()=>{
+        reset();
+        window.requestAnimationFrame(reset);
+      });
+      const onPageShow=(event:PageTransitionEvent)=>{
+        if(event.persisted) reset();
+      };
+      window.addEventListener('pageshow',onPageShow);
+      return()=>{
+        window.cancelAnimationFrame(frame1);
+        window.removeEventListener('pageshow',onPageShow);
+        window.history.scrollRestoration=previous;
+      };
+    }
+
+    return()=>{ window.history.scrollRestoration=previous; };
+  },[]);
+
   const trackSignupEvent = useCallback((name:string, method?:string) => {
     if(typeof window==='undefined') return;
     track(name,method?{method}:undefined);
