@@ -4096,36 +4096,39 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   PIP-BOY — APPROVED CITY MARKET / CHIEFS SCENE COMPOSITION
-   Three substantial illustrated objects in one foreground scene.
-   Single mobile nav locked at 82px.
+   KCPD — APPROVED OPTION #1
+   City Market / Chiefs / Pip-Boy scene composition.
+   One illustrated foreground nav, locked at 82px.
    ===================================================================== */
 @media(max-width:639px){
-  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-top-header{
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-header{
     position:relative !important;
     overflow:visible !important;
     border:0 !important;
     background:transparent !important;
     box-shadow:none !important;
   }
-  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-top-row{
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-top-row{
     position:relative !important;
     width:100% !important;
     height:auto !important;
     aspect-ratio:1024 / 420 !important;
     padding:0 !important;
     margin:0 !important;
-    background:url('/pipboy-master/pipboy_header.webp') center / 100% 100% no-repeat !important;
-    border-bottom:2px solid #58ff61 !important;
+    background:url('/kcpd-approved/kcpd_header.webp') center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #4c8cff !important;
   }
-  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-brand,
-  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-theme-mark,
-  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-wordmark{
+
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="kcpd"] .nkc-mobile-wordmark{
     opacity:0 !important;
     visibility:hidden !important;
     pointer-events:none !important;
   }
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"]{
+
+  .nkc-mobile-bottom-nav[data-theme="kcpd"]{
     display:flex !important;
     height:82px !important;
     min-height:82px !important;
@@ -4134,17 +4137,14 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     margin:0 !important;
     gap:0 !important;
     border:0 !important;
-    border-top:2px solid #58ff61 !important;
-    background:#020b04 url('/pipboy-master/pipboy_nav.webp') center bottom / 100% 100% no-repeat !important;
-    box-shadow:0 -7px 18px rgba(0,0,0,.38),0 -2px 9px rgba(65,255,82,.18) !important;
+    border-top:2px solid #4c8cff !important;
+    background:#020a1c url('/kcpd-approved/kcpd_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.38),0 -2px 9px rgba(35,105,255,.22) !important;
     overflow:hidden !important;
   }
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"]::after{
-    content:none !important;
-    display:none !important;
-  }
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus{
+
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-bottom-nav-plus{
     position:relative !important;
     display:block !important;
     flex:1 1 33.333% !important;
@@ -4162,10 +4162,11 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:none !important;
     overflow:hidden !important;
   }
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-theme-art-icon,
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-nav-icon,
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-plus-icon,
-  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-nav-label{
+
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-theme-art-icon,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="kcpd"] .nkc-nav-label{
     display:none !important;
     opacity:0 !important;
     visibility:hidden !important;
