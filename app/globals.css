@@ -4096,39 +4096,36 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
 }
 
 /* =====================================================================
-   KCFD — APPROVED MASTER INSTALL
-   City Market + Navy composition; City Market + 18th & Vine master logic.
-   Approved three-object scene. Single bottom nav locked at 82px.
+   PIP-BOY — APPROVED CITY MARKET / CHIEFS SCENE COMPOSITION
+   Three substantial illustrated objects in one foreground scene.
+   Single mobile nav locked at 82px.
    ===================================================================== */
 @media(max-width:639px){
-  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-top-header{
+  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-top-header{
     position:relative !important;
     overflow:visible !important;
     border:0 !important;
     background:transparent !important;
     box-shadow:none !important;
   }
-
-  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-top-row{
+  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-top-row{
     position:relative !important;
     width:100% !important;
     height:auto !important;
-    aspect-ratio:1024 / 455 !important;
+    aspect-ratio:1024 / 420 !important;
     padding:0 !important;
     margin:0 !important;
-    background:url('/kcfd-approved/kcfd_header.webp') center / 100% 100% no-repeat !important;
-    border-bottom:2px solid #d79a2b !important;
+    background:url('/pipboy-master/pipboy_header.webp') center / 100% 100% no-repeat !important;
+    border-bottom:2px solid #58ff61 !important;
   }
-
-  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-brand,
-  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-theme-mark,
-  .nkc-app-shell[data-theme="kcfd"] .nkc-mobile-wordmark{
+  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-brand,
+  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-theme-mark,
+  .nkc-app-shell[data-theme="pip-boy"] .nkc-mobile-wordmark{
     opacity:0 !important;
     visibility:hidden !important;
     pointer-events:none !important;
   }
-
-  .nkc-mobile-bottom-nav[data-theme="kcfd"]{
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"]{
     display:flex !important;
     height:82px !important;
     min-height:82px !important;
@@ -4137,14 +4134,17 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     margin:0 !important;
     gap:0 !important;
     border:0 !important;
-    border-top:2px solid #d79a2b !important;
-    background:#43060a url('/kcfd-approved/kcfd_nav.webp') center bottom / 100% 100% no-repeat !important;
-    box-shadow:0 -7px 18px rgba(0,0,0,.34) !important;
+    border-top:2px solid #58ff61 !important;
+    background:#020b04 url('/pipboy-master/pipboy_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -7px 18px rgba(0,0,0,.38),0 -2px 9px rgba(65,255,82,.18) !important;
     overflow:hidden !important;
   }
-
-  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-bottom-nav-plus{
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"]::after{
+    content:none !important;
+    display:none !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-bottom-nav-plus{
     position:relative !important;
     display:block !important;
     flex:1 1 33.333% !important;
@@ -4162,11 +4162,10 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     box-shadow:none !important;
     overflow:hidden !important;
   }
-
-  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-theme-art-icon,
-  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-nav-icon,
-  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-custom-theme-plus-icon,
-  .nkc-mobile-bottom-nav[data-theme="kcfd"] .nkc-nav-label{
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-theme-art-icon,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="pip-boy"] .nkc-nav-label{
     display:none !important;
     opacity:0 !important;
     visibility:hidden !important;
