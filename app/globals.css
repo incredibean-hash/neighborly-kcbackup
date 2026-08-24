@@ -1959,3 +1959,15 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     filter:drop-shadow(0 0 4px color-mix(in srgb,var(--nkc-nav-accent,currentColor) 35%,transparent)) !important;
   }
 }
+
+
+/* NeighborlyKC mobile wordmark — dialed down after V6 heart cleanup */
+@media (max-width:639px){
+  .nkc-mobile-wordmark{
+    font-size:17px !important;
+    letter-spacing:-0.45px !important;
+    line-height:1 !important;
+    white-space:nowrap !important;
+    max-width:56vw !important;
+  }
+}
