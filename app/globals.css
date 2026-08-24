@@ -4095,78 +4095,22 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
   }
 }
 
-/* =====================================================================
-   MARINES — CITY MARKET + 18TH & VINE SCENE NAV
-   One illustrated foreground scene; three transparent functional zones.
-   ===================================================================== */
-@media(max-width:639px){
-  .nkc-mobile-bottom-nav[data-theme="marines"]{
-    display:flex !important;
-    height:auto !important;
-    min-height:0 !important;
-    max-height:none !important;
-    aspect-ratio:1024 / 336 !important;
-    padding:0 !important;
-    margin:0 !important;
-    gap:0 !important;
-    border:0 !important;
-    background:#160403 url('/marines-scene/marines_nav.webp') center bottom / 100% 100% no-repeat !important;
-    box-shadow:0 -4px 0 #b68d3b,0 -10px 22px rgba(22,4,3,.32) !important;
-    overflow:hidden !important;
-  }
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item,
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus{
-    position:relative !important;
-    display:block !important;
-    flex:1 1 33.333% !important;
-    width:33.333% !important;
-    min-width:0 !important;
-    max-width:none !important;
-    height:100% !important;
-    min-height:0 !important;
-    max-height:none !important;
-    align-self:stretch !important;
-    margin:0 !important;
-    padding:0 !important;
-    border:0 !important;
-    border-radius:0 !important;
-    background:transparent !important;
-    box-shadow:none !important;
-    overflow:hidden !important;
-  }
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-theme-art-icon,
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-nav-icon,
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-custom-theme-plus-icon,
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-nav-label{
-    display:none !important;
-    opacity:0 !important;
-    visibility:hidden !important;
-    pointer-events:none !important;
-  }
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-orb-item:active,
-  .nkc-mobile-bottom-nav[data-theme="marines"] .nkc-bottom-nav-plus:active{
-    background:rgba(255,237,191,.10) !important;
-  }
-}
 
 /* =====================================================================
-   MARINES — CONTENT CLEARANCE FOR SCENE NAV
-   Positioning reference: City Market + 18th & Vine only.
-   Keeps the illustrated nav unchanged and gives feed/content enough
-   bottom room to end above it rather than sliding underneath it.
+   ROYALS — CITY MARKET + 18TH & VINE LOCKED MASTER REBUILD
+   One illustrated header scene and one illustrated foreground nav scene.
+   Three transparent functional nav hit targets; no legacy icon artwork.
    ===================================================================== */
 @media(max-width:639px){
-  .nkc-app-shell[data-theme="marines"] .nkc-page-content{
-    padding-bottom:132px !important;
-  }
-
-  .nkc-app-shell[data-theme="marines"] main{
-    padding-bottom:132px !important;
-  }
-
-  .nkc-app-shell[data-theme="marines"] .nkc-mobile-filter-fab,
-  .nkc-app-shell[data-theme="marines"] [data-mobile-filter-fab="true"]{
-    top:auto !important;
-    bottom:128px !important;
-  }
+  .nkc-app-shell[data-theme="royals"] .nkc-mobile-top-header{position:relative !important;overflow:visible !important;border:0 !important;background:transparent !important;box-shadow:none !important}
+  .nkc-app-shell[data-theme="royals"] .nkc-mobile-top-row{position:relative !important;width:100% !important;height:auto !important;aspect-ratio:730 / 330 !important;padding:0 !important;background:url('/royals-master/royals_header.webp') center/100% 100% no-repeat !important;border-bottom:4px solid #c9a24b !important}
+  .nkc-app-shell[data-theme="royals"] .nkc-mobile-brand,.nkc-app-shell[data-theme="royals"] .nkc-mobile-theme-mark,.nkc-app-shell[data-theme="royals"] .nkc-mobile-wordmark{opacity:0 !important;pointer-events:none !important}
+  .nkc-app-shell[data-theme="royals"] .nkc-mobile-whats{border:2px solid #c9a24b !important;background:#f7f3e8 !important;color:#17375e !important}
+  .nkc-app-shell[data-theme="royals"] .nkc-forecast-banner{border:1.5px solid #c9a24b !important;background:linear-gradient(160deg,#08264d,#04172f) !important;color:#f7f3e8 !important}
+  .nkc-app-shell[data-theme="royals"] .nkc-forecast-day{border-color:#315f8f !important;background:linear-gradient(180deg,#0c315e,#061d3a) !important;color:#f7f3e8 !important}
+  .nkc-app-shell[data-theme="royals"] .nkc-welcome-card,.nkc-app-shell[data-theme="royals"] .nkc-post-card{border:2px solid #c9a24b !important;background:linear-gradient(180deg,#0d315e,#071d39) !important;color:#f7f3e8 !important}
+  .nkc-mobile-bottom-nav[data-theme="royals"]{display:flex !important;height:auto !important;min-height:0 !important;max-height:none !important;aspect-ratio:730 / 260 !important;padding:0 !important;margin:0 !important;gap:0 !important;border:0 !important;background:#061b38 url('/royals-master/royals_nav.webp') center bottom/100% 100% no-repeat !important;box-shadow:0 -4px 0 #c9a24b,0 -10px 22px rgba(0,14,35,.32) !important;overflow:hidden !important}
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item,.nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus{position:relative !important;display:block !important;flex:1 1 33.333% !important;width:33.333% !important;min-width:0 !important;max-width:none !important;height:100% !important;min-height:0 !important;max-height:none !important;align-self:stretch !important;margin:0 !important;padding:0 !important;border:0 !important;border-radius:0 !important;background:transparent !important;box-shadow:none !important;overflow:hidden !important}
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-theme-art-icon,.nkc-mobile-bottom-nav[data-theme="royals"] .nkc-custom-theme-nav-icon,.nkc-mobile-bottom-nav[data-theme="royals"] .nkc-custom-theme-plus-icon,.nkc-mobile-bottom-nav[data-theme="royals"] .nkc-nav-label{display:none !important;opacity:0 !important;visibility:hidden !important;pointer-events:none !important}
+  .nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-orb-item:active,.nkc-mobile-bottom-nav[data-theme="royals"] .nkc-bottom-nav-plus:active{background:rgba(255,237,191,.10) !important}
 }
