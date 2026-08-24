@@ -2945,3 +2945,59 @@ input::placeholder,textarea::placeholder{color:currentColor!important;opacity:.7
     border-color:#168fa5 !important;
   }
 }
+
+
+/* === City of Fountains approved scene artwork install === */
+@media(max-width:639px){
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-row{
+    aspect-ratio:1024 / 604 !important;
+    background:url('/city-fountains-scene/city_fountains_scene_header.webp') center center / 100% 100% no-repeat !important;
+  }
+
+  /* The approved scene already contains its own menu/search/bell artwork. */
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-fountains-menu-hit{
+    left:2.2% !important;
+    top:4.5% !important;
+    width:12% !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-top-icons{
+    right:2.2% !important;
+    top:4.5% !important;
+    width:24% !important;
+    height:18% !important;
+  }
+
+  /* Replace floating icons with the complete wet-stone fountain-plaza scene. */
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"]{
+    height:112px !important;
+    min-height:112px !important;
+    padding:0 !important;
+    border-top:1px solid rgba(104,239,247,.85) !important;
+    background:url('/city-fountains-scene/city_fountains_scene_nav.webp') center bottom / 100% 100% no-repeat !important;
+    box-shadow:0 -10px 24px rgba(0,10,20,.32) !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-nav-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-custom-theme-plus-icon,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-nav-label{
+    opacity:0 !important;
+  }
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-orb-item,
+  .nkc-mobile-bottom-nav[data-theme="city-fountains"] .nkc-bottom-nav-plus{
+    flex:1 1 33.333% !important;
+    width:33.333% !important;
+    max-width:none !important;
+    height:112px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-page-content{
+    padding-bottom:124px !important;
+  }
+  .nkc-app-shell[data-theme="city-fountains"] .nkc-mobile-filter-fab,
+  .nkc-app-shell[data-theme="city-fountains"] [data-mobile-filter-fab="true"]{
+    bottom:124px !important;
+  }
+}
